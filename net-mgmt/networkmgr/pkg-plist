@@ -3,7 +3,7 @@ etc/xdg/autostart/networkmgr.desktop
 share/networkmgr/authentication.py
 share/networkmgr/enable-net.sh
 share/networkmgr/net_api.py
-share/networkmgr/netcardmgr
+share/networkmgr/netcardmgr.py
 share/networkmgr/detect-nics.sh
 share/networkmgr/functions-networking.sh
 share/networkmgr/test-netup.sh
