@@ -3,7 +3,7 @@
 
 
 PORTNAME=	networkmgr
-PORTVERSION=	0.3
+PORTVERSION=	0.4
 PORTREVISION=	0
 CATEGORIES=	net-mgmt
 MASTER_SITES=	https://github.com/GhostBSD/${PORTNAME}/archive/
@@ -17,13 +17,10 @@ USE_GITHUB=	yes
 GH_ACCOUNT=	GhostBSD
 GH_PROJECT=	${PORTNAME}
 GH_TAGNAME=	${PORTVERSION}
-GH_COMMIT= 2105641
+GH_COMMIT= e435aad
 USE_PYTHON=	yes
 USE_PYDISTUTILS=	yes
-#NO_BUILD=	yes
 NO_STAGE=	yes
-#PLIST_DIRS=	bin/pywarrior
-#WRKSRC=		${WRKDIR}/${PORTNAME}-${PORTVERSION}
 
 		
 .include <bsd.port.mk>
