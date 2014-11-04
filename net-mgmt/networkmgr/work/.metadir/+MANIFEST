@@ -1,0 +1,16 @@
+name: "networkmgr"
+version: "0.6"
+origin: net-mgmt/networkmgr
+comment: <<EOD
+GTK network manager.
+EOD
+maintainer: ericturgeon@ghostbsd.org
+prefix: /usr/local
+deps: { 
+"py27-setuptools27": {origin: devel/py-setuptools27, version: "5.5.1"}
+"python27": {origin: lang/python27, version: "2.7.8_5"}
+}
+categories: [ net-mgmt, ]
+licenselogic: single
+licenses: [ BSD, ]
+options: {}
