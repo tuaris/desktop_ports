@@ -1,0 +1,34 @@
+# New ports collection makefile for: ghostbsd-irc client
+# Date created:        17 may 2015
+# Whom:                angelescuo@yahoo.com
+#
+# $FreeBSD$
+#
+
+PORTNAME=	ghostbsd-irc
+PORTVERSION=	1.0
+CATEGORIES=	irc
+
+MAINTAINER=	angelescuo@yahoo.com
+COMMENT= GhostBSD irc client 
+LICENSE = GPLv2
+
+USE_GITHUB=	yes
+GH_ACCOUNT=	GhostBSD
+GH_PROJECT=	${PORTNAME}
+GH_TAGNAME=	${PORTVERSION}
+GH_COMMIT=	8475406
+
+NO_BUILD=	yes
+RUN_DEPENDS= ssft.sh:${PORTSDIR}/devel/ssft\
+             dpkg:${PORTSDIR}/archivers/dpkg
+
+do-install:
+
+		@${INSTALL_SCRIPT} ${WRKSRC}/ghostbsd-irc ${STAGEDIR}/${PREFIX}/bin
+		@${INSTALL_DATA} ${WRKSRC}/ghostbsd-irc.desktop ${STAGEDIR}/${PREFIX}/share/applications
+		@${CP}    ${WRKSRC}/icons/pixmaps/* ${STAGEDIR}${PREFIX}/share/pixmaps
+		@${MKDIR} -p ${STAGEDIR}${PREFIX}/share/icons/hicolor
+		@${CP} -R ${WRKSRC}/icons/hicolor/* ${STAGEDIR}${PREFIX}/share/icons/hicolor
+
+.include <bsd.port.mk>
