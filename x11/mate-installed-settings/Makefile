@@ -6,7 +6,7 @@
 #
 
 PORTNAME= 	mate-installed-settings
-PORTVERSION=	1.0.5
+PORTVERSION=	1.0
 CATEGORIES=	x11
 
 MAINTAINER=	angelescuo@yahoo.com
@@ -14,10 +14,10 @@ COMMENT=	GhostBSD mate settings in installed mode
 LICENSE =	BSD
 
 USE_GITHUB=	yes
-GH_ACCOUNT=	angelescuo
+GH_ACCOUNT=	GhostBSD
 GH_PROJECT=	${PORTNAME}
 GH_TAGNAME=	${PORTVERSION}
-GH_COMMIT=	8c6c14b
+GH_COMMIT=	f9e4a0c
 
 RUN_DEPENDS=	glib-compile-schemas:${PORTSDIR}/devel/glib-2.0 \
 
