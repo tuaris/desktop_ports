@@ -14,10 +14,10 @@ COMMENT=	GhostBSD mate settings in live mode
 LICENSE =	BSD
 
 USE_GITHUB=	yes
-GH_ACCOUNT=	angelescuo
+GH_ACCOUNT=	GhostBSD
 GH_PROJECT=	${PORTNAME}
 GH_TAGNAME=	${PORTVERSION}
-GH_COMMIT=	7ef6a11
+GH_COMMIT=	2b3ba06
 
 RUN_DEPENDS=	glib-compile-schemas:${PORTSDIR}/devel/glib-2.0
 
