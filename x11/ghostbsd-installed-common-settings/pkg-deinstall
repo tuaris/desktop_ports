@@ -29,22 +29,26 @@ rem_filesfrom_freebsd()
 {
     # removes X config files
     for files in $(ls /usr/local/share/ghostbsd/common-installed-settings/packages/override/etc/X11 ) ; do
-    echo $files
         rm -f /etc/X11/$files
     done
+}
+
+restore_packages_settings()
+{
+    # removes htmlview alternative for cups
+    update-alternatives --altdir /usr/local/etc/alternatives --remove htmlview /usr/local/bin/firefox
 }
 
 case $2 in
     DEINSTALL)
     restore_freebsd
     rem_filesfrom_freebsd
-    #rm -Rf /usr/local/share/ghostbsd/common-installed-settings/base/backup
-    #rm -Rf /usr/local/share/ghostbsd/common-installed-settings/packages/backup
+    restore_packages_settings
     ;;
     POST-DEINSTALL)
-    rm -Rf /usr/local/share/ghostbsd/common-installed-settings/
+    #rm -Rf /usr/local/share/ghostbsd/common-installed-settings/
+    echo "ghostbsd-installed-common-settings was uninstalled."
     ;;
-    
     *)
     echo $2
     ;;

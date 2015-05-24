@@ -20,6 +20,7 @@ GH_TAGNAME=	${PORTVERSION}
 GH_COMMIT=	827462b
 
 RUN_DEPENDS=	glib-compile-schemas:${PORTSDIR}/devel/glib-2.0 \
+		 dpkg:${PORTSDIR}/archivers/dpkg
 
 NO_BUILD=	yes
 

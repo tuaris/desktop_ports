@@ -53,9 +53,26 @@ packages_overrides()
 
 patch_etc_files()
 {
-    for files in $(ls /usr/local/share/ghostbsd/common-installed-settings/base/patches | cut -d . -f1,2) ; do
+    for files in $(ls /usr/local/share/ghostbsd/common-installed-settings/base/patches | cut -d . -f1,2 |grep -v devd.conf | grep -v sysctl.conf) ; do
         cat /usr/local/share/ghostbsd/common-installed-settings/base/patches/$files.extra >> /etc/$files
     done
+
+    if [ -z "$(cat /etc/devd.conf| grep ugen[0-9])" ] ; then
+         cat /usr/local/share/ghostbsd/common-installed-settings/base/patches/devd.conf.extra >> /etc/devd.conf
+    fi
+
+    if [ -z "$(cat /etc/sysctl.conf| grep vfs.usermount)" ] ; then
+         cat /usr/local/share/ghostbsd/common-installed-settings/base/patches/sysctl.conf.extra >> /etc/sysctl.conf
+    fi
+
+}
+
+packages_settings()
+{
+    #set htmlview alternative to firefox for cups
+    if [ -e /usr/local/bin/firefox ] ; then
+        update-alternatives --altdir /usr/local/etc/alternatives --install /usr/local/bin/htmlview htmlview /usr/local/bin/firefox 50
+    fi
 }
 
 case "$2" in
@@ -68,6 +85,8 @@ case "$2" in
     packages_overrides
     # patch files from etc
     patch_etc_files
+    # apply packages settings
+    packages_settings
     ;;
     *)
     ;;

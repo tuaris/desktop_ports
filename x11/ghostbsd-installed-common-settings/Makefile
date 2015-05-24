@@ -21,6 +21,7 @@ GH_COMMIT=	954ce53
 
 
 NO_BUILD=	yes
+RUN_DEPENDS= dpkg:${PORTSDIR}/archivers/dpkg
 
 do-install:
 	@${MKDIR} -p ${STAGEDIR}/${PREFIX}/share/ghostbsd
