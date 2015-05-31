@@ -17,7 +17,7 @@ USE_GITHUB=	yes
 GH_ACCOUNT=	GhostBSD
 GH_PROJECT=	${PORTNAME}
 GH_TAGNAME=	${PORTVERSION}
-GH_COMMIT=	
+GH_COMMIT=	acbafb4
 
 
 NO_BUILD=	yes
@@ -27,6 +27,6 @@ do-install:
 	@${CP} -R   ${WRKSRC}/etc/skel/* ${STAGEDIR}/${PREFIX}/share/ghostbsd/xfce-installed-settings/etc/skel
 	@${MKDIR} -p ${STAGEDIR}/${PREFIX}/share/ghostbsd/xfce-installed-settings/etc/default/grub.d
 	@${CP} -R   ${WRKSRC}/etc/default/* ${STAGEDIR}/${PREFIX}/share/ghostbsd/xfce-installed-settings/etc/default
-	@${MKDIR} -p ${STAGEDIR}/${PREFIX}/etc/xdg
-	@${CP} -R   ${WRKSRC}/etc/xdg/* ${STAGEDIR}/${PREFIX}/etc/xdg
+	@${MKDIR} -p ${STAGEDIR}/${PREFIX}/share/ghostbsd/xfce-installed-settings/etc/xdg
+	@${CP} -R   ${WRKSRC}/etc/xdg/* ${STAGEDIR}/${PREFIX}/share/ghostbsd/xfce-installed-settings/etc/xdg
 .include <bsd.port.mk>
