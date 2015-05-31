@@ -24,11 +24,24 @@ remove_files_from()
     done
 }
 
+autologin_revert()
+{
+# removing auto login, startx and X configuration.
+( echo "g/# ghostbsd user autologin/d" ; echo 'wq' ) | ex -s /etc/gettytab
+( echo "g/ghostbsd:\\/d" ; echo 'wq' ) | ex -s /etc/gettytab
+( echo "g/:al=ghostbsd:ht:np:sp#115200:/d" ; echo 'wq' ) | ex -s /etc/gettytab
+sed -i "" "/ttyv0/s/ghostbsd/Pc/g" /etc/ttys
+sed -i '' 's@#pcdm_enable="YES"@pcdm_enable="YES"@g' /etc/rc.conf
+
+# Removing livecd hostname.
+( echo 'g/hostname="livecd"/d' ; echo 'wq' ) | ex -s /etc/rc.conf
+}
 case $2 in
     DEINSTALL)
     restore_freebsd
     restore_packages_settings
     remove_files_from
+#    autologin_revert
     ;;
     POST-DEINSTALL)
     #rm -Rf /usr/local/share/ghostbsd/common-live-settings/
@@ -40,3 +53,4 @@ case $2 in
 esac
 
 exit 0
+

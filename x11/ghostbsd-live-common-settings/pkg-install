@@ -31,6 +31,15 @@ copy_files_in()
     cp -af /usr/local/share/ghostbsd/common-live-settings/etc/* /etc
 }
 
+autologin()
+{
+echo "# ghostbsd user autologin" >> /etc/gettytab
+echo "ghostbsd:\\" >> /etc/gettytab
+echo ":al=ghostbsd:ht:np:sp#115200:" >> /etc/gettytab
+
+sed -i "" "/ttyv0/s/Pc/ghostbsd/g" /etc/ttys
+}
+
 case "$2" in
     POST-INSTALL)
     # backup old files from FreeBSD base system
@@ -41,9 +50,13 @@ case "$2" in
     packages_settings
     # copy files from base/etc to etc
     copy_files_in
+    # enable autologin for tty
+    autologin
     ;;
     *)
     ;;
 esac
 
 exit 0
+
+
