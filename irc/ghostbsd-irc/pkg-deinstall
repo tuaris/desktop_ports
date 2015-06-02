@@ -10,4 +10,6 @@ if [ -e /usr/local/bin/lxterminal ] ; then
      update-alternatives --altdir /usr/local/etc/alternatives --remove x-terminal-emulator /usr/local/bin/lxterminal
 fi
 
+# removes ghostbsd-irc from desktop
+rm -f /home/ghostbsd/Desktop/ghostbsd-irc.desktop
 exit 0
