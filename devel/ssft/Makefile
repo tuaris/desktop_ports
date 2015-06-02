@@ -22,6 +22,8 @@ GH_COMMIT=	2f5c91e
 MAN1=		ssft.sh.1
 NO_BUILD=	yes
 
+RUN_DEPENDS=	zenity:${PORTSDIR}/x11/zenity
+
 pre-build:
 # Install .mo files
 	for po in `cd ${WRKSRC}/po && ls *.po 2> /dev/null`; do \
