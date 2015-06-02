@@ -21,8 +21,7 @@ GH_COMMIT=	8475406
 
 NO_BUILD=	yes
 RUN_DEPENDS= ssft.sh:${PORTSDIR}/devel/ssft\
-             dpkg:${PORTSDIR}/archivers/dpkg\
-             zenity:${PORTSDIR}/x11/zenity
+             dpkg:${PORTSDIR}/archivers/dpkg
 
 do-install:
 
