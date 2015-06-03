@@ -6,7 +6,7 @@
 #
 
 PORTNAME= 	ssft
-PORTVERSION=	0.9.13
+PORTVERSION=	1.0
 CATEGORIES=	devel
 
 MAINTAINER=	angelescuo@yahoo.com
