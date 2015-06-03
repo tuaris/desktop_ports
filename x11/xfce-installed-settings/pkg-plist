@@ -1,4 +1,4 @@
-share/ghostbsd/xfce-installed-settings/etc/default/grub.d/ghostbsd.cfg
+share/ghostbsd/xfce-installed-settings/etc/default/grub
 share/ghostbsd/xfce-installed-settings/etc/skel/dmrc
 share/ghostbsd/xfce-installed-settings/etc/skel/gtkrc-2.0
 share/ghostbsd/xfce-installed-settings/etc/xdg/Terminal/terminalrc
@@ -24,3 +24,4 @@ share/ghostbsd/xfce-installed-settings/etc/xdg/xfce4/xfconf/xfce-perchannel-xml/
 share/ghostbsd/xfce-installed-settings/etc/xdg/xfce4/xfconf/xfce-perchannel-xml/xfce4-session.xml
 share/ghostbsd/xfce-installed-settings/etc/xdg/xfce4/xfconf/xfce-perchannel-xml/xfwm4.xml
 share/ghostbsd/xfce-installed-settings/etc/xdg/xfce4/xfconf/xfce-perchannel-xml/xsettings.xml
+@dir share/ghostbsd/xfce-installed-settings/etc/default
