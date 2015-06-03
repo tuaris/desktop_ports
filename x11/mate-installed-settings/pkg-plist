@@ -1,7 +1,9 @@
-share/ghostbsd/mate-installed-settings/etc/default/grub.d/desktopbsd.cfg
+share/ghostbsd/mate-installed-settings/etc/default/grub.d/ghostbsd.cfg
 share/ghostbsd/mate-installed-settings/etc/polkit-1/localauthority/10-vendor.d/10-desktopbsd-gnome-installed-policy.pkla
 share/ghostbsd/mate-installed-settings/etc/skel/dmrc
 share/ghostbsd/mate-installed-settings/mate-panel/panel-default-layout.mate
+share/ghostbsd/mate-installed-settings/schemas/org.mate.panel.toplevel.gschema.xml
+share/ghostbsd/mate-installed-settings/schemas/org.mate.screensaver.gschema.xml
 share/ghostbsd/mate-installed-settings/schemas/org.mate.terminal.gschema.xml
 share/glib-2.0/schemas/92_org.gnome.desktop.screensaver.wallpaper.gschema.override
 share/glib-2.0/schemas/92_org.mate.caja.gschema.override
