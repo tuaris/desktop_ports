@@ -6,7 +6,7 @@
 #
 
 PORTNAME= 	ghostbsd-installed-common-settings
-PORTVERSION=	1.0
+PORTVERSION=	1.1
 CATEGORIES=	x11
 
 MAINTAINER=	angelescuo@yahoo.com
@@ -17,7 +17,7 @@ USE_GITHUB=	yes
 GH_ACCOUNT=	GhostBSD
 GH_PROJECT=	${PORTNAME}
 GH_TAGNAME=	${PORTVERSION}
-GH_COMMIT=	954ce53
+GH_COMMIT=	934ba39
 
 
 NO_BUILD=	yes
