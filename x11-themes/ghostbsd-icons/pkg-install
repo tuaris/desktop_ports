@@ -7,6 +7,9 @@
     # copy icons from ghostbsd dir to hicolor for Glogo in mate panel
     cp -af /usr/local/share/icons/ghostbsd/* /usr/local/share/icons/hicolor
 
+    # update icon cache for hicolor for G logo in panel
+    gtk-update-icon-cache -f /usr/local/share/icons/hicolor
+
     # remove unwanted icons 
     rm -rf /usr/local/share/icons/Quid
     rm -rf /usr/local/share/icons/HighContrast
