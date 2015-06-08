@@ -15,9 +15,6 @@ LICENSE =	BSD
 
 USE_GITHUB=	yes
 GH_ACCOUNT=	GhostBSD
-GH_PROJECT=	${PORTNAME}
-GH_TAGNAME=	${PORTVERSION}
-GH_COMMIT=	f9c0544
 
 RUN_DEPENDS=	glib-compile-schemas:${PORTSDIR}/devel/glib-2.0 \
 		 dpkg:${PORTSDIR}/archivers/dpkg
