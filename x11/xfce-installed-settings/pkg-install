@@ -27,8 +27,7 @@ case "$2" in
 file:///root/Downloads Downloads
 file:///root/Movies Movies
 file:///root/Music Music
-file:///root/Pictures Pictures
-" > /root/.gtk-bookmarks
+file:///root/Pictures Pictures" > /root/.gtk-bookmarks
 
     mkdir -p /root/Documents
     mkdir -p /root/Downloads
@@ -40,8 +39,7 @@ file:///root/Pictures Pictures
 file:///home/ghostbsd/Downloads Downloads
 file:///home/ghostbsd/Movies Movies
 file:///home/ghostbsd/Music Music
-file:///home/ghostbsd/Pictures Pictures
-" > /home/ghostbsd/.gtk-bookmarks
+file:///home/ghostbsd/Pictures Pictures" > /home/ghostbsd/.gtk-bookmarks
 
     chmod g+rwx /home/ghostbsd/.gtk-bookmarks
     mkdir -p /home/ghostbsd/Documents
