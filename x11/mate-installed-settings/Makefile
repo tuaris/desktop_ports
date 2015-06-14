@@ -1,12 +1,12 @@
 # New ports collection makefile for: mate settings in installed mode
-# Date created:        17 may 2015
+# Date created:        14 jun 2015
 # Whom:                angelescuo@yahoo.com
 #
 # $FreeBSD$
 #
 
 PORTNAME= 	mate-installed-settings
-PORTVERSION=	1.4
+PORTVERSION=	1.5
 CATEGORIES=	x11
 
 MAINTAINER=	angelescuo@yahoo.com
