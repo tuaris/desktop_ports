@@ -6,7 +6,7 @@
 #
 
 PORTNAME=	ghostbsd-irc
-PORTVERSION=	1.1
+PORTVERSION=	1.2
 CATEGORIES=	irc
 
 MAINTAINER=	angelescuo@yahoo.com
