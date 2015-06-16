@@ -75,6 +75,21 @@ packages_settings()
     fi
 }
 
+root_gtk_bookmarks()
+{
+    printf "file:///root/Documents Documents
+file:///root/Downloads Downloads
+file:///root/Movies Movies
+file:///root/Music Music
+file:///root/Pictures Pictures " > /root/.gtk-bookmarks
+
+    mkdir -p /root/Documents
+    mkdir -p /root/Downloads
+    mkdir -p /root/Movies
+    mkdir -p /root/Music
+    mkdir -p /root/Pictures
+}
+
 case "$2" in
     POST-INSTALL)
     # backup old files from FreeBSD base system
@@ -87,6 +102,8 @@ case "$2" in
     patch_etc_files
     # apply packages settings
     packages_settings
+    # does .gtk_bookmarks for root
+    root_gtk_bookmarks
     ;;
     *)
     ;;
