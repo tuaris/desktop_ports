@@ -1,12 +1,12 @@
 # New ports collection makefile for: GhostBSD settings for grub2
-# Date created:        6 jun 2015
+# Date created:        29 jun 2015
 # Whom:                angelescuo@yahoo.com
 #
 # $FreeBSD$
 #
 
 PORTNAME= 	ghostbsd-grub2-settings
-PORTVERSION=	1.2
+PORTVERSION=	1.4
 CATEGORIES=	sysutils
 
 MAINTAINER=	angelescuo@yahoo.com
