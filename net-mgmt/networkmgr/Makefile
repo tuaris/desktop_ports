@@ -3,7 +3,7 @@
 
 
 PORTNAME=	networkmgr
-PORTVERSION=	0.6
+PORTVERSION=	0.9
 PORTREVISION=	0
 CATEGORIES=	net-mgmt
 MASTER_SITES=	https://github.com/GhostBSD/${PORTNAME}/archive/
@@ -15,12 +15,9 @@ LICENSE=	BSD
 
 USE_GITHUB=	yes
 GH_ACCOUNT=	GhostBSD
-GH_PROJECT=	${PORTNAME}
-GH_TAGNAME=	${PORTVERSION}
-GH_COMMIT=	e3dd752
-USE_PYTHON=	yes
-USE_PYDISTUTILS=	yes
 
-
+USES = python:2
+USE_PYTHON=	distutils autoplist
+USE_GNOME=	pygtk2
 
 .include <bsd.port.mk>
