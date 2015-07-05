@@ -9,7 +9,7 @@ fi
 
 # removes x-terminal-alternative needed for gksu
 if [ -e /usr/local/bin/cinnamon-terminal ] ; then
-    update-alternatives --altdir /usr/local/etc/alternatives --remove x-terminal-emulator /usr/local/bin/cinnamon-terminal
+    update-alternatives --altdir /usr/local/etc/alternatives --remove x-terminal-emulator /usr/local/bin/gnome-terminal
 fi
 
 exit 0
