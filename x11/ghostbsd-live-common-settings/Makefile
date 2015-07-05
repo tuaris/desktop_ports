@@ -1,5 +1,5 @@
 # New ports collection makefile for: ghostbsd common settings in live mode
-# Date created:        17 may 2015
+# Date created:        5 july 2015
 # Whom:                angelescuo@yahoo.com
 #
 # $FreeBSD$
@@ -24,4 +24,6 @@ RUN_DEPENDS= dpkg:${PORTSDIR}/archivers/dpkg \
 do-install:
 	@${MKDIR} -p ${STAGEDIR}/${PREFIX}/share/ghostbsd
 	@${CP} -R   ${WRKSRC}/ghostbsd/* ${STAGEDIR}/${PREFIX}/share/ghostbsd
+	@${MKDIR} -p ${STAGEDIR}/${PREFIX}/etc/polkit-1
+	@${CP} -R   ${WRKSRC}/etc/polkit-1/* ${STAGEDIR}/${PREFIX}/etc/polkit-1
 .include <bsd.port.mk>
