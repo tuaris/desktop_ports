@@ -30,6 +30,8 @@
 /boot/grub/themes/ghostbsd/terminal_box_sw.png
 /boot/grub/themes/ghostbsd/terminal_box_w.png
 /boot/grub/themes/ghostbsd/theme.txt
+etc/default/grub
 @dir /boot/grub/themes/ghostbsd
 @dir /boot/grub/themes
 @dir /boot/grub
+

@@ -6,7 +6,7 @@
 #
 
 PORTNAME= 	ghostbsd-grub2-settings
-PORTVERSION=	1.5
+PORTVERSION=	1.6
 CATEGORIES=	sysutils
 
 MAINTAINER=	angelescuo@yahoo.com
@@ -19,9 +19,10 @@ GH_ACCOUNT=	GhostBSD
 
 NO_BUILD=	yes
 
-RUN_DEPENDS=	grub-mkconfig:${PORTSDIR}/sysutils/grub2
+RUN_DEPENDS=	grub-mkconfig:${PORTSDIR}/sysutils/grub2-pcbsd
 
 do-install:
 	@${MKDIR} -p ${STAGEDIR}/boot/grub/themes/ghostbsd
+	@${MKDIR} -p ${STAGEDIR}/usr/local/etc/default
 	@${CP} -R   ${WRKSRC}/* ${STAGEDIR}/
 .include <bsd.port.mk>
