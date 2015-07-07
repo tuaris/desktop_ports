@@ -19,7 +19,6 @@ share/ghostbsd/common-installed-settings/base/patches/devd.conf.extra
 share/ghostbsd/common-installed-settings/base/patches/make.conf.extra
 share/ghostbsd/common-installed-settings/base/patches/rc.conf.extra
 share/ghostbsd/common-installed-settings/base/patches/sysctl.conf.extra
-share/ghostbsd/common-installed-settings/packages/override/applications/SpiderOak.desktop
 share/ghostbsd/common-installed-settings/packages/override/applications/mc.desktop
 share/ghostbsd/common-installed-settings/packages/override/etc/X11/xorg.conf.orig
 share/ghostbsd/common-installed-settings/packages/override/etc/X11/xorg.conf.vbox
