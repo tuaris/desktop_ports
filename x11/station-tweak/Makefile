@@ -17,7 +17,7 @@ USE_GITHUB=	yes
 GH_ACCOUNT=	GhostBSD
 
 USES = python:2
-USE_PYTHON=	distutils autoplist
+USE_PYTHON=	distutils
 USE_GNOME=	pygtk2
 
 .include <bsd.port.mk>
