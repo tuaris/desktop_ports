@@ -9,7 +9,7 @@ CATEGORIES=	net-mgmt
 MASTER_SITES=	https://github.com/GhostBSD/${PORTNAME}/archive/
 
 MAINTAINER=	ericturgeon@ghostbsd.org
-COMMENT=	GTK network manager.
+COMMENT=	Mate configuration system.
 
 LICENSE=	BSD
 
