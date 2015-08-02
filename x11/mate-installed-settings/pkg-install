@@ -42,8 +42,6 @@ case "$2" in
     if [ ! -d /usr/local/share/mate-panel/layouts ]; then
         mkdir -p /usr/local/share/mate-panel/layouts
     fi
-    mv /usr/local/share/mate-panel/layouts/default.layout /usr/local/share/mate-panel/layouts/mate.layout
-    # cp -af /usr/local/share/ghostbsd/mate-installed-settings/mate-panel/panel-default-layout.mate /usr/local/share/mate-panel/layouts/default.layout
     ;;
 esac
 
