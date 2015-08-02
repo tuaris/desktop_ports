@@ -3,7 +3,7 @@
 
 
 PORTNAME=	station-tweak
-PORTVERSION=	0.1
+PORTVERSION=	0.2
 PORTREVISION=	0
 CATEGORIES=	net-mgmt
 MASTER_SITES=	https://github.com/GhostBSD/${PORTNAME}/archive/
