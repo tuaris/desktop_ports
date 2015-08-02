@@ -23,12 +23,12 @@ case "$2" in
     cp -af /usr/local/share/ghostbsd/mate-installed-settings/etc/polkit-1/* /usr/local/etc/polkit-1
 
     # overrites some of mate xml settings
-    for override in $(ls /usr/local/share/ghostbsd/mate-installed-settings/schemas) ; do
-        mv /usr/local/share/glib-2.0/schemas/$override \
-        /usr/local/share/ghostbsd/mate-installed-settings/schemas/$override.old
-        cp -af /usr/local/share/ghostbsd/mate-installed-settings/schemas/$override \
-        /usr/local/share/glib-2.0/schemas
-    done
+    # for override in $(ls /usr/local/share/ghostbsd/mate-installed-settings/schemas) ; do
+    #     mv /usr/local/share/glib-2.0/schemas/$override \
+    #     /usr/local/share/ghostbsd/mate-installed-settings/schemas/$override.old
+    #     cp -af /usr/local/share/ghostbsd/mate-installed-settings/schemas/$override \
+    #     /usr/local/share/glib-2.0/schemas
+    # done
 
     # compile schemas
     glib-compile-schemas /usr/local/share/glib-2.0/schemas
@@ -43,7 +43,7 @@ case "$2" in
         mkdir -p /usr/local/share/mate-panel/layouts
     fi
     mv /usr/local/share/mate-panel/layouts/default.layout /usr/local/share/mate-panel/layouts/mate.layout
-    cp -af /usr/local/share/ghostbsd/mate-installed-settings/mate-panel/panel-default-layout.mate /usr/local/share/mate-panel/layouts/default.layout
+    # cp -af /usr/local/share/ghostbsd/mate-installed-settings/mate-panel/panel-default-layout.mate /usr/local/share/mate-panel/layouts/default.layout
     ;;
 esac
 
