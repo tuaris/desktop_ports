@@ -19,7 +19,7 @@ restore_packages_settings()
 
 remove_files_from()
 {
-    for files in $(ls -l /usr/local/share/ghostbsd/common-live-settings/etc/rc.d); do
+    for files in $(ls /usr/local/share/ghostbsd/common-live-settings/etc/rc.d); do
         rm -f /etc/rc.d/$files
     done
 }
