@@ -18,6 +18,6 @@ GH_ACCOUNT=	GhostBSD
 
 USES = python:2
 USE_PYTHON=	distutils
-USE_GNOME=	pygtk2
+USE_GNOME=	pygtk2 intltool
 
 .include <bsd.port.mk>
