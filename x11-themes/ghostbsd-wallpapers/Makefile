@@ -6,7 +6,7 @@
 #
 
 PORTNAME=	ghostbsd-wallpapers
-PORTVERSION=	1.0
+PORTVERSION=	1.2
 CATEGORIES=	x11-themes
 
 MAINTAINER=	angelescuo@yahoo.com
@@ -21,4 +21,9 @@ NO_BUILD=	yes
 do-install:
 	@${MKDIR} -p ${STAGEDIR}${PREFIX}/share/backgrounds/ghostbsd 
 	@${CP} -PR ${WRKSRC}/*.jpg ${STAGEDIR}${PREFIX}/share/backgrounds/ghostbsd
+	@${MKDIR} -p ${STAGEDIR}${PREFIX}/share/mate-background-properties
+	@${CP} -PR ${WRKSRC}/ghostbsd.xml ${STAGEDIR}${PREFIX}/share/mate-background-properties
+	@${MKDIR} -p ${STAGEDIR}${PREFIX}/share/gnome-background-properties
+	@${CP} -PR ${WRKSRC}/ghostbsd.xml ${STAGEDIR}${PREFIX}/share/gnome-background-properties
+
 .include <bsd.port.mk>

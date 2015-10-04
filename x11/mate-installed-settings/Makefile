@@ -24,8 +24,8 @@ NO_BUILD=	yes
 do-install:
 	@${MKDIR} -p ${STAGEDIR}/${PREFIX}/share/ghostbsd/mate-installed-settings
 	@${CP} -R   ${WRKSRC}/ghostbsd/* ${STAGEDIR}/${PREFIX}/share/ghostbsd/mate-installed-settings
-	@${MKDIR} -p ${STAGEDIR}/${PREFIX}/share/mate-background-properties
-	@${CP} ${WRKSRC}/mate-background-properties/ghostbsd.xml ${STAGEDIR}/${PREFIX}/share/mate-background-properties
+	#@${MKDIR} -p ${STAGEDIR}/${PREFIX}/share/mate-background-properties
+	#@${CP} ${WRKSRC}/mate-background-properties/ghostbsd.xml ${STAGEDIR}/${PREFIX}/share/mate-background-properties
 	@${MKDIR} -p ${STAGEDIR}/${PREFIX}/share/glib-2.0/schemas
 	@${CP} -R   ${WRKSRC}/schemas/* ${STAGEDIR}/${PREFIX}/share/glib-2.0/schemas
 .include <bsd.port.mk>
