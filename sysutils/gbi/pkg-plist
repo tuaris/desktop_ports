@@ -1,4 +1,5 @@
 bin/gbi
+lib/gbi/addUser.py
 lib/gbi/backend-query/detect-laptop.sh
 lib/gbi/backend-query/detect-nics.sh
 lib/gbi/backend-query/detect-sheme.sh
@@ -184,7 +185,6 @@ lib/gbi/timezone/city/Pacific
 lib/gbi/timezone/continent
 lib/gbi/use_disk.py
 lib/gbi/use_zfs.py
-lib/gbi/user.py
 %%PYTHON_SITELIBDIR%%/gbi-3.0-py%%PYTHON_VER%%.egg-info/PKG-INFO
 %%PYTHON_SITELIBDIR%%/gbi-3.0-py%%PYTHON_VER%%.egg-info/SOURCES.txt
 %%PYTHON_SITELIBDIR%%/gbi-3.0-py%%PYTHON_VER%%.egg-info/dependency_links.txt
