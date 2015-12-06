@@ -30,7 +30,7 @@ case "$2" in
         # we  rewrite URL_BASE
         sed -i "" "s@#URL_BASE=http://yourdomain.com/poudriere/@URL_BASE=http://127.0.0.1/poudriere/@g" /usr/local/etc/poudriere.conf 
     fi
-    # copy grub config 
+    # 
     ;;
 esac
 
