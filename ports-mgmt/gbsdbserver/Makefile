@@ -1,12 +1,12 @@
 # New ports collection makefile for: ghostbsd packages build server settings
-# Date created:        1 dec 2015
+# Date created:        6 dec 2015
 # Whom:                angelescuo@yahoo.com
 #
 # $FreeBSD$
 #
 
 PORTNAME= 	gbsdbserver
-PORTVERSION=	1.0
+PORTVERSION=	1.1
 CATEGORIES=	ports-mgmt
 
 MAINTAINER=	angelescuo@yahoo.com
@@ -23,6 +23,6 @@ RUN_DEPENDS=	poudriere:${PORTSDIR}/ports-mgmt/poudriere \
 NO_BUILD=	yes
 
 do-install:
-		@${MKDIR} -p ${STAGEDIR}${LOCALDIR}${ETCDIR}
+	@${INSTALL_SCRIPT} ${WRKSRC}/scripts/* ${STAGEDIR}/${PREFIX}/bin
 
 .include <bsd.port.mk>

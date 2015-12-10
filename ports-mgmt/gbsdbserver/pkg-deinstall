@@ -16,4 +16,8 @@ if [ -d /usr/local/etc/ssl/certs ] ; then
       rm -Rf /usr/local/etc/ssl/certs
 fi
 
+# removes nginx config files
+
+# removes portmaster poudriere nginx
+
 exit 0
