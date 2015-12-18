@@ -109,6 +109,11 @@ lib/gbi/logo.png
 lib/gbi/partition.py
 lib/gbi/partition_handler.py
 lib/gbi/root.py
+lib/gbi/slide-images/Exaile.png
+lib/gbi/slide-images/G-logo.png
+lib/gbi/slide-images/Mozilla-Firefox-Start-Page.png
+lib/gbi/slide-images/Shotwell.png
+lib/gbi/slides.py
 lib/gbi/slides/accessibility.html
 lib/gbi/slides/browse.html
 lib/gbi/slides/chat.html
