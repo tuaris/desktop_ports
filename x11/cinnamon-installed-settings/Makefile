@@ -6,7 +6,7 @@
 #
 
 PORTNAME= 	cinnamon-installed-settings
-PORTVERSION=	1.2
+PORTVERSION=	1.3
 CATEGORIES=	x11
 
 MAINTAINER=	angelescuo@yahoo.com
