@@ -6,7 +6,7 @@
 #
 
 PORTNAME= 	inxi
-PORTVERSION=	2.2.25
+PORTVERSION=	2.2.31
 CATEGORIES=	sysutils
 
 MAINTAINER=	angelescuo@yahoo.com
