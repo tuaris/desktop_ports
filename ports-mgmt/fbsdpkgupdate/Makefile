@@ -1,4 +1,4 @@
-# New ports collection makefile for: ghostbsd-bug-report
+# New ports collection makefile for: fbsdpkgupdate
 # Date created:        Saturday, January 02 2016
 # Whom:                ericturgeon@ghostbsd.com
 #
@@ -6,20 +6,20 @@
 #
 
 PORTNAME=	fbsdpkgupdate
-PORTVERSION=	0.1
-CATEGORIES=	ports-mgmt
-
+PORTVERSION=	0.2
+PORTREVISION=	0
+CATEGORIES=	net-mgmt
+MASTER_SITES=	https://github.com/GhostBSD/${PORTNAME}/archive/
 
 MAINTAINER=	ericturgeon@ghostbsd.com
-COMMENT= GhostBSD bug report tool
+COMMENT= Tool to create pkg update list
 LICENSE = BSD
 
 USE_GITHUB=	yes
 GH_ACCOUNT=	GhostBSD
 
-NO_BUILD=	yes 
-
-do-install:
-		@${INSTALL_DATA} ${WRKSRC}/fbsdpkgupdate ${STAGEDIR}${PREFIX}/sbin
+USES = python:2
+USE_PYTHON=	distutils
+USE_GNOME=	pygtk2
 
 .include <bsd.port.mk>
