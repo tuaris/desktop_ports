@@ -8,7 +8,7 @@
 PORTNAME=	fbsdpkgupdate
 PORTVERSION=	0.2
 PORTREVISION=	0
-CATEGORIES=	net-mgmt
+CATEGORIES=	ports-mgmt
 MASTER_SITES=	https://github.com/GhostBSD/${PORTNAME}/archive/
 
 MAINTAINER=	ericturgeon@ghostbsd.com
