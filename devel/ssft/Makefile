@@ -20,6 +20,7 @@ MAN1=		ssft.sh.1
 NO_BUILD=	yes
 
 RUN_DEPENDS=	zenity:${PORTSDIR}/x11/zenity
+BUILD_DEPENDS=	msgfmt:${PORTSDIR}/devel/gettext-tools
 
 pre-build:
 # Install .mo files
