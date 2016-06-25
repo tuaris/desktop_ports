@@ -5,11 +5,9 @@ etc/PolicyKit/PolicyKit.conf
 etc/polkit-1/localauthority/50-local.d/org.freedesktop.consolekit.pkla
 etc/xdg/autostart/desktopsound.desktop
 share/ghostbsd/common-installed-settings/base/override/COPYRIGHT
-share/ghostbsd/common-installed-settings/base/override/boot/beastie.4th
-share/ghostbsd/common-installed-settings/base/override/boot/brand.4th
+share/ghostbsd/common-installed-settings/base/override/boot/brand-gbsd.4th
 share/ghostbsd/common-installed-settings/base/override/boot/loader.conf
-share/ghostbsd/common-installed-settings/base/override/boot/menu-commands.4th
-share/ghostbsd/common-installed-settings/base/override/boot/menu.4th
+share/ghostbsd/common-installed-settings/base/override/boot/logo-gbsd.4th
 share/ghostbsd/common-installed-settings/base/override/boot/splash.pcx
 share/ghostbsd/common-installed-settings/base/override/etc/devfs.conf
 share/ghostbsd/common-installed-settings/base/override/etc/devfs.rules
@@ -29,3 +27,4 @@ share/sounds/ghostbsd/desktop-login.ogg
 @dir share/ghostbsd/common-installed-settings/base/backup/etc
 @dir share/ghostbsd/common-installed-settings/packages/backup/applications
 @dir share/ghostbsd/common-installed-settings/packages/backup/etc/X11
+
