@@ -22,5 +22,5 @@ NO_BUILD=	yes
 
 do-install:
 	@${MKDIR} -p ${STAGEDIR}/${PREFIX}/share/ghostbsd/kde-installed-settings
-	@${CP} -R   ${WRKSRC}/ghostbsd/* ${STAGEDIR}/${PREFIX}/share/ghostbsd/kde-installed-settings
+	@${CP} -R   ${WRKSRC}/* ${STAGEDIR}/${PREFIX}/share/ghostbsd/kde-installed-settings
 .include <bsd.port.mk>
