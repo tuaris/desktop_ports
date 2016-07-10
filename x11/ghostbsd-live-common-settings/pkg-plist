@@ -2,5 +2,6 @@ etc/polkit-1/localauthority/10-vendor.d/10-live-cd.pkla
 share/ghostbsd/common-live-settings/base/backup/etc/rc.d/mountcritlocal
 share/ghostbsd/common-live-settings/base/override/etc/rc.d/mountcritlocal
 share/ghostbsd/common-live-settings/config-live-settings
+share/ghostbsd/common-live-settings/etc/rc.d/cheatcodes
 share/ghostbsd/common-live-settings/etc/rc.d/unionfs
 share/ghostbsd/common-live-settings/etc/rc.d/uzip
