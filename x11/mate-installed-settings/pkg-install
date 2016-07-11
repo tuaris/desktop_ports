@@ -10,6 +10,9 @@ case "$2" in
     # copy dmrc from ghostbsd dir to /usr/share/skel
     cp -af /usr/local/share/ghostbsd/mate-installed-settings/etc/skel/dmrc /usr/share/skel/dot.dmrc
 
+    # copy xinitrc from ghostbsd dir to /usr/share/skel
+    cp -af /usr/local/share/ghostbsd/mate-installed-settings/etc/skel/xinitrc /usr/share/skel/dot.xinitrc
+
     # copy grub config 
     if [ ! -d /usr/local/etc/default ]; then
         mkdir -p /usr/local/etc/default
