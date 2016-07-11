@@ -16,7 +16,8 @@ LICENSE =	BSD
 USE_GITHUB=	yes
 GH_ACCOUNT=	GhostBSD
 
-RUN_DEPENDS=	slim:${PORTSDIR}/x11/slim
+RUN_DEPENDS=	slim:${PORTSDIR}/x11/slim \
+		iso_to_hd:${PORTSDIR}/x11/ghostbsd-installed-common-settings
 
 NO_BUILD=	yes
 
