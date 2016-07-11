@@ -9,7 +9,7 @@ case "$2" in
             /usr/local/etc/slim.conf
     fi
     if [ -f /etc/rc.conf ]; then
-        echo 'slim_enabled="YES"' >> /etc/rc.conf
+        echo 'slim_enable="YES"' >> /etc/rc.conf
     fi
         ;;
 esac
