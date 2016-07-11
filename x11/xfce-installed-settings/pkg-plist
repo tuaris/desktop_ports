@@ -1,5 +1,6 @@
 share/ghostbsd/xfce-installed-settings/etc/default/grub
 share/ghostbsd/xfce-installed-settings/etc/skel/dmrc
+share/ghostbsd/xfce-installed-settings/etc/skel/xinitrc
 share/ghostbsd/xfce-installed-settings/etc/skel/gtkrc-2.0
 share/ghostbsd/xfce-installed-settings/etc/xdg/Terminal/terminalrc
 share/ghostbsd/xfce-installed-settings/etc/xdg/Thunar/thunarrc
