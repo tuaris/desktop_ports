@@ -8,6 +8,9 @@ case "$2" in
             -e  "s/current_theme       default/current_theme       ghostbsd/g" \
             /usr/local/etc/slim.conf
     fi
+    if [ -f /etc/rc.conf ]; then
+        sed - '' -e "s/#gdm_enable/slim_enable/g" /etc/rc.conf
+    fi
         ;;
 esac
 
