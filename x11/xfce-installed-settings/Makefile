@@ -6,7 +6,7 @@
 #
 
 PORTNAME= 	xfce-installed-settings
-PORTVERSION=	1.7
+PORTVERSION=	1.8
 CATEGORIES=	x11
 
 MAINTAINER=	angelescuo@yahoo.com
