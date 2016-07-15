@@ -18,8 +18,8 @@ case "$2" in
     cp -af /usr/local/share/ghostbsd/kde-settings/etc/polkit-1/* /usr/local/etc/polkit-1
 
     # kde
-    cp -af /usr.local/share/ghostbsd/kde-settings/etc/kde4rc /usr/local/etc/
-    cp -af /usr.local/share/ghostbsd/kde-settings/etc/kde-user-profile /usr/local/etc/
+    cp -af /usr/local/share/ghostbsd/kde-settings/etc/kde4rc /usr/local/etc/
+    cp -af /usr/local/share/ghostbsd/kde-settings/etc/kde-user-profile /usr/local/etc/
         
     # set x-terminal-emulator alternative for gksu
     if [ -e /usr/local/bin/konsole ] ; then
