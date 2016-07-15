@@ -19,6 +19,6 @@ GH_ACCOUNT=	GhostBSD
 NO_BUILD=	yes
 
 do-install:
-	@${MKDIR} -p ${STAGEDIR}/${PREFIX}/share/ghostbsd/kde-live-settings
-	@${CP} -R   ${WRKSRC}/* ${STAGEDIR}/${PREFIX}/share/ghostbsd/kde-installed-settings
+	@${MKDIR} -p ${STAGEDIR}/${PREFIX}/share/ghostbsd/kde-settings
+	@${CP} -R   ${WRKSRC}/* ${STAGEDIR}/${PREFIX}/share/ghostbsd/kde-settings
 .include <bsd.port.mk>
