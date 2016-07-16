@@ -21,6 +21,11 @@ case "$2" in
     if [ -e /usr/local/bin/konsole ] ; then
         update-alternatives --altdir /usr/local/etc/alternatives --install /usr/local/bin/x-terminal-emulator x-terminal-emulator /usr/local/bin/konsole 50
     fi
+    
+    # enable virtuoso 
+    if [ -f /usr/local/etc/rc.d/virtuoso ]; then
+        echo 'virtuoso_enable="YES"' >> /etc/rc.conf
+    fi
     ;;
 esac
 
