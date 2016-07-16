@@ -12,8 +12,6 @@ share/ghostbsd/kde-settings/share/apps/desktoptheme/oxygen/metadata.desktop
 share/ghostbsd/kde-settings/share/apps/dolphin/dolphinui.rc
 share/ghostbsd/kde-settings/share/apps/konsole/GhostBSD.colorscheme
 share/ghostbsd/kde-settings/share/apps/konsole/Shell.profile
-share/ghostbsd/kde-settings/share/apps/plasma-desktop/init/00-defaultLayout.js
-share/ghostbsd/kde-settings/share/apps/plasma/layout-templates/org.kde.plasma-desktop.defaultPanel/contents/layout.js
 share/ghostbsd/kde-settings/share/apps/plasma/plasmoids/lockout/contents/config/main.xml
 share/ghostbsd/kde-settings/share/apps/plasma/plasmoids/lockout/contents/ui/config.ui
 share/ghostbsd/kde-settings/share/apps/plasma/plasmoids/lockout/contents/ui/data.js
