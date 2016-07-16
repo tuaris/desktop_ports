@@ -6,7 +6,7 @@
 #
 
 PORTNAME= 	kde-installed-settings
-PORTVERSION=	1.4
+PORTVERSION=	1.5
 CATEGORIES=	x11
 
 MAINTAINER=	angelescuo@yahoo.com
@@ -21,6 +21,8 @@ RUN_DEPENDS=	dpkg:${PORTSDIR}/archivers/dpkg
 NO_BUILD=	yes
 
 do-install:
-	@${MKDIR} -p ${STAGEDIR}/${PREFIX}/share/ghostbsd/kde-settings
-	@${CP} -R   ${WRKSRC}/* ${STAGEDIR}/${PREFIX}/share/ghostbsd/kde-settings
+	@${MKDIR} -p ${STAGEDIR}/${PREFIX}/share/ghostbsd/kde-settings/etc
+	@${CP} -Rf   ${WRKSRC}/etc ${STAGEDIR}/${PREFIX}/share/ghostbsd/kde-settings
+	@${MKDIR} -p ${STAGEDIR}/${PREFIX}/share/apps
+	@${CP} -Rf   ${WRKSRC}/share/apps/* ${STAGEDIR}/${PREFIX}/share/apps
 .include <bsd.port.mk>
