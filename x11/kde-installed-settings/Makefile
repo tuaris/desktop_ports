@@ -6,7 +6,7 @@
 #
 
 PORTNAME= 	kde-installed-settings
-PORTVERSION=	1.1
+PORTVERSION=	1.4
 CATEGORIES=	x11
 
 MAINTAINER=	angelescuo@yahoo.com
