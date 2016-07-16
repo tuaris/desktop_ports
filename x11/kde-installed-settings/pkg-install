@@ -25,6 +25,7 @@ case "$2" in
     # enable virtuoso 
     if [ -f /usr/local/etc/rc.d/virtuoso ]; then
         echo 'virtuoso_enable="YES"' >> /etc/rc.conf
+        echo 'virtuoso_config="/usr/local/lib/virtuoso/db/virtuoso.ini"' >> /etc/rc.conf
     fi
     ;;
 esac
