@@ -19,7 +19,8 @@ GH_ACCOUNT=	GhostBSD
 MAN1=		inxi.1
 NO_BUILD=	yes
 
-RUN_DEPENDS=	gawk:${PORTSDIR}/lang/gawk
+RUN_DEPENDS=	gawk:${PORTSDIR}/lang/gawk \
+		bash:${PORTSDIR}/shells/bash
 
 do-install:
 	@${INSTALL_SCRIPT} ${WRKSRC}/src/* ${STAGEDIR}/${PREFIX}/bin
