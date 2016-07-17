@@ -2,7 +2,11 @@
 
 case "$2" in
     POST-INSTALL)
-    # copy dmrc from ghostbsd dir to /usr/share/skel
+    
+    # copy kde skel to /usr/share/skel
+    cp -Rf /usr/local/share/ghostbsd/kde-settings/etc/skel/.config /usr/share/skel/
+
+    # cp dmrc to dot.dmrc under /usr/share/skel
     cp -af /usr/local/share/ghostbsd/kde-settings/etc/skel/dmrc /usr/share/skel/dot.dmrc
     
     # copy grub config 
@@ -11,21 +15,9 @@ case "$2" in
     fi
     cp -af /usr/local/share/ghostbsd/kde-settings/etc/default/*   /usr/local/etc/default
     
-    #copy local policy 
-    if [ ! -d /usr/local/etc/polkit-1 ]; then
-        mkdir -p /usr/local/etc/polkit-1
-    fi
-    cp -af /usr/local/share/ghostbsd/kde-settings/etc/polkit-1/* /usr/local/etc/polkit-1
-
-    # set x-terminal-emulator alternative for gksu
+    # set x-terminal-emulator alternative 
     if [ -e /usr/local/bin/konsole ] ; then
         update-alternatives --altdir /usr/local/etc/alternatives --install /usr/local/bin/x-terminal-emulator x-terminal-emulator /usr/local/bin/konsole 50
-    fi
-    
-    # enable virtuoso 
-    if [ -f /usr/local/etc/rc.d/virtuoso ]; then
-        echo 'virtuoso_enable="YES"' >> /etc/rc.conf
-        echo 'virtuoso_config="/usr/local/lib/virtuoso/db/virtuoso.ini"' >> /etc/rc.conf
     fi
     ;;
 esac
