@@ -5,6 +5,7 @@ case "$2" in
     
     # copy kde skel to /usr/share/skel
     cp -Rf /usr/local/share/ghostbsd/kde-settings/etc/skel/.local /usr/share/skel/
+    cp -Rf /usr/local/share/ghostbsd/kde-settings/etc/skel/.kde4 /usr/share/skel/
 
     # cp dmrc to dot.dmrc under /usr/share/skel
     cp -af /usr/local/share/ghostbsd/kde-settings/etc/skel/dmrc /usr/share/skel/dot.dmrc
