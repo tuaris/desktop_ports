@@ -5,23 +5,24 @@
 # $FreeBSD$
 #
 
-PORTNAME= 	ghostbsd-kdm-theme
+PORTNAME=	ghostbsd-kdm-theme
 PORTVERSION=	1.0
 CATEGORIES=	x11
 
 MAINTAINER=	angelescuo@yahoo.com
 COMMENT=	GhostBSD theme for kdm and autologin too
-LICENSE =	BSD
+
+LICENSE=	BSD
 
 USE_GITHUB=	yes
 GH_ACCOUNT=	GhostBSD
 
-RUN_DEPENDS=	kdm:${PORTSDIR}/x11/kde4-workspace \
-		iso_to_hd:${PORTSDIR}/x11/ghostbsd-installed-common-settings
+RUN_DEPENDS=	kdm:x11/kde4-workspace \
+		iso_to_hd:x11/ghostbsd-installed-common-settings
 
 NO_BUILD=	yes
 
 do-install:
-	@${MKDIR} -p ${STAGEDIR}/${PREFIX}/share/apps/kdm/themes
-	@${CP} -R   ${WRKSRC}/* ${STAGEDIR}/${PREFIX}/share/apps/kdm/themes/ghostbsd/
+	${MKDIR} ${STAGEDIR}/${PREFIX}/share/apps/kdm/themes
+	${CP} -R   ${WRKSRC}/* ${STAGEDIR}/${PREFIX}/share/apps/kdm/themes/ghostbsd/
 .include <bsd.port.mk>

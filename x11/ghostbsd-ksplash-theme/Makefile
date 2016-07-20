@@ -5,23 +5,24 @@
 # $FreeBSD$
 #
 
-PORTNAME= 	ghostbsd-ksplash-theme
+PORTNAME=	ghostbsd-ksplash-theme
 PORTVERSION=	1.1
 CATEGORIES=	x11
 
 MAINTAINER=	angelescuo@yahoo.com
 COMMENT=	GhostBSD theme for ksplash
-LICENSE =	BSD
+
+LICENSE=	BSD
 
 USE_GITHUB=	yes
 GH_ACCOUNT=	GhostBSD
 
-RUN_DEPENDS=	/usr/local/share/apps/ksplash/Themes/Default/Theme.rc:${PORTSDIR}/x11/kde4-base-artwork \
-		iso_to_hd:${PORTSDIR}/x11/ghostbsd-installed-common-settings
+RUN_DEPENDS=	/usr/local/share/apps/ksplash/Themes/Default/Theme.rc:x11-themes/kde4-base-artwork \
+		iso_to_hd:x11/ghostbsd-installed-common-settings
 
 NO_BUILD=	yes
 
 do-install:
-	@${MKDIR} -p ${STAGEDIR}/${PREFIX}/share/apps/ksplash/Themes
-	@${CP} -R   ${WRKSRC}/Themes/* ${STAGEDIR}/${PREFIX}/share/apps/ksplash/Themes/
+	${MKDIR} ${STAGEDIR}/${PREFIX}/share/apps/ksplash/Themes
+	${CP} -R  ${WRKSRC}/Themes/* ${STAGEDIR}/${PREFIX}/share/apps/ksplash/Themes/
 .include <bsd.port.mk>
