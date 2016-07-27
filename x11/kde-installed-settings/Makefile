@@ -5,25 +5,26 @@
 # $FreeBSD$
 #
 
-PORTNAME= 	kde-installed-settings
-PORTVERSION=	1.10
+PORTNAME=	kde-installed-settings
+PORTVERSION=	1.11
 CATEGORIES=	x11
 
 MAINTAINER=	angelescuo@yahoo.com
 COMMENT=	GhostBSD KDE settings in installed mode
-LICENSE =	BSD
+
+LICENSE=	BSD
 
 USE_GITHUB=	yes
 GH_ACCOUNT=	GhostBSD
 
-RUN_DEPENDS=	dpkg:${PORTSDIR}/archivers/dpkg \
-		iso_to_hd:${PORTSDIR}/x11/ghostbsd-installed-common-settings
+RUN_DEPENDS=	dpkg:archivers/dpkg \
+		iso_to_hd:x11/ghostbsd-installed-common-settings
 
 NO_BUILD=	yes
 
 do-install:
-	@${MKDIR} -p ${STAGEDIR}/${PREFIX}/share/ghostbsd/kde-settings/etc
-	@${CP} -Rf   ${WRKSRC}/etc ${STAGEDIR}/${PREFIX}/share/ghostbsd/kde-settings
-	@${MKDIR} -p ${STAGEDIR}/${PREFIX}/share/apps
-	@${CP} -Rf   ${WRKSRC}/share/apps/* ${STAGEDIR}/${PREFIX}/share/apps
+	${MKDIR} ${STAGEDIR}/${PREFIX}/share/ghostbsd/kde-settings/etc
+	${CP} -Rf   ${WRKSRC}/etc ${STAGEDIR}/${PREFIX}/share/ghostbsd/kde-settings
+	${MKDIR} ${STAGEDIR}/${PREFIX}/share/apps
+	${CP} -Rf   ${WRKSRC}/share/apps/* ${STAGEDIR}/${PREFIX}/share/apps
 .include <bsd.port.mk>

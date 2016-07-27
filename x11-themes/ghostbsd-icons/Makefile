@@ -10,10 +10,11 @@ PORTVERSION=	1.2
 CATEGORIES=	x11-themes
 
 MAINTAINER=	angelescuo@yahoo.com
-COMMENT= GhostBSD icons for mate flavour
+COMMENT=	GhostBSD icons for mate flavour
+
 LICENSE=	CCBYSA
 LICENSE_NAME=	CREATIVE COMMON
-LICENSE_PERMS= dist-mirror pkg-mirror auto-accept
+LICENSE_PERMS=	dist-mirror pkg-mirror auto-accept
 LICENSE_FILE=	${FILESDIR}/LICENSE
 LICENSE_DISTFILES=	${DISTNAME}${EXTRACT_SUFX}
 
@@ -23,6 +24,6 @@ GH_ACCOUNT=	GhostBSD
 NO_BUILD=	yes
 
 do-install:
-	@${MKDIR} -p ${STAGEDIR}${PREFIX}/share/icons/
-	@${CP} -R ${WRKSRC}/icons/* ${STAGEDIR}${PREFIX}/share/icons
+	${MKDIR} ${STAGEDIR}${PREFIX}/share/icons/
+	${CP} -R ${WRKSRC}/icons/* ${STAGEDIR}${PREFIX}/share/icons
 .include <bsd.port.mk>

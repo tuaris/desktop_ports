@@ -5,13 +5,14 @@
 # $FreeBSD$
 #
 
-PORTNAME= 	gbsdbserver
+PORTNAME=	gbsdbserver
 PORTVERSION=	1.1
 CATEGORIES=	ports-mgmt
 
 MAINTAINER=	angelescuo@yahoo.com
 COMMENT=	GhostBSD packages build server settings
-LICENSE =	BSD
+
+LICENSE=	BSD
 
 USE_GITHUB=	yes
 GH_ACCOUNT=	GhostBSD
@@ -24,5 +25,4 @@ NO_BUILD=	yes
 
 do-install:
 	@${INSTALL_SCRIPT} ${WRKSRC}/scripts/* ${STAGEDIR}/${PREFIX}/bin
-
 .include <bsd.port.mk>

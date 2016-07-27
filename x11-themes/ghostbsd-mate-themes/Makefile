@@ -10,8 +10,9 @@ PORTVERSION=	1.4
 CATEGORIES=	x11-themes
 
 MAINTAINER=	angelescuo@yahoo.com
-COMMENT= GhostBSD themes for mate flavour
-LICENSE = BSD
+COMMENT=	GhostBSD themes for mate flavour
+
+LICENSE=	BSD
 
 USE_GITHUB=	yes
 GH_ACCOUNT=	GhostBSD
@@ -19,6 +20,6 @@ GH_ACCOUNT=	GhostBSD
 NO_BUILD=	yes
 
 do-install:
-	@${MKDIR} -p ${STAGEDIR}${PREFIX}/share/themes/
-	@${CP} -R ${WRKSRC}/themes/* ${STAGEDIR}${PREFIX}/share/themes
+	${MKDIR} ${STAGEDIR}${PREFIX}/share/themes/
+	${CP} -R ${WRKSRC}/themes/* ${STAGEDIR}${PREFIX}/share/themes
 .include <bsd.port.mk>

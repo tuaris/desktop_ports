@@ -5,13 +5,14 @@
 # $FreeBSD$
 #
 
-PORTNAME= 	kde-live-settings
+PORTNAME=	kde-live-settings
 PORTVERSION=	1.0
 CATEGORIES=	x11
 
 MAINTAINER=	angelescuo@yahoo.com
 COMMENT=	GhostBSD kde settings in live mode
-LICENSE =	BSD
+
+LICENSE=	BSD
 
 USE_GITHUB=	yes
 GH_ACCOUNT=	GhostBSD
@@ -19,6 +20,6 @@ GH_ACCOUNT=	GhostBSD
 NO_BUILD=	yes
 
 do-install:
-	@${MKDIR} -p ${STAGEDIR}/${PREFIX}/share/config
-	@${CP} -R   ${WRKSRC}/share/config/* ${STAGEDIR}/${PREFIX}/share/config
+	${MKDIR} ${STAGEDIR}/${PREFIX}/share/config
+	${CP} -R   ${WRKSRC}/share/config/* ${STAGEDIR}/${PREFIX}/share/config
 .include <bsd.port.mk>
