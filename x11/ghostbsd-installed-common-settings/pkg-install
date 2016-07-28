@@ -49,6 +49,7 @@ freebsd_overrides()
 packages_overrides()
 {
     cp -af /usr/local/share/ghostbsd/common-installed-settings/packages/override/etc/* /etc
+    cp -af /usr/local/share/ghostbsd/common-installed-settings/packages/override/etc/rc.d/* /etc/rc.d
     cp -af /usr/local/share/ghostbsd/common-installed-settings/packages/override/applications/* \
     /usr/local/share/applications
 }

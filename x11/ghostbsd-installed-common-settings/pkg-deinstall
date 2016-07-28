@@ -15,6 +15,11 @@ restore_freebsd()
         fi
     done
 
+    # removes virtualbox init script
+    if [ -f /etc/rc.d/virtualbox ]; then
+        rm -f /etc/rc.d/virtualbox
+    fi
+
     # restore from original packages files
     if [ -d /usr/local/share/ghostbsd/common-installed-settings/packages/backup/etc ] ; then
         cp -af /usr/local/share/ghostbsd/common-installed-settings/packages/backup/etc/* /etc

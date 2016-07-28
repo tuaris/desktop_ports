@@ -14,6 +14,7 @@ share/ghostbsd/common-installed-settings/base/override/boot/splash.pcx
 share/ghostbsd/common-installed-settings/base/override/etc/devfs.rules
 share/ghostbsd/common-installed-settings/base/override/etc/login.conf
 share/ghostbsd/common-installed-settings/base/override/etc/motd
+share/ghostbsd/common-installed-settings/base/override/etc/rc.d/virtualbox
 share/ghostbsd/common-installed-settings/base/patches/devd.conf.extra
 share/ghostbsd/common-installed-settings/base/patches/make.conf.extra
 share/ghostbsd/common-installed-settings/base/patches/profile.extra
@@ -26,4 +27,3 @@ share/sounds/ghostbsd/desktop-login.ogg
 @dir share/ghostbsd/common-installed-settings/base/backup/boot
 @dir share/ghostbsd/common-installed-settings/packages/backup/applications
 @dir share/ghostbsd/common-installed-settings/packages/backup/etc/X11
-
