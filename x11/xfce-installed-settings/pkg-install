@@ -5,9 +5,6 @@ case "$2" in
     # copy dmrc from ghostbsd dir to /usr/share/skel
     cp -af /usr/local/share/ghostbsd/xfce-installed-settings/etc/skel/dmrc /usr/share/skel/dot.dmrc
 
-    # copy xinitrc from ghostbsd dir to /usr/share/skel
-    cp -af /usr/local/share/ghostbsd/xfce-installed-settings/etc/skel/xinitrc /usr/share/skel/dot.xinitrc
-
     # copy gtkrc-2.0 from ghostbsd dir to /usr/share/skel
     cp -af /usr/local/share/ghostbsd/xfce-installed-settings/etc/skel/gtkrc-2.0 /usr/share/skel/dot.gtkrc-2.0
     
