@@ -12,7 +12,11 @@ case "$2" in
     if [ -f /etc/rc.conf ]; then
         echo 'slim_enable="YES"' >> /etc/rc.conf
     fi
-        ;;
+
+    # copy xinitrc from ghostbsd dir to /usr/share/skel
+    cp -af /usr/local/share/ghostbsd/slim/etc/skel/xinitrc /usr/share/skel/dot.xinitrc
+    ;;
 esac
 
 exit 0
+ 
