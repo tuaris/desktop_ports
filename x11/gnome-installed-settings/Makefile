@@ -6,7 +6,7 @@
 #
 
 PORTNAME=	gnome-installed-settings
-PORTVERSION=	1.4
+PORTVERSION=	1.5
 CATEGORIES=	x11
 
 MAINTAINER=	angelescuo@yahoo.com
