@@ -6,7 +6,7 @@
 #
 
 PORTNAME=	mate-installed-settings
-PORTVERSION=	2.5
+PORTVERSION=	2.6
 CATEGORIES=	x11
 
 MAINTAINER=	angelescuo@yahoo.com
