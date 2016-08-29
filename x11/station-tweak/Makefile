@@ -16,6 +16,8 @@ LICENSE=	BSD
 USE_GITHUB=	yes
 GH_ACCOUNT=	GhostBSD
 
+BUILD_DEPENDS=	${PYTHON_PKGNAMEPREFIX}python-distutils-extra>=2.15:devel/py-python-distutils-extra
+
 USES = python:2
 USE_PYTHON=	distutils
 USE_GNOME=	pygtk2 intltool
