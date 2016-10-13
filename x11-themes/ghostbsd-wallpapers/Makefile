@@ -6,7 +6,7 @@
 #
 
 PORTNAME=	ghostbsd-wallpapers
-PORTVERSION=	11.0
+PORTVERSION=	11.0.2
 CATEGORIES=	x11-themes
 
 MAINTAINER=	angelescuo@yahoo.com
