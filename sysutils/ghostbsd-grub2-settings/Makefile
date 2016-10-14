@@ -6,7 +6,7 @@
 #
 
 PORTNAME=	ghostbsd-grub2-settings
-PORTVERSION=	1.12
+PORTVERSION=	2.0
 CATEGORIES=	sysutils
 
 MAINTAINER=	angelescuo@yahoo.com
