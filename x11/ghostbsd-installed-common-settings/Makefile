@@ -6,7 +6,7 @@
 #
 
 PORTNAME=	ghostbsd-installed-common-settings
-PORTVERSION=	3.3
+PORTVERSION=	3.4
 CATEGORIES=	x11
 
 MAINTAINER=	angelescuo@yahoo.com
