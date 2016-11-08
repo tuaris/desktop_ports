@@ -147,7 +147,7 @@ lib/gbi/timezone/city/Europe
 lib/gbi/timezone/city/Indian
 lib/gbi/timezone/city/Pacific
 lib/gbi/timezone/continent
-lib/gbi/use_disk.py
+lib/gbi/use_ufs.py
 lib/gbi/use_zfs.py
 %%PYTHON_SITELIBDIR%%/gbi-3.0-py%%PYTHON_VER%%.egg-info/PKG-INFO
 %%PYTHON_SITELIBDIR%%/gbi-3.0-py%%PYTHON_VER%%.egg-info/SOURCES.txt
