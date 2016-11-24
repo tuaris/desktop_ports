@@ -52,6 +52,7 @@ packages_overrides()
     cp -af /usr/local/share/ghostbsd/common-installed-settings/packages/override/etc/rc.d/* /etc/rc.d
     cp -af /usr/local/share/ghostbsd/common-installed-settings/packages/override/applications/* \
     /usr/local/share/applications
+    cp -raf /usr/local/share/ghostbsd/common-installed-settings/packages/override/root/* /root
 }
 
 patch_etc_files()

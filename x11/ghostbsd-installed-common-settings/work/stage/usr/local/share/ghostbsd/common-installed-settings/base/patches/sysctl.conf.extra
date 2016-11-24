@@ -1,0 +1,9 @@
+vfs.usermount=1
+compat.linux.osrelease=2.6.18
+
+# the following is required to run chromium browser
+kern.ipc.shm_allow_removed=1
+kern.bootfile=/boot/kernel/kernel
+
+# this is required for MBR alignement
+kern.geom.part.mbr.enforce_chs=0

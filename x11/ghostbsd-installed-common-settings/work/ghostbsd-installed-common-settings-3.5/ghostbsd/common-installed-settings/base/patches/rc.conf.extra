@@ -1,0 +1,37 @@
+#
+# See /etc/defaults/rc.conf to add more option.
+# Do not configure /etc/defaults/rc.conf.
+# Configure only this file.
+#
+
+hostname="ghostbsd"
+
+# Power saver.
+powerd_enable="YES"
+powerd_flags="-a adp -b adp"
+
+# DEVFS rules
+devfs_system_ruleset="devfsrules_common"
+devd_enable="YES"
+
+usbd_enable="YES"
+dbus_enable="YES"
+hald_enable="YES"
+polkit_enable="YES"
+
+moused_enable="YES"
+iscsid_enable="YES"
+
+# Enable linux compatibility
+linux_enable="YES"
+
+# Disable sendmail in livecd
+sendmail_enable="NONE"
+sendmail_submit_enable="NO"
+sendmail_outbound_enable="NO"
+sendmail_msp_queue_enable="NO"
+
+# Load the following kernel modules
+kld_list="geom_mirror geom_journal geom_eli linux"
+
+# Configs from installed packages

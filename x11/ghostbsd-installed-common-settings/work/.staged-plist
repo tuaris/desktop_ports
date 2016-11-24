@@ -1,4 +1,4 @@
-n/iso_to_hd
+bin/iso_to_hd
 bin/xconfig
 bin/xdrivers
 etc/PolicyKit/PolicyKit.conf
