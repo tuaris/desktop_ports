@@ -22,7 +22,7 @@ backup_freebsd()
             cp -af /etc/$files /usr/local/share/ghostbsd/common-installed-settings/base/backup/etc/
         fi
     done
-    
+
     # backup desktop files that will be override
     for files in $(ls /usr/local/share/ghostbsd/common-installed-settings/packages/override/applications) ; do
         if [ -f /usr/local/share/applications/$files ]; then
@@ -49,10 +49,8 @@ freebsd_overrides()
 packages_overrides()
 {
     cp -af /usr/local/share/ghostbsd/common-installed-settings/packages/override/etc/* /etc
-    cp -af /usr/local/share/ghostbsd/common-installed-settings/packages/override/etc/rc.d/* /etc/rc.d
     cp -af /usr/local/share/ghostbsd/common-installed-settings/packages/override/applications/* \
     /usr/local/share/applications
-    cp -raf /usr/local/share/ghostbsd/common-installed-settings/packages/override/root/* /root
 }
 
 patch_etc_files()
@@ -85,7 +83,7 @@ case "$2" in
     backup_freebsd
     # copy files from override to FreeBSD base system
     freebsd_overrides
-    # copy files from base direct over FreeBSD base system 
+    # copy files from base direct over FreeBSD base system
     packages_overrides
     # patch files from etc
     patch_etc_files
