@@ -20,4 +20,3 @@ share/ghostbsd/common-live-settings/config-live-settings
 share/ghostbsd/common-live-settings/etc/rc.d/cheatcodes
 share/ghostbsd/common-live-settings/etc/rc.d/unionfs
 share/ghostbsd/common-live-settings/etc/rc.d/uzip
-
