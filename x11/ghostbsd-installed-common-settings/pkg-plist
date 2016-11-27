@@ -1,6 +1,3 @@
-bin/iso_to_hd
-bin/xconfig
-bin/xdrivers
 etc/PolicyKit/PolicyKit.conf
 etc/polkit-1/localauthority/50-local.d/org.freedesktop.consolekit.pkla
 etc/xdg/autostart/desktopsound.desktop
