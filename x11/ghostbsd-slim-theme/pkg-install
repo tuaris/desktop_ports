@@ -14,7 +14,7 @@ case "$2" in
     fi
 
     # copy xinitrc from ghostbsd dir to /usr/share/skel
-    #cp -af /usr/local/share/ghostbsd/slim/etc/skel/xinitrc /usr/share/skel/dot.xinitrc
+    cp -af /usr/local/share/ghostbsd/slim/etc/skel/xinitrc /usr/share/skel/dot.xinitrc
     ;;
 esac
 
