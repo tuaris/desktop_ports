@@ -6,7 +6,7 @@
 #
 
 PORTNAME=	ghostbsd-live-common-settings
-PORTVERSION=	2.6
+PORTVERSION=	2.7
 CATEGORIES=	x11
 
 MAINTAINER=	angelescuo@yahoo.com
