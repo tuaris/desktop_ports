@@ -17,12 +17,6 @@ backup_freebsd()
             cp -af /etc/$tocopy /usr/local/share/ghostbsd/common-installed-settings/base/backup/etc/
         fi
     done
-    for files in $(ls /usr/local/share/ghostbsd/common-installed-settings/base/patches | sed -e 's/.extra//g') ; do
-        if [ -f /etc/$files ]; then
-            cp -af /etc/$files /usr/local/share/ghostbsd/common-installed-settings/base/backup/etc/
-        fi
-    done
-
     # backup desktop files that will be override
     for files in $(ls /usr/local/share/ghostbsd/common-installed-settings/packages/override/applications) ; do
         if [ -f /usr/local/share/applications/$files ]; then

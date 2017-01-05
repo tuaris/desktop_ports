@@ -1,3 +1,6 @@
+bin/detect-nics
+bin/detect-wifi
+bin/netcardmgr
 bin/networkmgr
 etc/xdg/autostart/networkmgr.desktop
 %%PYTHON_SITELIBDIR%%/networkmgr-1.0-py%%PYTHON_VER%%.egg-info/PKG-INFO
@@ -6,8 +9,6 @@ etc/xdg/autostart/networkmgr.desktop
 %%PYTHON_SITELIBDIR%%/networkmgr-1.0-py%%PYTHON_VER%%.egg-info/requires.txt
 %%PYTHON_SITELIBDIR%%/networkmgr-1.0-py%%PYTHON_VER%%.egg-info/top_level.txt
 %%DATADIR%%/authentication.py
-%%DATADIR%%/detect-nics.sh
-%%DATADIR%%/detect-wifi.sh
 %%DATADIR%%/enable-net.sh
 %%DATADIR%%/icons/nm-adhoc.png
 %%DATADIR%%/icons/nm-device-wired-autoip.png
@@ -44,6 +45,5 @@ etc/xdg/autostart/networkmgr.desktop
 %%DATADIR%%/icons/nm-vpn-standalone-lock.png
 %%DATADIR%%/icons/nm-wwan-tower.png
 %%DATADIR%%/net_api.py
-%%DATADIR%%/netcardmgr.py
 %%DATADIR%%/test-netup.sh
 %%DATADIR%%/trayicon.py

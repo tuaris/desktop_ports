@@ -1,0 +1,42 @@
+#!/bin/sh
+doas_settings()
+{
+    if [ ! -e /usr/local/etc/doas.conf ] ; then
+        touch /usr/local/etc/doas.conf
+    fi
+    grep -q 'permit nopass keepenv :wheel cmd netcardmgr' /usr/local/etc/doas.conf 2>/dev/null
+    if [ $? -ne 0 ] ; then
+        echo 'permit nopass keepenv :wheel cmd netcardmgr' >> /usr/local/etc/doas.conf
+    fi
+    grep -q 'permit nopass keepenv :wheel cmd detect-nics' /usr/local/etc/doas.conf 2>/dev/null
+    if [ $? -ne 0 ] ; then
+        echo 'permit nopass keepenv :wheel cmd detect-nics' >> /usr/local/etc/doas.conf
+    fi
+    grep -q 'permit nopass keepenv :wheel cmd detect-wifi' /usr/local/etc/doas.conf 2>/dev/null
+    if [ $? -ne 0 ] ; then
+        echo 'permit nopass keepenv :wheel cmd detect-wifi' >> /usr/local/etc/doas.conf
+    fi
+    grep -q 'permit nopass keepenv :wheel cmd ifconfig' /usr/local/etc/doas.conf 2>/dev/null
+    if [ $? -ne 0 ] ; then
+        echo 'permit nopass keepenv :wheel cmd ifconfig' >> /usr/local/etc/doas.conf
+    fi
+    grep -q 'permit nopass keepenv :wheel cmd service' /usr/local/etc/doas.conf 2>/dev/null
+    if [ $? -ne 0 ] ; then
+        echo 'permit nopass keepenv :wheel cmd service' >> /usr/local/etc/doas.conf
+    fi
+    grep -q 'permit nopass keepenv :wheel cmd wpa_supplicant' /usr/local/etc/doas.conf 2>/dev/null
+    if [ $? -ne 0 ] ; then
+        echo 'permit nopass keepenv :wheel cmd wpa_supplicant' >> /usr/local/etc/doas.conf
+    fi
+}
+
+case "$2" in
+    POST-INSTALL)
+    # backup old files from FreeBSD base system
+    doas_settings
+    ;;
+    *)
+    ;;
+esac
+
+exit 0
