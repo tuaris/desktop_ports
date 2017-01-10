@@ -3,7 +3,7 @@
 
 
 PORTNAME=	networkmgr
-PORTVERSION=	1.9
+PORTVERSION=	1.10
 
 CATEGORIES=	net-mgmt
 MASTER_SITES=	https://github.com/GhostBSD/${PORTNAME}/archive/
