@@ -13,6 +13,8 @@ backup_freebsd()
 freebsd_overrides()
 {
   cp -af /usr/local/share/ghostbsd/common-live-settings/base/override/* /
+  # rebuild login database because one override was login.conf
+  cap_mkdb /etc/login.conf
 }
 
 copy_files_in()
