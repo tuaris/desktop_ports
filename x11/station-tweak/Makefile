@@ -18,6 +18,8 @@ GH_ACCOUNT=	GhostBSD
 
 BUILD_DEPENDS=	${PYTHON_PKGNAMEPREFIX}python-distutils-extra>=2.15:devel/py-python-distutils-extra
 
+RUN_DEPENDS=	wmctrl:x11/wmctrl
+
 USES = python:2
 USE_PYTHON=	distutils
 USE_GNOME=	pygtk2 intltool
