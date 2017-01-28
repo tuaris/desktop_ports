@@ -6,7 +6,7 @@
 #
 
 PORTNAME=	update-station
-PORTVERSION=	0.8
+PORTVERSION=	0.9
 CATEGORIES=	ports-mgmt
 MASTER_SITES=	https://github.com/GhostBSD/${PORTNAME}/archive/
 
