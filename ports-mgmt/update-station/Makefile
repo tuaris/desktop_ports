@@ -6,13 +6,15 @@
 #
 
 PORTNAME=	update-station
-PORTVERSION=	0.9
+PORTVERSION=	1.1
 CATEGORIES=	ports-mgmt
 MASTER_SITES=	https://github.com/GhostBSD/${PORTNAME}/archive/
 
 MAINTAINER=	ericturgeon@ghostbsd.com
 COMMENT= Tool to update FreeBSD/GhostBSD software and system.
 LICENSE = BSD
+
+RUN_DEPENDS=    doas:security/doas
 
 USE_GITHUB=	yes
 GH_ACCOUNT=	GhostBSD

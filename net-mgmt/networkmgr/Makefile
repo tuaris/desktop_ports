@@ -9,7 +9,7 @@ MASTER_SITES=	http://github.com/GhostBSD/${PORTNAME}/archive/
 MAINTAINER=	ericturgeon.bsd@gmail.com
 COMMENT=	FreeBSD/GhostBSD network conection manager
 
-LICENSE=	BSD
+LICENSE=	BSD3CLAUSE
 
 RUN_DEPENDS=    doas:security/doas
 
