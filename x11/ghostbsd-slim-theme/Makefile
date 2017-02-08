@@ -6,7 +6,7 @@
 #
 
 PORTNAME=	ghostbsd-slim-theme
-PORTVERSION=	1.1
+PORTVERSION=	1.2
 CATEGORIES=	x11
 
 MAINTAINER=	angelescuo@yahoo.com
