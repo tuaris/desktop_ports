@@ -18,7 +18,6 @@ USE_GITHUB=	yes
 GH_ACCOUNT=	GhostBSD
 
 RUN_DEPENDS=	slim:x11/slim \
-		iso_to_hd:x11/ghostbsd-installed-common-settings
 
 NO_BUILD=	yes
 

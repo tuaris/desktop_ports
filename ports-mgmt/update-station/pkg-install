@@ -12,9 +12,13 @@ doas_settings()
     if [ $? -ne 0 ] ; then
         echo 'permit nopass keepenv :wheel cmd fbsdpkgupdate' >> ${PKG_PREFIX}/etc/doas.conf
     fi
-    grep -q 'permit nopass keepenv :wheel cmd pkg args upgrade' ${PKG_PREFIX}/etc/doas.conf 2>/dev/null
+    grep -q 'permit nopass keepenv :wheel cmd pkg args upgrade -y' ${PKG_PREFIX}/etc/doas.conf 2>/dev/null
     if [ $? -ne 0 ] ; then
-        echo 'permit nopass keepenv :wheel cmd pkg args upgrade' >> ${PKG_PREFIX}/etc/doas.conf
+        echo 'permit nopass keepenv :wheel cmd pkg args upgrade -y' >> ${PKG_PREFIX}/etc/doas.conf
+    fi
+    grep -q 'permit nopass keepenv :wheel cmd pkg args upgrade -Fy' ${PKG_PREFIX}/etc/doas.conf 2>/dev/null
+    if [ $? -ne 0 ] ; then
+        echo 'permit nopass keepenv :wheel cmd pkg args upgrade -Fy' >> ${PKG_PREFIX}/etc/doas.conf
     fi
     grep -q 'permit nopass keepenv :wheel cmd pkg args lock' ${PKG_PREFIX}/etc/doas.conf 2>/dev/null
     if [ $? -ne 0 ] ; then
