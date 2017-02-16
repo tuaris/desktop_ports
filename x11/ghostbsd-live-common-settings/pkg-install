@@ -39,6 +39,7 @@ case "$2" in
     freebsd_overrides
     # copy files from base/etc to etc
     copy_files_in
+    setup_DM
     ;;
     *)
     ;;

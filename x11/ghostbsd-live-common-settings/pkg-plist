@@ -1,10 +1,9 @@
 etc/polkit-1/localauthority/10-vendor.d/10-live-cd.pkla
+share/ghostbsd/common-live-settings/base/backup/etc/gettytab
 share/ghostbsd/common-live-settings/base/backup/etc/rc.d/mountcritlocal
-share/ghostbsd/common-live-settings/base/override/etc/gettytab
+share/ghostbsd/common-live-settings/base/backup/etc/ttys
 share/ghostbsd/common-live-settings/base/override/etc/login.conf
 share/ghostbsd/common-live-settings/base/override/etc/rc.d/mountcritlocal
-share/ghostbsd/common-live-settings/base/override/etc/ttys
-share/ghostbsd/common-live-settings/base/override/root/.login
 share/ghostbsd/common-live-settings/base/override/root/cardDetect/XF86Config.compat
 share/ghostbsd/common-live-settings/base/override/root/cardDetect/XF86Config.default
 share/ghostbsd/common-live-settings/base/override/root/cardDetect/XF86Config.intel
@@ -24,4 +23,3 @@ share/ghostbsd/common-live-settings/config-live-settings
 share/ghostbsd/common-live-settings/etc/rc.d/cheatcodes
 share/ghostbsd/common-live-settings/etc/rc.d/unionfs
 share/ghostbsd/common-live-settings/etc/rc.d/uzip
-
