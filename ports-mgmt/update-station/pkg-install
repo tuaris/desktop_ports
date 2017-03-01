@@ -36,29 +36,13 @@ doas_settings()
     if [ $? -ne 0 ] ; then
         echo 'permit nopass keepenv :wheel cmd chmod args -R 665 /var/db/update-station/' >> ${PKG_PREFIX}/etc/doas.conf
     fi
-    grep -q 'permit nopass keepenv :wheel cmd portsnap' ${PKG_PREFIX}/etc/doas.conf 2>/dev/null
-    if [ $? -ne 0 ] ; then
-        echo 'permit nopass keepenv :wheel cmd portsnap' >> ${PKG_PREFIX}/etc/doas.conf
-    fi
     grep -q 'permit nopass keepenv :wheel cmd sh args /usr/local/lib/update-station/cleandesktop.sh' ${PKG_PREFIX}/etc/doas.conf 2>/dev/null
     if [ $? -ne 0 ] ; then
         echo 'permit nopass keepenv :wheel cmd sh args /usr/local/lib/update-station/cleandesktop.sh' >> ${PKG_PREFIX}/etc/doas.conf
     fi
-    grep -q 'permit nopass keepenv :wheel cmd cat args /var/db/update-station/update-list.txt' ${PKG_PREFIX}/etc/doas.conf 2>/dev/null
+    grep -q 'permit nopass keepenv :wheel cmd shutdown args -r now' ${PKG_PREFIX}/etc/doas.conf 2>/dev/null
     if [ $? -ne 0 ] ; then
-        echo 'permit nopass keepenv :wheel cmd cat args /var/db/update-station/update-list.txt' >> ${PKG_PREFIX}/etc/doas.conf
-    fi
-    grep -q 'permit nopass keepenv :wheel cmd cp args -Rfv /tmp/ports/ /usr/ports' ${PKG_PREFIX}/etc/doas.conf 2>/dev/null
-    if [ $? -ne 0 ] ; then
-        echo 'permit nopass keepenv :wheel cmd cp args -Rfv /tmp/ports/ /usr/ports' >> ${PKG_PREFIX}/etc/doas.conf
-    fi
-    grep -q 'permit nopass keepenv :wheel cmd make args reinstall clean' ${PKG_PREFIX}/etc/doas.conf 2>/dev/null
-    if [ $? -ne 0 ] ; then
-        echo 'permit nopass keepenv :wheel cmd make args reinstall clean' >> ${PKG_PREFIX}/etc/doas.conf
-    fi
-    grep -q 'permit nopass keepenv :wheel cmd fetch' ${PKG_PREFIX}/etc/doas.conf 2>/dev/null
-    if [ $? -ne 0 ] ; then
-        echo 'permit nopass keepenv :wheel cmd fetch' >> ${PKG_PREFIX}/etc/doas.conf
+        echo 'permit nopass keepenv :wheel cmd shutdown args -r now' >> ${PKG_PREFIX}/etc/doas.conf
     fi
 }
 
