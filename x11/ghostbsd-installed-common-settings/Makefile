@@ -6,7 +6,7 @@
 #
 
 PORTNAME=	ghostbsd-installed-common-settings
-PORTVERSION=	4.1
+PORTVERSION=	4.2
 CATEGORIES=	x11
 
 MAINTAINER=	angelescuo@yahoo.com
@@ -22,12 +22,6 @@ NO_BUILD=	yes
 RUN_DEPENDS= dpkg:archivers/dpkg
 
 do-install:
-	${MKDIR} ${STAGEDIR}/${PREFIX}/share/ghostbsd
-	${CP} -R   ${WRKSRC}/ghostbsd/* ${STAGEDIR}/${PREFIX}/share/ghostbsd
-	${RM} -f ${STAGEDIR}/${PREFIX}/share/ghostbsd/common-installed-settings/base/backup/boot/.gitignore
-	${RM} -f ${STAGEDIR}/${PREFIX}/share/ghostbsd/common-installed-settings/base/backup/etc/.gitignore
-	${RM} -f ${STAGEDIR}/${PREFIX}/share/ghostbsd/common-installed-settings/packages/backup/applications/.gitignore
-	${RM} -f ${STAGEDIR}/${PREFIX}/share/ghostbsd/common-installed-settings/packages/backup/etc/X11/.gitignore
 	${MKDIR} ${STAGEDIR}/${PREFIX}/share/sounds
-	${CP} -R   ${WRKSRC}/usr/local/* ${STAGEDIR}/${PREFIX}
+	${CP} -R   ${WRKSRC}/local/* ${STAGEDIR}/${PREFIX}
 .include <bsd.port.mk>
