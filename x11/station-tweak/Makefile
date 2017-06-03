@@ -5,7 +5,7 @@
 PORTNAME=	station-tweak
 PORTVERSION=	0.2
 PORTREVISION=	0
-CATEGORIES=	net-mgmt
+CATEGORIES=	x11
 MASTER_SITES=	https://github.com/GhostBSD/${PORTNAME}/archive/
 
 MAINTAINER=	ericturgeon@ghostbsd.org
