@@ -6,10 +6,10 @@
 #
 
 PORTNAME=	mate-installed-settings
-PORTVERSION=	2.9
+PORTVERSION=	3.0
 CATEGORIES=	x11
 
-MAINTAINER=	angelescuo@yahoo.com
+MAINTAINER=	ericturgeon.bsd@gmail.com
 COMMENT=	GhostBSD mate settings in installed mode
 
 LICENSE=	BSD
