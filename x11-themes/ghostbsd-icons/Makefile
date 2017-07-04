@@ -6,11 +6,11 @@
 #
 
 PORTNAME=	ghostbsd-icons
-PORTVERSION=	1.2
+PORTVERSION=	1.3
 CATEGORIES=	x11-themes
 
 MAINTAINER=	angelescuo@yahoo.com
-COMMENT=	GhostBSD icons for mate flavour
+COMMENT=	GhostBSD icons for GTK DE
 
 LICENSE=	CCBYSA
 LICENSE_NAME=	CREATIVE COMMON

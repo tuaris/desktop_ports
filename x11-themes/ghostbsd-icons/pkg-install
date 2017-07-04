@@ -10,7 +10,7 @@
     # update icon cache for hicolor for G logo in panel
     gtk-update-icon-cache -f /usr/local/share/icons/hicolor
 
-    # remove unwanted icons 
+    # remove unwanted icons
     rm -rf /usr/local/share/icons/Quid
     rm -rf /usr/local/share/icons/HighContrast
     rm -rf /usr/local/share/icons/HighContrast-SVG
@@ -24,5 +24,5 @@
     rm -rf /usr/local/share/icons/matefaenzadark
     rm -rf /usr/local/share/icons/matefaenzagray
     rm -f /usr/local/share/icons/mate/icon-theme.cache
-    
+
 exit 0
