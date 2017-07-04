@@ -6,7 +6,7 @@
 #
 
 PORTNAME=	ghostbsd-mate-themes
-PORTVERSION=	1.4
+PORTVERSION=	1.5
 CATEGORIES=	x11-themes
 
 MAINTAINER=	angelescuo@yahoo.com
