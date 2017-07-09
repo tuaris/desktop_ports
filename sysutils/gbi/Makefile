@@ -3,7 +3,7 @@
 
 
 PORTNAME=	gbi
-PORTVERSION=	4.4
+PORTVERSION=	4.5
 PORTREVISION=	0
 CATEGORIES=	sysutils
 MASTER_SITES=	https://github.com/GhostBSD/${PORTNAME}/archive/
