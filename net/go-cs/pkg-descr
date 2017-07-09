@@ -1,0 +1,4 @@
+cs is a program for concurrently executing local or remote commands on
+multiple hosts.  It is using OpenSSH for running remote commands.
+
+WWW: https://github.com/akosela/go-cs

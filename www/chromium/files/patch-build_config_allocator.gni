@@ -1,0 +1,11 @@
+--- build/config/allocator.gni.orig	2017-06-05 19:03:01 UTC
++++ build/config/allocator.gni
+@@ -18,7 +18,7 @@ if (is_android || current_cpu == "mipsel" || is_mac ||
+ # against the debug CRT with "is_nacl=false".
+ if ((is_linux || is_android || is_mac ||
+      (is_win && !is_component_build && !is_debug)) && !is_asan && !is_lsan &&
+-    !is_tsan && !is_msan) {
++    !is_tsan && !is_msan && !is_bsd) {
+   _default_use_experimental_allocator_shim = true
+ } else {
+   _default_use_experimental_allocator_shim = false
