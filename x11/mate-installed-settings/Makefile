@@ -6,7 +6,7 @@
 #
 
 PORTNAME=	mate-installed-settings
-PORTVERSION=	3.0
+PORTVERSION=	3.1
 CATEGORIES=	x11
 
 MAINTAINER=	ericturgeon.bsd@gmail.com
