@@ -6,7 +6,7 @@
 #
 
 PORTNAME=	ghostbsd-bug-report
-PORTVERSION=	1.0
+PORTVERSION=	1.1
 CATEGORIES=	sysutils
 
 MAINTAINER=	angelescuo@yahoo.com
@@ -19,7 +19,7 @@ GH_ACCOUNT=	GhostBSD
 
 NO_BUILD=	yes
 
-RUN_DEPENDS=	xdg-open:devel/xdg-utils 
+RUN_DEPENDS=	xdg-open:devel/xdg-utils
 
 do-install:
 		${INSTALL_DATA} ${WRKSRC}/applications/ghostbsd-bug-report.desktop ${STAGEDIR}${PREFIX}/share/applications
