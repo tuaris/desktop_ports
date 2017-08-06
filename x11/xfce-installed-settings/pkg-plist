@@ -15,7 +15,7 @@ share/ghostbsd/xfce-installed-settings/etc/xdg/xfce4/panel/xfce4-orageclock-plug
 share/ghostbsd/xfce-installed-settings/etc/xdg/xfce4/panel/xfce4-verve-plugin-7.rc
 share/ghostbsd/xfce-installed-settings/etc/xdg/xfce4/panel/xkb-plugin-12.rc
 share/ghostbsd/xfce-installed-settings/etc/xdg/xfce4/xfce4-taskmanager.rc
-share/ghostbsd/xfce-installed-settings/etc/xdg/xfce4/xfconf/xfce-perchannel-xml/keyboards.xml
+share/ghostbsd/xfce-installed-settings/etc/xdg/xfce4/xfconf/xfce-perchannel-xml/keyboard-layout.xml
 share/ghostbsd/xfce-installed-settings/etc/xdg/xfce4/xfconf/xfce-perchannel-xml/thunar.xml
 share/ghostbsd/xfce-installed-settings/etc/xdg/xfce4/xfconf/xfce-perchannel-xml/xfce4-appfinder.xml
 share/ghostbsd/xfce-installed-settings/etc/xdg/xfce4/xfconf/xfce-perchannel-xml/xfce4-desktop.xml
