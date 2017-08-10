@@ -16,7 +16,7 @@ LIB_DEPENDS=			libgksu2.so:sysutils/libgksu \
 				libgnome-keyring.so:security/libgnome-keyring
 
 OPTIONS_DEFINE=                 NAUT_EXT
-OPTIONS_DEFAULT=                NAUT_EXT
+# OPTIONS_DEFAULT=                NAUT_EXT
 OPTIONS_SUB=                    yes
 
 NAUT_EXT_DESC=                  Build extension for the Nautilus file manager
