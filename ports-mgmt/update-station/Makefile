@@ -16,10 +16,10 @@ LICENSE = BSD
 
 RUN_DEPENDS=    doas:security/doas
 
+USES = python:2.7
 USE_GITHUB=	yes
 GH_ACCOUNT=	GhostBSD
 
-USES = python:2
 USE_PYTHON=	distutils
 USE_GNOME=	pygtk2
 
