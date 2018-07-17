@@ -4,8 +4,6 @@
     if [ ! -d /usr/local/share/icons/hicolor ] ; then
         mkdir -p /usr/local/share/icons/hicolor
     fi
-    # copy icons from ghostbsd dir to hicolor for Glogo in mate panel
-    cp -af /usr/local/share/icons/ghostbsd/* /usr/local/share/icons/hicolor
 
     # update icon cache for hicolor for G logo in panel
     gtk-update-icon-cache -f /usr/local/share/icons/hicolor
