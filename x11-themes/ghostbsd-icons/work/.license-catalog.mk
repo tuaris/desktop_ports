@@ -1,0 +1,5 @@
+_LICENSE=CCBYSA
+_LICENSE_NAME=CREATIVE COMMON
+_LICENSE_PERMS=dist-mirror pkg-mirror auto-accept
+_LICENSE_GROUPS=
+_LICENSE_DISTFILES=GhostBSD-ghostbsd-icons-1.5_GH0.tar.gz
