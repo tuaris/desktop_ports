@@ -14,6 +14,8 @@ COMMENT=	GhostBSD grub2 settings
 
 LICENSE=	BSD
 
+BROKEN= Dependany expired (sysutils/grub2-pcbsd)
+
 USE_GITHUB=	yes
 GH_ACCOUNT=	GhostBSD
 
