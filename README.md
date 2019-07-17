@@ -1,4 +1,4 @@
 ports
 =====
 
-Special ports for GHostBSD
+Special ports for FreeBSD Desktop
