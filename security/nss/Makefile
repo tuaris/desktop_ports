@@ -1,9 +1,9 @@
 # Created by: Maxim Sobolev <sobomax@FreeBSD.org>
-# $FreeBSD: head/security/nss/Makefile 506263 2019-07-09 00:58:53Z jbeich $
+# $FreeBSD: head/security/nss/Makefile 509664 2019-08-23 21:55:48Z jbeich $
 
 PORTNAME=	nss
 PORTVERSION=	3.45
-PORTREVISION=	2
+PORTREVISION=	3
 CATEGORIES=	security
 MASTER_SITES=	MOZILLA/security/${PORTNAME}/releases/${DISTNAME:tu:C/[-.]/_/g}_RTM/src \
 				https://cdn.pacyworld.com/pacyworld.com/ca/:pacyworld
