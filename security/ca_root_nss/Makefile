@@ -1,4 +1,4 @@
-# $FreeBSD: head/security/ca_root_nss/Makefile 506263 2019-07-09 00:58:53Z jbeich $
+# $FreeBSD: head/security/ca_root_nss/Makefile 510302 2019-08-31 00:50:46Z jbeich $
 
 PORTNAME=	ca_root_nss
 PORTVERSION=	${VERSION_NSS}
@@ -37,7 +37,7 @@ PLIST_SUB+=	CERTDIR=${CERTDIR}
 # !!!  Please DO NOT submit patches for new version until it has !!!
 # !!!  been committed there first.                               !!!
 # !!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!
-VERSION_NSS=	3.45
+VERSION_NSS=	3.46
 #NSS_SUFFIX=	-with-ckbi-1.98
 CERTDATA_TXT_PATH=	nss-${VERSION_NSS}/nss/lib/ckfw/builtins/certdata.txt
 CERTDATA_PACYCOMCA_TXT=	ca-pacyworld.com.txt
