@@ -2,7 +2,7 @@
 # $FreeBSD: head/security/nss/Makefile 510302 2019-08-31 00:50:46Z jbeich $
 
 PORTNAME=	nss
-PORTVERSION=	3.46
+PORTVERSION=	3.46.1
 PORTREVISION=	1
 CATEGORIES=	security
 MASTER_SITES=	MOZILLA/security/${PORTNAME}/releases/${DISTNAME:tu:C/[-.]/_/g}_RTM/src \
@@ -20,6 +20,7 @@ LICENSE_FILE=	${WRKSRC}/COPYING
 BUILD_DEPENDS=	zip:archivers/zip
 LIB_DEPENDS=	libnspr4.so:devel/nspr \
 		libsqlite3.so:databases/sqlite3
+TEST_DEPENDS=	bash:shells/bash
 
 WRKSRC_SUBDIR=	nss
 
@@ -72,12 +73,12 @@ USE_BINUTILS=	# intel-gcm.s
 CC+=	-B${LOCALBASE}/bin
 .endif
 
-check regression-test test:
+do-test:
 	cd ${WRKSRC}/tests;	\
 		${SETENV} PATH="${BINS}/bin:${PATH}" \
 		    LD_LIBRARY_PATH="${BINS}/lib" \
 		    ${MAKE_ENV}	\
-			./all.sh
+			bash ./all.sh
 	@if ${GREP} -Fh '>Failed<'	\
 	    ${WRKSRC:H}/tests_results/security/*/results.html; then	\
 		echo "Some tests have failed. Let ${MAINTAINER} know.";	\
@@ -96,8 +97,6 @@ post-patch:
 	@cd ${WRKSRC} && \
 		${FIND} . -name "*.c" -o -name "*.h" | \
 		${XARGS} ${REINPLACE_CMD} -e 's|"nspr.h"|<nspr.h>|'
-	${FIND} ${WRKSRC}/tests -name '*.sh' | ${XARGS} ${GREP} -l -F '/bin/bash' | \
-		${XARGS} ${REINPLACE_CMD} -e 's|#! */bin/bash|#!${SH}|'
 
 merge-pacyworld:
 	@${CAT} ${WRKDIR}/${CERTDATA_PACYCOMCA_TXT} ${WRKDIR}/${CERTDATA_PACYWORLD_TXT} >> ${WRKSRC}/${CERTDATA_TXT_PATH}
