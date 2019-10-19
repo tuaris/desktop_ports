@@ -4,7 +4,7 @@
 
 PORTNAME=	station-tweak
 PORTVERSION=	0.3
-PORTREVISION=	1
+PORTREVISION=	2
 CATEGORIES=	x11
 MASTER_SITES=	https://github.com/GhostBSD/${PORTNAME}/archive/
 
@@ -19,7 +19,7 @@ GH_ACCOUNT=	GhostBSD
 BUILD_DEPENDS=	${PYTHON_PKGNAMEPREFIX}python-distutils-extra>=2.15:devel/py-python-distutils-extra
 
 RUN_DEPENDS=	wmctrl:x11/wmctrl \
-		plank:x11-wm/plank \
+		plank:x11/plank \
 		${PREFIX}/libexec/brisk-menu:x11/brisk-menu
 
 USES=		python:2.7 gettext-tools
