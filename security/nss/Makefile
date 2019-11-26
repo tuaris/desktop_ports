@@ -2,7 +2,7 @@
 # $FreeBSD: head/security/nss/Makefile 510302 2019-08-31 00:50:46Z jbeich $
 
 PORTNAME=	nss
-PORTVERSION=	3.46.1
+PORTVERSION=	3.47.1
 PORTREVISION=	1
 CATEGORIES=	security
 MASTER_SITES=	MOZILLA/security/${PORTNAME}/releases/${DISTNAME:tu:C/[-.]/_/g}_RTM/src \
