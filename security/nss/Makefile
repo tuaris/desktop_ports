@@ -1,8 +1,8 @@
 # Created by: Maxim Sobolev <sobomax@FreeBSD.org>
-# $FreeBSD: head/security/nss/Makefile 510302 2019-08-31 00:50:46Z jbeich $
+# $FreeBSD: head/security/nss/Makefile 519827 2019-12-11 18:57:48Z pkubaj $
 
 PORTNAME=	nss
-PORTVERSION=	3.47.1
+PORTVERSION=	3.48
 PORTREVISION=	1
 CATEGORIES=	security
 MASTER_SITES=	MOZILLA/security/${PORTNAME}/releases/${DISTNAME:tu:C/[-.]/_/g}_RTM/src \
@@ -64,8 +64,8 @@ BINS=		${DIST}/${OPSYS}${OSREL}_OPT.OBJ
 BINS=		${DIST}/${OPSYS}${OSREL}_DBG.OBJ
 .endif
 
-.if ${OPSYS} == FreeBSD && ${ARCH} == i386 && ! ${MACHINE_CPU:Msse2}
-USES+=		compiler:c++14-lang # gcm.h
+.if ${ARCH} == powerpc64
+USES+=		compiler:c++11-lang # -mcrypto -mvsx
 .endif
 
 .if ${OPSYS} == FreeBSD && ${ARCH} == amd64
