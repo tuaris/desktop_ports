@@ -1,13 +1,13 @@
 # Created by: Alan Eldridge <alane@FreeBSD.org>
-# $FreeBSD: head/www/firefox-esr/Makefile 521037 2019-12-27 23:29:08Z jbeich $
+# $FreeBSD: head/www/firefox-esr/Makefile 521577 2019-12-31 00:47:00Z jbeich $
 
 PORTNAME=	firefox
-DISTVERSION=	68.3.0
-PORTREVISION=	4
+DISTVERSION=	68.4.0
+PORTREVISION=	1
 PORTEPOCH=	1
 CATEGORIES=	www
 MASTER_SITES=	MOZILLA/${PORTNAME}/releases/${DISTVERSION}esr/source \
-		MOZILLA/${PORTNAME}/candidates/${DISTVERSION}esr-candidates/build2/source
+		MOZILLA/${PORTNAME}/candidates/${DISTVERSION}esr-candidates/build1/source
 PKGNAMESUFFIX=	-esr
 DISTFILES=	${DISTNAME}esr.source${EXTRACT_SUFX}
 
