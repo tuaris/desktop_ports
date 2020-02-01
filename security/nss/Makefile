@@ -1,8 +1,8 @@
 # Created by: Maxim Sobolev <sobomax@FreeBSD.org>
-# $FreeBSD: head/security/nss/Makefile 523023 2020-01-14 15:26:43Z jbeich $
+# $FreeBSD: head/security/nss/Makefile 524147 2020-01-26 00:20:01Z jbeich $
 
 PORTNAME=	nss
-PORTVERSION=	3.49.1
+PORTVERSION=	3.49.2
 PORTREVISION=	1
 CATEGORIES=	security
 MASTER_SITES=	MOZILLA/security/${PORTNAME}/releases/${DISTNAME:tu:C/[-.]/_/g}_RTM/src \
@@ -17,7 +17,6 @@ COMMENT=	Libraries to support development of security-enabled applications
 LICENSE=	MPL20
 LICENSE_FILE=	${WRKSRC}/COPYING
 
-BUILD_DEPENDS=	zip:archivers/zip
 LIB_DEPENDS=	libnspr4.so:devel/nspr \
 		libsqlite3.so:databases/sqlite3
 TEST_DEPENDS=	bash:shells/bash
