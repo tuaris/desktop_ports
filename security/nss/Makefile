@@ -1,15 +1,11 @@
 # Created by: Maxim Sobolev <sobomax@FreeBSD.org>
-# $FreeBSD: head/security/nss/Makefile 524147 2020-01-26 00:20:01Z jbeich $
+# $FreeBSD: head/security/nss/Makefile 525766 2020-02-10 23:51:09Z jbeich $
 
 PORTNAME=	nss
-PORTVERSION=	3.49.2
+PORTVERSION=	3.50
 PORTREVISION=	1
 CATEGORIES=	security
-MASTER_SITES=	MOZILLA/security/${PORTNAME}/releases/${DISTNAME:tu:C/[-.]/_/g}_RTM/src \
-				https://cdn.pacyworld.com/pacyworld.com/ca/:pacyworld
-DISTFILES=		${DISTNAME}${EXTRACT_SUFX} \
-				ca-pacyworld.com.txt:pacyworld ca-pacyworld_root.txt:pacyworld
-EXTRACT_ONLY=	${DISTNAME}${EXTRACT_SUFX}
+MASTER_SITES=	MOZILLA/security/${PORTNAME}/releases/${DISTNAME:tu:C/[-.]/_/g}_RTM/src
 
 MAINTAINER=	gecko@FreeBSD.org
 COMMENT=	Libraries to support development of security-enabled applications
@@ -21,11 +17,13 @@ LIB_DEPENDS=	libnspr4.so:devel/nspr \
 		libsqlite3.so:databases/sqlite3
 TEST_DEPENDS=	bash:shells/bash
 
-WRKSRC_SUBDIR=	nss
+USES=		cpe gmake perl5
 
 MAKE_JOBS_UNSAFE=	yes
-USE_LDCONFIG=	${PREFIX}/lib/nss
-USES=		cpe gmake perl5
+
+WRKSRC_SUBDIR=	nss
+
+USE_LDCONFIG=	yes
 CPE_VENDOR=	mozilla
 CPE_PRODUCT=	network_security_services
 USE_PERL5=	build
@@ -36,10 +34,6 @@ MAKE_ENV=	LIBRARY_PATH="${LOCALBASE}/lib" \
 		NSS_USE_SYSTEM_SQLITE=1
 CFLAGS+=	-I${LOCALBASE}/include/nspr
 
-CERTDATA_TXT_PATH=	lib/ckfw/builtins/certdata.txt
-CERTDATA_PACYCOMCA_TXT=	ca-pacyworld.com.txt
-CERTDATA_PACYWORLD_TXT=	ca-pacyworld_root.txt
-
 SUB_FILES=	nss-config nss.pc
 SUB_LIST=	PORTVERSION=${PORTVERSION}
 
@@ -47,7 +41,7 @@ DIST=		${WRKSRC:H}/dist
 
 EXTRACT_AFTER_ARGS=--exclude */lib/zlib --exclude */lib/dbm --exclude */lib/sqlite
 
-INSTALL_BINS=	addbuiltin certutil cmsutil crlutil derdump makepqg \
+INSTALL_BINS=	certutil cmsutil crlutil derdump makepqg \
 		mangle modutil ocspclnt oidcalc p7content p7env p7sign \
 		p7verify pk12util rsaperf shlibsign signtool signver \
 		ssltap strsclnt symkeyutil vfychain vfyserv
@@ -65,12 +59,16 @@ BINS=		${DIST}/${OPSYS}${OSREL}_DBG.OBJ
 
 .if ${ARCH} == powerpc64
 USES+=		compiler:c++11-lang # -mcrypto -mvsx
+.else
+MAKE_ENV+=	NSS_DISABLE_ALTIVEC=1
 .endif
 
 .if ${OPSYS} == FreeBSD && ${ARCH} == amd64
 USE_BINUTILS=	# intel-gcm.s
 CC+=	-B${LOCALBASE}/bin
 .endif
+
+.include "${.CURDIR}/../../security/nss/Makefile.ca"
 
 do-test:
 	cd ${WRKSRC}/tests;	\
@@ -86,10 +84,6 @@ do-test:
 		echo "All tests succeeded. Good news.";	\
 	fi
 
-post-extract:
-	@${CP} ${DISTDIR}/${CERTDATA_PACYCOMCA_TXT} ${WRKDIR}
-	@${CP} ${DISTDIR}/${CERTDATA_PACYWORLD_TXT} ${WRKDIR}
-
 post-patch:
 	@${REINPLACE_CMD} '/NSS_DEFAULT_SYSTEM/s,/etc,${PREFIX}&,' \
 		${WRKSRC}/lib/sysinit/nsssysinit.c
@@ -97,19 +91,14 @@ post-patch:
 		${FIND} . -name "*.c" -o -name "*.h" | \
 		${XARGS} ${REINPLACE_CMD} -e 's|"nspr.h"|<nspr.h>|'
 
-merge-pacyworld:
-	@${CAT} ${WRKDIR}/${CERTDATA_PACYCOMCA_TXT} ${WRKDIR}/${CERTDATA_PACYWORLD_TXT} >> ${WRKSRC}/${CERTDATA_TXT_PATH}
-
-pre-build: merge-pacyworld
-
 do-install:
-	${MKDIR} ${STAGEDIR}${PREFIX}/include/nss/nss ${STAGEDIR}${PREFIX}/lib/nss
+	${MKDIR} ${STAGEDIR}${PREFIX}/include/nss ${STAGEDIR}${PREFIX}/lib
 	${FIND} ${DIST}/public/nss -type l \
-		-exec ${INSTALL_DATA} {} ${STAGEDIR}${PREFIX}/include/nss/nss \;
+		-exec ${INSTALL_DATA} {} ${STAGEDIR}${PREFIX}/include/nss \;
 	${INSTALL_LIB} ${BINS}/lib/*.so \
-		${STAGEDIR}${PREFIX}/lib/nss
+		${STAGEDIR}${PREFIX}/lib/
 	${INSTALL_DATA} ${BINS}/lib/libcrmf.a \
-		${STAGEDIR}${PREFIX}/lib/nss
+		${STAGEDIR}${PREFIX}/lib/
 .for bin in ${INSTALL_BINS}
 	${INSTALL_PROGRAM} ${BINS}/bin/${bin} \
 		${STAGEDIR}${PREFIX}/bin

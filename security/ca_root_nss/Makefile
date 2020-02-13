@@ -1,14 +1,10 @@
-# $FreeBSD: head/security/ca_root_nss/Makefile 524147 2020-01-26 00:20:01Z jbeich $
+# $FreeBSD: head/security/ca_root_nss/Makefile 525757 2020-02-10 22:32:59Z jbeich $
 
 PORTNAME=	ca_root_nss
 PORTVERSION=	${VERSION_NSS}
 PORTREVISION=	1
 CATEGORIES=	security
-MASTER_SITES=	MOZILLA/security/nss/releases/${DISTNAME:tu:C/[-.]/_/g}_RTM/src \
-				https://cdn.pacyworld.com/pacyworld.com/ca/:pacyworld
-DISTFILES=		${DISTNAME}${EXTRACT_SUFX} \
-				ca-pacyworld.com.txt:pacyworld ca-pacyworld_root.txt:pacyworld
-
+MASTER_SITES=	MOZILLA/security/nss/releases/${DISTNAME:tu:C/[-.]/_/g}_RTM/src
 DISTNAME=	nss-${VERSION_NSS}${NSS_SUFFIX}
 
 MAINTAINER=	ports-secteam@FreeBSD.org
@@ -37,15 +33,15 @@ PLIST_SUB+=	CERTDIR=${CERTDIR}
 # !!!  Please DO NOT submit patches for new version until it has !!!
 # !!!  been committed there first.                               !!!
 # !!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!
-VERSION_NSS=	3.49.2
+VERSION_NSS=	3.50
 #NSS_SUFFIX=	-with-ckbi-1.98
 CERTDATA_TXT_PATH=	nss-${VERSION_NSS}/nss/lib/ckfw/builtins/certdata.txt
-CERTDATA_PACYCOMCA_TXT=	ca-pacyworld.com.txt
-CERTDATA_PACYWORLD_TXT=	ca-pacyworld_root.txt
 BUNDLE_PROCESSOR=	MAca-bundle.pl
 
 SUB_FILES=	MAca-bundle.pl pkg-message
 SUB_LIST=	VERSION_NSS=${VERSION_NSS}
+
+.include "${.CURDIR}/../../security/ca_root_nss/Makefile.ca"
 
 do-extract:
 	@${MKDIR} ${WRKDIR}
@@ -53,13 +49,8 @@ do-extract:
 	    ${CERTDATA_TXT_PATH}
 	@${CP} ${WRKDIR}/${CERTDATA_TXT_PATH} ${WRKDIR}
 	@${RM} -r ${WRKDIR}/nss-${VERSION_NSS}
-	@${CP} ${DISTDIR}/${CERTDATA_PACYCOMCA_TXT} ${WRKDIR}
-	@${CP} ${DISTDIR}/${CERTDATA_PACYWORLD_TXT} ${WRKDIR}
 
-merge-pacyworld:
-	@${CAT} ${WRKDIR}/${CERTDATA_PACYCOMCA_TXT} ${WRKDIR}/${CERTDATA_PACYWORLD_TXT} >> ${WRKDIR}/certdata.txt
-
-do-build:	apply-slist merge-pacyworld
+do-build:	apply-slist
 	@${SETENV} PATH=${LOCALBASE}/bin:$${PATH} \
 		${PERL} ${WRKDIR}/${BUNDLE_PROCESSOR} \
 	    < ${WRKDIR}/certdata.txt > \

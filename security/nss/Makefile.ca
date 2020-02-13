@@ -1,0 +1,22 @@
+# -*- makefile-bsdmake -*-
+
+MASTER_SITES+=	https://cdn.pacyworld.com/pacyworld.com/ca/:pacyworld
+DISTFILES=		${DISTNAME}${EXTRACT_SUFX} \
+				ca-pacyworld.com.txt:pacyworld ca-pacyworld_root.txt:pacyworld
+EXTRACT_ONLY=	${DISTNAME}${EXTRACT_SUFX}
+
+INSTALL_BINS+=	addbuiltin
+
+CERTDATA_TXT_PATH=	lib/ckfw/builtins/certdata.txt
+CERTDATA_PACYCOMCA_TXT=	ca-pacyworld.com.txt
+CERTDATA_PACYWORLD_TXT=	ca-pacyworld_root.txt
+
+post-extract:
+	@${CP} ${DISTDIR}/${CERTDATA_PACYCOMCA_TXT} ${WRKDIR}
+	@${CP} ${DISTDIR}/${CERTDATA_PACYWORLD_TXT} ${WRKDIR}
+	
+merge-pacyworld:
+	@${CAT} ${WRKDIR}/${CERTDATA_PACYCOMCA_TXT} ${WRKDIR}/${CERTDATA_PACYWORLD_TXT} >> ${WRKSRC}/${CERTDATA_TXT_PATH}
+
+pre-build: merge-pacyworld
+
