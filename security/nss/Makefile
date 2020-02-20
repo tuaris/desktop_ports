@@ -1,5 +1,5 @@
 # Created by: Maxim Sobolev <sobomax@FreeBSD.org>
-# $FreeBSD: head/security/nss/Makefile 525766 2020-02-10 23:51:09Z jbeich $
+# $FreeBSD: head/security/nss/Makefile 526016 2020-02-13 14:17:23Z pkubaj $
 
 PORTNAME=	nss
 PORTVERSION=	3.50
@@ -32,7 +32,7 @@ MAKE_ENV=	LIBRARY_PATH="${LOCALBASE}/lib" \
 		FREEBL_LOWHASH=1 \
 		NSS_DISABLE_GTESTS=1 \
 		NSS_USE_SYSTEM_SQLITE=1
-CFLAGS+=	-I${LOCALBASE}/include/nspr
+CFLAGS+=	-I${LOCALBASE}/include/nspr -Wno-error=unused-function
 
 SUB_FILES=	nss-config nss.pc
 SUB_LIST=	PORTVERSION=${PORTVERSION}
