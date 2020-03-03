@@ -1,9 +1,9 @@
 # Created by: Alan Eldridge <alane@FreeBSD.org>
-# $FreeBSD: head/www/firefox-esr/Makefile 525477 2020-02-07 11:24:37Z jbeich $
+# $FreeBSD: head/www/firefox-esr/Makefile 527481 2020-02-29 22:53:08Z jbeich $
 
 PORTNAME=	firefox
 DISTVERSION=	68.5.0
-PORTREVISION=	2
+PORTREVISION=	4
 PORTEPOCH=	1
 CATEGORIES=	www
 MASTER_SITES=	MOZILLA/${PORTNAME}/releases/${DISTVERSION}esr/source \
@@ -23,7 +23,6 @@ BUILD_DEPENDS=	nspr>=4.21:devel/nspr \
 		png>=1.6.35:graphics/png \
 		libvpx>=1.5.0:multimedia/libvpx \
 		sqlite3>=3.28.0:databases/sqlite3 \
-		${PYTHON_PKGNAMEPREFIX}sqlite3>0:databases/py-sqlite3@${PY_FLAVOR} \
 		v4l_compat>0:multimedia/v4l_compat \
 		autoconf-2.13:devel/autoconf213 \
 		nasm:devel/nasm \
