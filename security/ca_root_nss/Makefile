@@ -1,4 +1,4 @@
-# $FreeBSD: head/security/ca_root_nss/Makefile 525757 2020-02-10 22:32:59Z jbeich $
+# $FreeBSD: head/security/ca_root_nss/Makefile 527914 2020-03-07 00:57:58Z jbeich $
 
 PORTNAME=	ca_root_nss
 PORTVERSION=	${VERSION_NSS}
@@ -33,7 +33,7 @@ PLIST_SUB+=	CERTDIR=${CERTDIR}
 # !!!  Please DO NOT submit patches for new version until it has !!!
 # !!!  been committed there first.                               !!!
 # !!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!
-VERSION_NSS=	3.50
+VERSION_NSS=	3.51
 #NSS_SUFFIX=	-with-ckbi-1.98
 CERTDATA_TXT_PATH=	nss-${VERSION_NSS}/nss/lib/ckfw/builtins/certdata.txt
 BUNDLE_PROCESSOR=	MAca-bundle.pl
