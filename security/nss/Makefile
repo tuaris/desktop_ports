@@ -1,5 +1,5 @@
 # Created by: Maxim Sobolev <sobomax@FreeBSD.org>
-# $FreeBSD: head/security/nss/Makefile 527914 2020-03-07 00:57:58Z jbeich $
+# $FreeBSD: head/security/nss/Makefile 528305 2020-03-12 18:29:13Z pkubaj $
 
 PORTNAME=	nss
 PORTVERSION=	3.51
@@ -58,7 +58,7 @@ BINS=		${DIST}/${OPSYS}${OSREL}_DBG.OBJ
 .endif
 
 .if ${ARCH} == powerpc64
-USES+=		compiler:c++11-lang # -mcrypto -mvsx
+USE_GCC=	yes
 .else
 MAKE_ENV+=	NSS_DISABLE_ALTIVEC=1
 .endif
