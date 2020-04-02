@@ -45,7 +45,7 @@ OPTIONS_DEFINE=	LIGHTNING
 OPTIONS_DEFAULT=CANBERRA LIGHTNING
 
 .include "${.CURDIR}/../../www/firefox/Makefile.options"
-.include "${.CURDIR}/../../www/firefox/Makefile.ca"
+.include "${.CURDIR}/../../mail/thunderbird/Makefile.ca"
 .include <bsd.port.pre.mk>
 
 .if ${PORT_OPTIONS:MLIGHTNING}
