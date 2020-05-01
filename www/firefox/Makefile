@@ -1,24 +1,24 @@
 # Created by: Alan Eldridge <alane@FreeBSD.org>
-# $FreeBSD: head/www/firefox/Makefile 530541 2020-04-04 01:10:56Z jbeich $
+# $FreeBSD: head/www/firefox/Makefile 533408 2020-04-30 03:22:44Z jbeich $
 
 PORTNAME=	firefox
-DISTVERSION=	75.0
-PORTREVISION=	2
+DISTVERSION=	76.0
+PORTREVISION=	3
 PORTEPOCH=	1
 CATEGORIES=	www
 MASTER_SITES=	MOZILLA/${PORTNAME}/releases/${DISTVERSION}/source \
-		MOZILLA/${PORTNAME}/candidates/${DISTVERSION}-candidates/build3/source
+		MOZILLA/${PORTNAME}/candidates/${DISTVERSION}-candidates/build2/source
 DISTFILES=	${DISTNAME}.source${EXTRACT_SUFX}
 
 MAINTAINER=	gecko@FreeBSD.org
 COMMENT=	Web browser based on the browser portion of Mozilla
 
 BUILD_DEPENDS=	nspr>=4.25:devel/nspr \
-		nss>=3.51:security/nss \
+		nss>=3.51.1:security/nss \
 		icu>=64.1,1:devel/icu \
 		libevent>=2.1.8:devel/libevent \
 		harfbuzz>=2.6.4:print/harfbuzz \
-		graphite2>=1.3.13:graphics/graphite2 \
+		graphite2>=1.3.14:graphics/graphite2 \
 		png>=1.6.35:graphics/png \
 		libvpx>=1.8.2:multimedia/libvpx \
 		py${PYTHON3_DEFAULT:S/.//}-sqlite3>0:databases/py-sqlite3@py${PYTHON3_DEFAULT:S/.//} \
