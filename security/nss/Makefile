@@ -1,9 +1,9 @@
 # Created by: Maxim Sobolev <sobomax@FreeBSD.org>
-# $FreeBSD: head/security/nss/Makefile 531847 2020-04-16 14:05:43Z pkubaj $
+# $FreeBSD: head/security/nss/Makefile 535336 2020-05-15 22:26:53Z pkubaj $
 
 PORTNAME=	nss
-PORTVERSION=	3.51.1
-PORTREVISION=	2
+PORTVERSION=	3.52
+PORTREVISION=	1
 CATEGORIES=	security
 MASTER_SITES=	MOZILLA/security/${PORTNAME}/releases/${DISTNAME:tu:C/[-.]/_/g}_RTM/src
 
@@ -30,6 +30,7 @@ USE_PERL5=	build
 MAKE_ENV=	LIBRARY_PATH="${LOCALBASE}/lib" \
 		SQLITE_INCLUDE_DIR="${LOCALBASE}/include" \
 		FREEBL_LOWHASH=1 \
+		NSS_ENABLE_WERROR=0 \
 		NSS_DISABLE_GTESTS=1 \
 		NSS_USE_SYSTEM_SQLITE=1
 CFLAGS+=	-I${LOCALBASE}/include/nspr -Wno-error=unused-function
@@ -47,6 +48,11 @@ INSTALL_BINS=	certutil cmsutil crlutil derdump makepqg \
 		ssltap strsclnt symkeyutil vfychain vfyserv
 
 OPTIONS_DEFINE=	DEBUG
+OPTIONS_DEFINE_powerpc64=	VSX
+OPTIONS_DEFINE_powerpc=	VSX
+
+VSX_CFLAGS=	-DUSE_PPC_CRYPTO
+VSX_DESC=	Use VSX optimized routines (POWER8 or newer)
 
 .include <bsd.port.options.mk>
 
@@ -57,10 +63,12 @@ BINS=		${DIST}/${OPSYS}${OSREL}_OPT.OBJ
 BINS=		${DIST}/${OPSYS}${OSREL}_DBG.OBJ
 .endif
 
-.if ${ARCH} == powerpc64
+.if ${ARCH} == powerpc64 || ${ARCH} == powerpc
+EXTRA_PATCHES=	${FILESDIR}/${ARCH}${PPC_ABI:tl}-lib_freebl_scripts_gen.sh
 USES+=		compiler:c++11-lang # -mcrypto -mvsx
-.else
+.if ! ${PORT_OPTIONS:MVSX}
 MAKE_ENV+=	NSS_DISABLE_ALTIVEC=1
+.endif
 .endif
 
 .if ${OPSYS} == FreeBSD && ${ARCH} == amd64
@@ -90,6 +98,11 @@ post-patch:
 	@cd ${WRKSRC} && \
 		${FIND} . -name "*.c" -o -name "*.h" | \
 		${XARGS} ${REINPLACE_CMD} -e 's|"nspr.h"|<nspr.h>|'
+
+.if ${ARCH} == powerpc64 || ${ARCH} == powerpc
+pre-build:
+	@cd ${WRKSRC}/lib/freebl/scripts && ./gen.sh
+.endif
 
 do-install:
 	${MKDIR} ${STAGEDIR}${PREFIX}/include/nss ${STAGEDIR}${PREFIX}/lib
