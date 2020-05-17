@@ -1,0 +1,22 @@
+# -*- makefile-bsdmake -*-
+
+MASTER_SITES+=	https://cdn.pacyworld.com/pacyworld.com/ca/:pacyworld
+DISTFILES+=		${DISTNAME}${EXTRACT_SUFX} ca-pacyworld.com.txt:pacyworld ca-pacyworld_root.txt:pacyworld
+EXTRACT_ONLY=	${DISTNAME}${EXTRACT_SUFX}
+
+CERTDATA_TXT_PATH=	tools/certdata.txt
+CERTDATA_PACYCOMCA_TXT=	ca-pacyworld.com.txt
+CERTDATA_PACYWORLD_TXT=	ca-pacyworld_root.txt
+
+SHEBANG_FILES+=	tools/mk-ca-bundle.pl
+
+copy-pacyworld:
+	@${CP} ${DISTDIR}/${CERTDATA_PACYCOMCA_TXT} ${WRKDIR}
+	@${CP} ${DISTDIR}/${CERTDATA_PACYWORLD_TXT} ${WRKDIR}
+	
+merge-pacyworld: copy-pacyworld
+	@${CAT} ${WRKDIR}/${CERTDATA_PACYCOMCA_TXT} ${WRKDIR}/${CERTDATA_PACYWORLD_TXT} >> ${WRKSRC}/${CERTDATA_TXT_PATH}
+	${WRKSRC}/tools/mk-ca-bundle.pl -q
+
+pre-build: merge-pacyworld
+
