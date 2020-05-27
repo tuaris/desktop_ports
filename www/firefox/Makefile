@@ -1,20 +1,20 @@
 # Created by: Alan Eldridge <alane@FreeBSD.org>
-# $FreeBSD: head/www/firefox/Makefile 535269 2020-05-15 04:59:07Z jbeich $
+# $FreeBSD: head/www/firefox/Makefile 536713 2020-05-27 20:03:54Z jbeich $
 
 PORTNAME=	firefox
-DISTVERSION=	76.0.1
-PORTREVISION=	4
+DISTVERSION=	77.0
+PORTREVISION=	2
 PORTEPOCH=	1
 CATEGORIES=	www
 MASTER_SITES=	MOZILLA/${PORTNAME}/releases/${DISTVERSION}/source \
-		MOZILLA/${PORTNAME}/candidates/${DISTVERSION}-candidates/build1/source
+		MOZILLA/${PORTNAME}/candidates/${DISTVERSION}-candidates/build2/source
 DISTFILES=	${DISTNAME}.source${EXTRACT_SUFX}
 
 MAINTAINER=	gecko@FreeBSD.org
 COMMENT=	Web browser based on the browser portion of Mozilla
 
 BUILD_DEPENDS=	nspr>=4.25:devel/nspr \
-		nss>=3.51.1:security/nss \
+		nss>=3.52.1:security/nss \
 		icu>=64.1,1:devel/icu \
 		libevent>=2.1.8:devel/libevent \
 		harfbuzz>=2.6.4:print/harfbuzz \

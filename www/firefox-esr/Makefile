@@ -1,5 +1,5 @@
 # Created by: Alan Eldridge <alane@FreeBSD.org>
-# $FreeBSD: head/www/firefox-esr/Makefile 535269 2020-05-15 04:59:07Z jbeich $
+# $FreeBSD: head/www/firefox-esr/Makefile 536377 2020-05-24 09:49:43Z jbeich $
 
 PORTNAME=	firefox
 DISTVERSION=	68.8.0
@@ -15,7 +15,7 @@ MAINTAINER=	gecko@FreeBSD.org
 COMMENT=	Web browser based on the browser portion of Mozilla
 
 BUILD_DEPENDS=	nspr>=4.21:devel/nspr \
-		nss>=3.44.3:security/nss \
+		nss>=3.52.1:security/nss \
 		icu>=63.1,1:devel/icu \
 		libevent>=2.1.8:devel/libevent \
 		harfbuzz>=2.4.0:print/harfbuzz \
