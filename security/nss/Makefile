@@ -1,8 +1,8 @@
 # Created by: Maxim Sobolev <sobomax@FreeBSD.org>
-# $FreeBSD: head/security/nss/Makefile 535999 2020-05-20 14:48:58Z jbeich $
+# $FreeBSD: head/security/nss/Makefile 537018 2020-05-30 00:29:34Z jbeich $
 
 PORTNAME=	nss
-PORTVERSION=	3.52.1
+PORTVERSION=	3.53
 PORTREVISION=	1
 CATEGORIES=	security
 MASTER_SITES=	MOZILLA/security/${PORTNAME}/releases/${DISTNAME:tu:C/[-.]/_/g}_RTM/src
@@ -19,15 +19,13 @@ TEST_DEPENDS=	bash:shells/bash
 
 USES=		cpe gmake perl5
 
-MAKE_JOBS_UNSAFE=	yes
-
 WRKSRC_SUBDIR=	nss
 
 USE_LDCONFIG=	yes
 CPE_VENDOR=	mozilla
 CPE_PRODUCT=	network_security_services
 USE_PERL5=	build
-MAKE_ENV=	LIBRARY_PATH="${LOCALBASE}/lib" \
+MAKE_ENV=	NSPR_LIB_DIR="${LOCALBASE}/lib" \
 		SQLITE_INCLUDE_DIR="${LOCALBASE}/include" \
 		FREEBL_LOWHASH=1 \
 		NSS_ENABLE_WERROR=0 \
