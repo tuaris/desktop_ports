@@ -1,7 +1,7 @@
-# $FreeBSD: head/www/node/Makefile 538484 2020-06-11 13:45:23Z bhughes $
+# $FreeBSD: head/www/node/Makefile 538603 2020-06-12 11:31:52Z bhughes $
 
 PORTNAME=	node
-PORTVERSION=	14.3.0
+PORTVERSION=	14.4.0
 DISTVERSIONPREFIX=	v
 PORTREVISION=	1
 CATEGORIES=	www
