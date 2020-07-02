@@ -1,7 +1,7 @@
-# $FreeBSD: head/www/node12/Makefile 538602 2020-06-12 11:30:34Z bhughes $
+# $FreeBSD: head/www/node12/Makefile 540917 2020-06-30 22:13:25Z bhughes $
 
 PORTNAME=	node
-PORTVERSION=	12.18.0
+PORTVERSION=	12.18.2
 DISTVERSIONPREFIX=	v
 PORTREVISION=	1
 CATEGORIES=	www
@@ -67,9 +67,9 @@ MAKE_ENV+=	CC.host=${CC} CFLAGS.host="${CFLAGS}" \
 		CXX.host=${CXX} CXXFLAGS.host="${CXXFLAGS}" \
 		LINK.host=${CXX} LDFLAGS.host="${LDFLAGS}"
 
-BUILD_DEPENDS+=	c-ares>=1.15.0:dns/c-ares\
-		libuv>=1.37.0:devel/libuv \
-		libnghttp2>=1.40.0:www/libnghttp2 \
+BUILD_DEPENDS+=	c-ares>=1.16.0:dns/c-ares \
+		libuv>=1.38.0:devel/libuv \
+		libnghttp2>=1.41.0:www/libnghttp2 \
 		objdump:devel/binutils
 LIB_DEPENDS+=	libcares.so:dns/c-ares\
 		libuv.so:devel/libuv \
