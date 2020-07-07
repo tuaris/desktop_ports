@@ -1,9 +1,9 @@
-# $FreeBSD: head/www/node12/Makefile 540917 2020-06-30 22:13:25Z bhughes $
+# $FreeBSD: head/www/node12/Makefile 541210 2020-07-04 12:47:46Z pkubaj $
 
 PORTNAME=	node
 PORTVERSION=	12.18.2
+PORTREVISION=	2
 DISTVERSIONPREFIX=	v
-PORTREVISION=	1
 CATEGORIES=	www
 MASTER_SITES=	http://nodejs.org/dist/v${PORTVERSION}/
 PKGNAMESUFFIX=	12
@@ -83,6 +83,8 @@ BROKEN_SSL+=	base
 
 .if ${ARCH} == armv6 || ${ARCH} == armv7
 EXTRA_PATCHES=	${PATCHDIR}/extra-patch-tools_v8__gypfiles_v8.gyp
+.elif defined(PPC_ABI) && ${PPC_ABI} == ELFv2
+EXTRA_PATCHES=	${PATCHDIR}/extra-patch-common.gypi
 .endif
 
 .if ${PORT_OPTIONS:MBUNDLED_SSL} && ${ARCH} != amd64
