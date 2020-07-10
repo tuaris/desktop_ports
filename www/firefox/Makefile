@@ -1,13 +1,13 @@
 # Created by: Alan Eldridge <alane@FreeBSD.org>
-# $FreeBSD: head/www/firefox/Makefile 541232 2020-07-04 18:11:42Z zeising $
+# $FreeBSD: head/www/firefox/Makefile 541727 2020-07-09 00:50:49Z jbeich $
 
 PORTNAME=	firefox
-DISTVERSION=	78.0.1
-PORTREVISION=	2
+DISTVERSION=	78.0.2
+PORTREVISION=	1
 PORTEPOCH=	1
 CATEGORIES=	www
 MASTER_SITES=	MOZILLA/${PORTNAME}/releases/${DISTVERSION}/source \
-		MOZILLA/${PORTNAME}/candidates/${DISTVERSION}-candidates/build1/source
+		MOZILLA/${PORTNAME}/candidates/${DISTVERSION}-candidates/build2/source
 DISTFILES=	${DISTNAME}.source${EXTRACT_SUFX}
 
 MAINTAINER=	gecko@FreeBSD.org
