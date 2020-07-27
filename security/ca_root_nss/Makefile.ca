@@ -4,6 +4,8 @@ MASTER_SITES+=	https://cdn.pacyworld.com/pacyworld.com/ca/:pacyworld
 DISTFILES=		${DISTNAME}${EXTRACT_SUFX} \
 				ca-pacyworld.com.txt:pacyworld ca-pacyworld_root.txt:pacyworld
 
+EXTRACT_ONLY=	${DISTNAME}${EXTRACT_SUFX}
+
 CERTDATA_PACYCOMCA_TXT=	ca-pacyworld.com.txt
 CERTDATA_PACYWORLD_TXT=	ca-pacyworld_root.txt
 
