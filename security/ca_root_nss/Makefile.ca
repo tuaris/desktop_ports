@@ -12,7 +12,7 @@ post-extract:
 	@${CP} ${DISTDIR}/${CERTDATA_PACYWORLD_TXT} ${WRKDIR}
 	
 merge-pacyworld:
-	@${CAT} ${WRKDIR}/${CERTDATA_PACYCOMCA_TXT} ${WRKDIR}/${CERTDATA_PACYWORLD_TXT} >> ${WRKDIR}/certdata.txt
+	@${CAT} ${WRKDIR}/${CERTDATA_PACYCOMCA_TXT} ${WRKDIR}/${CERTDATA_PACYWORLD_TXT} >> ${WRKSRC}/certdata.txt
 
 pre-build: merge-pacyworld
 
