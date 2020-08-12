@@ -7,6 +7,8 @@ This repository contains port skeletons that include modifications or additions 
 
 * The [`security/ca_root_nss`](https://www.freshports.org/security/ca_root_nss) and [`security/nss`](https://www.freshports.org/security/nss) packages are altered to include the [TDMC/Pacy World, LLC. root CA](http://www.pacyworld.com/ca.php).
 * The [`www/firefox`](https://www.freshports.org/www/firefox) and [`www/firefox-esr`](https://www.freshports.org/www/firefox-esr) packages are altered to include the [TDMC/Pacy World, LLC. root CA](http://www.pacyworld.com/ca.php).
+* The [`mail/thunderbird`](https://www.freshports.org/mail/thunderbird) package is altered to include the [TDMC/Pacy World, LLC. root CA](http://www.pacyworld.com/ca.php).
+* All [`www/node`](https://www.freshports.org/www/node) packages are also altered to include the [TDMC/Pacy World, LLC. root CA](http://www.pacyworld.com/ca.php).
 * This is forked from GostBSD's origional 11.x series desktop and thus borrows a lot from that.
 
 ### Todo:
