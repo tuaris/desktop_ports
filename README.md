@@ -3,11 +3,16 @@ Special FreeBSD Desktop Ports
 
 This repository contains port skeletons that include modifications or additions to the official FreeBSD ports collection.  This exists for the purpose of building a functional FreeBSD Desktop.
 
-Notable modifications:
+## Notable modifications:
 
 * The [`security/ca_root_nss`](https://www.freshports.org/security/ca_root_nss) and [`security/nss`](https://www.freshports.org/security/nss) packages are altered to include the [TDMC/Pacy World, LLC. root CA](http://www.pacyworld.com/ca.php).
 * The [`www/firefox`](https://www.freshports.org/www/firefox) and [`www/firefox-esr`](https://www.freshports.org/www/firefox-esr) packages are altered to include the [TDMC/Pacy World, LLC. root CA](http://www.pacyworld.com/ca.php).
 * This is forked from GostBSD's origional 11.x series desktop and thus borrows a lot from that.
+
+### Todo:
+
+* Further modify the Firefox ports to disable DoH by default as was done by [OpenBSD](https://undeadly.org/cgi?action=article;sid=20190911113856)
+* Remove certain pinned certificates for well-know ad serving hostnames.
 
 ## Using with Portshaker
 
