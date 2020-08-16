@@ -59,5 +59,9 @@ post-install:
 	${INSTALL_DATA} ${FIREFOX_DESKTOP} ${STAGEDIR}${PREFIX}/share/applications/
 	${MKDIR} ${STAGEDIR}${PREFIX}/share/pixmaps
 	${LN} -sf ${FIREFOX_ICON_SRC} ${STAGEDIR}${PREFIX}/share/pixmaps/${FIREFOX_ICON}
+	# install prefs
+	${MKDIR} ${STAGEDIR}${PREFIX}/lib/${MOZILLA}/browser/defaults/preferences
+	${INSTALL_DATA} ${FILESDIR}/all-freebsd.js \
+		${STAGEDIR}${PREFIX}/lib/${MOZILLA}/browser/defaults/preferences/all-freebsd.js
 
 .include <bsd.port.mk>
