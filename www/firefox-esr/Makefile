@@ -1,9 +1,9 @@
 # Created by: Alan Eldridge <alane@FreeBSD.org>
-# $FreeBSD: head/www/firefox-esr/Makefile 544073 2020-08-03 15:18:49Z tobik $
+# $FreeBSD: head/www/firefox-esr/Makefile 545204 2020-08-18 00:52:47Z jbeich $
 
 PORTNAME=	firefox
-DISTVERSION=	68.11.0
-PORTREVISION=	3
+DISTVERSION=	68.12.0
+PORTREVISION=	1
 PORTEPOCH=	1
 CATEGORIES=	www
 MASTER_SITES=	MOZILLA/${PORTNAME}/releases/${DISTVERSION}esr/source \
