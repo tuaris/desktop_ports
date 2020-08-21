@@ -1,9 +1,9 @@
-# $FreeBSD: head/www/node/Makefile 543682 2020-07-29 22:08:13Z bhughes $
+# $FreeBSD: head/www/node/Makefile 545560 2020-08-20 20:40:52Z bhughes $
 
 PORTNAME=	node
-PORTVERSION=	14.6.0
+PORTVERSION=	14.8.0
 DISTVERSIONPREFIX=	v
-PORTREVISION=	2
+PORTREVISION=	1
 CATEGORIES=	www
 MASTER_SITES=	http://nodejs.org/dist/v${PORTVERSION}/
 
@@ -39,7 +39,7 @@ BUNDLED_SSL_CONFIGURE_OFF=	--shared-openssl --openssl-use-def-ca-store
 BUNDLED_SSL_RUN_DEPENDS_OFF=	ca_root_nss>=0:security/ca_root_nss
 
 NLS_CONFIGURE_ON=	--with-intl=system-icu
-NLS_BUILD_DEPENDS=	icu>=66.1:devel/icu
+NLS_BUILD_DEPENDS=	icu>=67.1:devel/icu
 NLS_LIB_DEPENDS=	libicui18n.so:devel/icu
 
 DTRACE_CONFIGURE_ON=	--with-dtrace
