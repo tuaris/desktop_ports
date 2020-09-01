@@ -1,9 +1,9 @@
 # Created by: Joe Marcus Clarke <marcus@FreeBSD.org>
-# $FreeBSD: head/mail/thunderbird/Makefile 546956 2020-08-30 00:20:45Z jbeich $
+# $FreeBSD: head/mail/thunderbird/Makefile 547071 2020-08-30 18:36:07Z tobik $
 
 PORTNAME=	thunderbird
 DISTVERSION=	68.12.0
-PORTREVISION=	2
+PORTREVISION=	3
 CATEGORIES=	mail news net-im
 MASTER_SITES=	MOZILLA/${PORTNAME}/releases/${DISTVERSION}/source \
 		MOZILLA/${PORTNAME}/candidates/${DISTVERSION}-candidates/build1/source
