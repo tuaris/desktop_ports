@@ -1,4 +1,4 @@
-# $FreeBSD: head/www/node/Makefile 550012 2020-09-25 09:50:15Z bhughes $
+# $FreeBSD: head/www/node/Makefile 550352 2020-09-27 20:52:53Z linimon $
 
 PORTNAME=	node
 PORTVERSION=	14.12.0
@@ -15,7 +15,7 @@ LICENSE_FILE=	${WRKSRC}/LICENSE
 
 BROKEN_SSL=		libressl libressl-devel
 BROKEN_SSL_REASON=	Node.js 14.x requires OpenSSL 1.1.x or the BUNDLED_SSL option enabled
-ONLY_FOR_ARCHS=		aarch64 amd64 armv6 armv7 i386 powerpc64
+ONLY_FOR_ARCHS=		aarch64 amd64 armv6 armv7 i386 powerpc64 powerpc64le
 
 OPTIONS_DEFINE=		BUNDLED_SSL DOCS NLS DTRACE
 OPTIONS_DEFAULT=	DTRACE
