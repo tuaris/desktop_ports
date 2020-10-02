@@ -1,11 +1,11 @@
-# $FreeBSD: head/www/node/Makefile 550352 2020-09-27 20:52:53Z linimon $
+# $FreeBSD: head/www/node/Makefile 550646 2020-09-30 05:06:32Z bhughes $
 
 PORTNAME=	node
-PORTVERSION=	14.12.0
 DISTVERSIONPREFIX=	v
+DISTVERSION=	14.13.0
 PORTREVISION=	1
 CATEGORIES=	www
-MASTER_SITES=	http://nodejs.org/dist/v${PORTVERSION}/
+MASTER_SITES=	http://nodejs.org/dist/v${DISTVERSION}/
 
 MAINTAINER=	bhughes@FreeBSD.org
 COMMENT=	V8 JavaScript for client and server
@@ -71,8 +71,8 @@ MAKE_ENV+=	CC.host=${CC} CFLAGS.host="${CFLAGS}" \
 		LINK.host=${CXX} LDFLAGS.host="${LDFLAGS}"
 
 BUILD_DEPENDS+=	brotli>=1.0.9,1:archivers/brotli \
-		c-ares>=1.16.0:dns/c-ares \
-		libuv>=1.39.0:devel/libuv \
+		c-ares>=1.16.1:dns/c-ares \
+		libuv>=1.40.0:devel/libuv \
 		libnghttp2>=1.41.0:www/libnghttp2 \
 		objdump:devel/binutils
 LIB_DEPENDS+=	libbrotlidec.so:archivers/brotli \
