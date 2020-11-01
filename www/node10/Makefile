@@ -1,7 +1,7 @@
-# $FreeBSD: head/www/node10/Makefile 550352 2020-09-27 20:52:53Z linimon $
+# $FreeBSD: head/www/node10/Makefile 553619 2020-10-29 14:02:49Z bhughes $
 
 PORTNAME=	node
-PORTVERSION=	10.22.1
+PORTVERSION=	10.23.0
 DISTVERSIONPREFIX=	v
 PORTREVISION=	1
 CATEGORIES=	www
@@ -50,7 +50,7 @@ USES=		compiler:c++11-lib gmake python:2.7,build pkgconfig \
 
 HAS_CONFIGURE=	yes
 
-CONFLICTS_INSTALL=	node[68]-[0-9]* node12-[0-9]* node-[0-9]*
+CONFLICTS_INSTALL=	node12-[0-9]* node14-[0-9]* node-[0-9]*
 
 CONFIGURE_ARGS=	--prefix=${PREFIX_RELDEST} \
 		--without-npm \

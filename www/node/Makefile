@@ -1,8 +1,8 @@
-# $FreeBSD: head/www/node/Makefile 552769 2020-10-19 21:08:12Z bhughes $
+# $FreeBSD: head/www/node/Makefile 553650 2020-10-29 22:25:34Z bhughes $
 
 PORTNAME=	node
 DISTVERSIONPREFIX=	v
-DISTVERSION=	14.14.0
+DISTVERSION=	15.0.1
 PORTREVISION=	1
 CATEGORIES=	www
 MASTER_SITES=	http://nodejs.org/dist/v${DISTVERSION}/
@@ -14,7 +14,7 @@ LICENSE=	MIT
 LICENSE_FILE=	${WRKSRC}/LICENSE
 
 BROKEN_SSL=		libressl libressl-devel
-BROKEN_SSL_REASON=	Node.js 14.x requires OpenSSL 1.1.x or the BUNDLED_SSL option enabled
+BROKEN_SSL_REASON=	Node.js 15.x requires OpenSSL 1.1.x or the BUNDLED_SSL option enabled
 ONLY_FOR_ARCHS=		aarch64 amd64 armv6 armv7 i386 powerpc64 powerpc64le
 
 OPTIONS_DEFINE=		BUNDLED_SSL DOCS NLS DTRACE
@@ -49,12 +49,11 @@ USES=		compiler:c++11-lib gmake python:build pkgconfig \
 
 HAS_CONFIGURE=	yes
 
-CONFLICTS_INSTALL=	node[68]-[0-9]* node10-[0-9]* node12-[0-9]*
+CONFLICTS_INSTALL=	node10-[0-9]* node12-[0-9]* node14-[0-9]*
 
 CONFIGURE_ARGS=	--prefix=${PREFIX_RELDEST} \
 		--without-npm \
 		--shared-brotli \
-		--shared-cares \
 		--shared-libuv \
 		--shared-nghttp2 \
 		--shared-zlib
@@ -71,12 +70,10 @@ MAKE_ENV+=	CC.host=${CC} CFLAGS.host="${CFLAGS}" \
 		LINK.host=${CXX} LDFLAGS.host="${LDFLAGS}"
 
 BUILD_DEPENDS+=	brotli>=1.0.9,1:archivers/brotli \
-		c-ares>=1.16.1:dns/c-ares \
 		libuv>=1.40.0:devel/libuv \
 		libnghttp2>=1.41.0:www/libnghttp2 \
 		objdump:devel/binutils
 LIB_DEPENDS+=	libbrotlidec.so:archivers/brotli \
-		libcares.so:dns/c-ares\
 		libuv.so:devel/libuv \
 		libnghttp2.so:www/libnghttp2
 
