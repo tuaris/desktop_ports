@@ -1,9 +1,9 @@
-# $FreeBSD: head/www/node10/Makefile 553619 2020-10-29 14:02:49Z bhughes $
+# $FreeBSD: head/www/node10/Makefile 553940 2020-11-03 00:56:26Z jbeich $
 
 PORTNAME=	node
 PORTVERSION=	10.23.0
 DISTVERSIONPREFIX=	v
-PORTREVISION=	1
+PORTREVISION=	2
 CATEGORIES=	www
 MASTER_SITES=	http://nodejs.org/dist/v${PORTVERSION}/
 PKGNAMESUFFIX=	10
@@ -33,6 +33,7 @@ OPTIONS_EXCLUDE_aarch64=	DTRACE
 OPTIONS_EXCLUDE_armv6=		DTRACE
 OPTIONS_EXCLUDE_armv7=		DTRACE
 OPTIONS_EXCLUDE_powerpc64=	DTRACE
+OPTIONS_EXCLUDE_powerpc64le=	DTRACE
 
 BUNDLED_SSL_DESC=		Use node.js's bundled OpenSSL implementation
 BUNDLED_SSL_USES_OFF=		ssl
@@ -83,6 +84,8 @@ BROKEN_SSL+=	base
 
 .if ${PORT_OPTIONS:MBUNDLED_SSL} && ${ARCH} != amd64 && ${ARCH} != i386
 CONFIGURE_ARGS+=--openssl-no-asm
+.elif (defined(PPC_ABI) && ${PPC_ABI} == ELFv2) || ${ARCH} == powerpc64le
+EXTRA_PATCHES=	${PATCHDIR}/extra-patch-common.gypi
 .endif
 
 .include "${.CURDIR}/../../www/node10/Makefile.ca"
