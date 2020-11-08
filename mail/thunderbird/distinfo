@@ -1,6 +1,6 @@
-TIMESTAMP = 1603101605
-SHA256 (thunderbird-78.4.0.source.tar.xz) = 341a63c22a06c4d3d2468410d26248253a2d4eddc7d1f6aaaa1ac974005dca67
-SIZE (thunderbird-78.4.0.source.tar.xz) = 361176060
+TIMESTAMP = 1604564761
+SHA256 (thunderbird-78.4.1.source.tar.xz) = 71d6d38d03d8999ebcaae1b4203fed14c42e57cc987aa3933d1076d4f8d81110
+SIZE (thunderbird-78.4.1.source.tar.xz) = 352778636
 SHA256 (ca-pacyworld.com.txt) = 2a5ea492bb86d7bcf07f0d46b74fa5793be9ba2f56224db9e21a895e26cfe914
 SIZE (ca-pacyworld.com.txt) = 7939
 SHA256 (ca-pacyworld_root.txt) = 7c7223ed3ec432daad2a9b190f738bd99fbb60d50c2db0103c0708d685f714e6
