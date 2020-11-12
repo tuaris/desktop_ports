@@ -1,8 +1,8 @@
 # Created by: Alan Eldridge <alane@FreeBSD.org>
-# $FreeBSD: head/www/firefox/Makefile 554694 2020-11-09 09:33:34Z cmt $
+# $FreeBSD: head/www/firefox/Makefile 554921 2020-11-12 00:10:27Z jbeich $
 
 PORTNAME=	firefox
-DISTVERSION=	82.0.3
+DISTVERSION=	83.0
 PORTREVISION=	1
 PORTEPOCH=	2
 CATEGORIES=	www
@@ -14,7 +14,7 @@ MAINTAINER=	gecko@FreeBSD.org
 COMMENT=	Web browser based on the browser portion of Mozilla
 
 BUILD_DEPENDS=	nspr>=4.26:devel/nspr \
-		nss>=3.56:security/nss \
+		nss>=3.58:security/nss \
 		icu>=67.1,1:devel/icu \
 		libevent>=2.1.8:devel/libevent \
 		harfbuzz>=2.6.8:print/harfbuzz \
