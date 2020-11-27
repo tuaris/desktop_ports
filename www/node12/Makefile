@@ -1,10 +1,9 @@
-# $FreeBSD: head/www/node12/Makefile 553940 2020-11-03 00:56:26Z jbeich $
+# $FreeBSD: head/www/node12/Makefile 556277 2020-11-25 07:56:30Z bhughes $
 
 PORTNAME=	node
-PORTVERSION=	12.19.0
+PORTVERSION=	12.20.0
 PORTREVISION=	1
 DISTVERSIONPREFIX=	v
-PORTREVISION=	2
 CATEGORIES=	www
 MASTER_SITES=	http://nodejs.org/dist/v${PORTVERSION}/
 PKGNAMESUFFIX=	12
@@ -69,8 +68,8 @@ MAKE_ENV+=	CC.host=${CC} CFLAGS.host="${CFLAGS}" \
 		CXX.host=${CXX} CXXFLAGS.host="${CXXFLAGS}" \
 		LINK.host=${CXX} LDFLAGS.host="${LDFLAGS}"
 
-BUILD_DEPENDS+=	c-ares>=1.16.0:dns/c-ares \
-		libuv>=1.39.0:devel/libuv \
+BUILD_DEPENDS+=	c-ares>=1.16.1:dns/c-ares \
+		libuv>=1.40.0:devel/libuv \
 		libnghttp2>=1.41.0:www/libnghttp2 \
 		objdump:devel/binutils
 LIB_DEPENDS+=	libcares.so:dns/c-ares\

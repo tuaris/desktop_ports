@@ -1,9 +1,9 @@
 # Created by: Alan Eldridge <alane@FreeBSD.org>
-# $FreeBSD: head/www/firefox-esr/Makefile 555054 2020-11-13 22:46:33Z jbeich $
+# $FreeBSD: head/www/firefox-esr/Makefile 556308 2020-11-25 23:23:56Z pkubaj $
 
 PORTNAME=	firefox
 DISTVERSION=	78.5.0
-PORTREVISION=	3
+PORTREVISION=	5
 PORTEPOCH=	1
 CATEGORIES=	www
 MASTER_SITES=	MOZILLA/${PORTNAME}/releases/${DISTVERSION}esr/source \
@@ -33,6 +33,7 @@ USE_GECKO=	gecko
 CPE_PRODUCT=	${PORTNAME}_esr
 CONFLICTS_INSTALL=	firefox
 USE_MOZILLA=	-sqlite
+CFLAGS_powerpc64le=	-DSQLITE_BYTEORDER=1234
 
 USES=		tar:xz
 
