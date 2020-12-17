@@ -1,12 +1,9 @@
-# New ports collection makefile for: mate settings in installed mode
-# Date created:        14 jun 2015
-# Whom:                angelescuo@yahoo.com
 #
 # $FreeBSD$
 #
 
 PORTNAME=	mate-installed-settings
-PORTVERSION=	3.3
+PORTVERSION=	3.9
 CATEGORIES=	x11
 
 MAINTAINER=	ericturgeon.bsd@gmail.com
@@ -16,6 +13,7 @@ LICENSE=	BSD
 
 USE_GITHUB=	yes
 GH_ACCOUNT=	GhostBSD
+GH_PROJECT=	ghostbsd-mate-settings
 
 RUN_DEPENDS=	glib-compile-schemas:devel/glib20 \
 		 dpkg:archivers/dpkg
@@ -23,8 +21,10 @@ RUN_DEPENDS=	glib-compile-schemas:devel/glib20 \
 NO_BUILD=	yes
 
 do-install:
-	${MKDIR} ${STAGEDIR}/${PREFIX}/share/ghostbsd/mate-installed-settings
-	${CP} -R   ${WRKSRC}/ghostbsd/* ${STAGEDIR}/${PREFIX}/share/ghostbsd/mate-installed-settings
+	${MKDIR} ${STAGEDIR}/${PREFIX}/bin
+	${CP}    ${WRKSRC}/bin/* ${STAGEDIR}/${PREFIX}/bin
+	${MKDIR} ${STAGEDIR}/${PREFIX}/etc
+	${CP} -R   ${WRKSRC}/etc/* ${STAGEDIR}/${PREFIX}/etc
 	${MKDIR} ${STAGEDIR}/${PREFIX}/share/glib-2.0/schemas
 	${CP} -R   ${WRKSRC}/schemas/* ${STAGEDIR}/${PREFIX}/share/glib-2.0/schemas
 .include <bsd.port.mk>
