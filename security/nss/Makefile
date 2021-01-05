@@ -1,12 +1,11 @@
 # Created by: Maxim Sobolev <sobomax@FreeBSD.org>
-# $FreeBSD: head/security/nss/Makefile 559326 2020-12-27 00:37:20Z jbeich $
+# $FreeBSD: head/security/nss/Makefile 560345 2021-01-04 20:47:58Z jbeich $
 
 PORTNAME=	nss
 PORTVERSION=	3.60.1
 PORTREVISION=	1
 CATEGORIES=	security
 MASTER_SITES=	MOZILLA/security/${PORTNAME}/releases/${DISTNAME:tu:C/[-.]/_/g}_RTM/src
-DISTNAME=	${PORTNAME}-3.60 # XXX Drop after 3.60.1 distfile appears
 
 MAINTAINER=	gecko@FreeBSD.org
 COMMENT=	Libraries to support development of security-enabled applications
