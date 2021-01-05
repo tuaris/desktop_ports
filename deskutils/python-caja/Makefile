@@ -24,9 +24,5 @@ USE_GNOME=	cairo gdkpixbuf2 gtk30 intltool pygobject3
 USE_LDCONFIG=	yes
 GNU_CONFIGURE=	yes
 INSTALL_TARGET=	install-strip
-PORTSCOUT=	limitw:1,even
-
-post-patch:
-	@${REINPLACE_CMD} -e 's|gupnp-1.0|gupnp-1.2|' ${WRKSRC}/configure
 
 .include <bsd.port.mk>
