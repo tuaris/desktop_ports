@@ -2,7 +2,7 @@
 # $FreeBSD: $
 
 PORTNAME=	python-caja
-PORTVERSION=	1.22.1
+PORTVERSION=	1.24.0
 CATEGORIES=	deskutils mate
 MASTER_SITES=	MATE
 DIST_SUBDIR=	mate
@@ -13,15 +13,18 @@ COMMENT=	Caja-Python Components
 LICENSE=	GPLv2
 LICENSE_FILE=	${WRKSRC}/COPYING
 
-PORTSCOUT=	limitw:1,even
+USES=		compiler:c11 gmake mate libtool localbase:ldflags \
+		pathfix pkgconfig python:3.6+ tar:xz
 
-USES=		compiler:c11 gettext gmake gnome libtool localbase mate \
-		pathfix pkgconfig python:2.7 tar:xz
+OPTIONS_DEFINE=	NLS
+NLS_USES=	gettext
+
 USE_MATE=	caja desktop
 USE_GNOME=	cairo gdkpixbuf2 gtk30 intltool pygobject3
 USE_LDCONFIG=	yes
 GNU_CONFIGURE=	yes
 INSTALL_TARGET=	install-strip
+PORTSCOUT=	limitw:1,even
 
 post-patch:
 	@${REINPLACE_CMD} -e 's|gupnp-1.0|gupnp-1.2|' ${WRKSRC}/configure
