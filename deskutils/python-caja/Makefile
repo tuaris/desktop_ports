@@ -1,5 +1,5 @@
 # Created by: Daniel Morante <daniel@morante.net>
-# $FreeBSD: $
+# $FreeBSD$
 
 PORTNAME=	python-caja
 PORTVERSION=	1.24.0
@@ -8,7 +8,7 @@ MASTER_SITES=	MATE
 DIST_SUBDIR=	mate
 
 MAINTAINER=	gnome@FreeBSD.org
-COMMENT=	Caja-Python Components
+COMMENT=	libcaja-extension python bindings 
 
 LICENSE=	GPLv2
 LICENSE_FILE=	${WRKSRC}/COPYING
