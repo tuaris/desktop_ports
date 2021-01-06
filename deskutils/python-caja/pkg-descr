@@ -1,6 +1,4 @@
 These are unstable bindings for the caja extension library.  For examples and
-documentation check the examples sub directory at:
-
-https://github.com/mate-desktop/python-caja/
+documentation check the examples sub directory at: ${PREFIX}/share/doc/python-caja
 
 WWW: https://mate-desktop.org/

@@ -1,6 +1,6 @@
 As of python-caja 1.5.0, scripts are loaded only from
 $XDG_DATA_DIR/caja-python/extensions, which includes ~/.local/share and
-/usr/local/share (or whatever your $XDG_DATA_DIR is set to).
+${PREFIX}/share (or whatever your $XDG_DATA_DIR is set to).
 
 Copy scripts over to:
 
