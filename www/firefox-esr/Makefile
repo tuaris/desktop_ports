@@ -44,7 +44,7 @@ MOZ_OPTIONS=	--enable-application=browser \
 		--enable-official-branding
 
 .include "${.CURDIR}/../../www/firefox/Makefile.options"
-.include "${.CURDIR}/../../www/firefox/Makefile.ca"
+.include "${.CURDIR}/Makefile.ca"
 
 post-patch:
 	@${REINPLACE_CMD} -e 's/%u/%U/' -e '/X-MultipleArgs/d' \
