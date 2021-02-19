@@ -1,8 +1,8 @@
 # Created by: Alan Eldridge <alane@FreeBSD.org>
-# $FreeBSD: head/www/firefox-esr/Makefile 564098 2021-02-05 09:49:46Z cmt $
+# $FreeBSD: head/www/firefox-esr/Makefile 565791 2021-02-17 19:03:04Z cmt $
 
 PORTNAME=	firefox
-DISTVERSION=	78.7.1
+DISTVERSION=	78.8.0
 PORTREVISION=	1
 PORTEPOCH=	1
 CATEGORIES=	www

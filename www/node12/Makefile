@@ -1,7 +1,7 @@
-# $FreeBSD: head/www/node12/Makefile 561596 2021-01-14 21:16:54Z bhughes $
+# $FreeBSD: head/www/node12/Makefile 565274 2021-02-14 23:30:00Z bhughes $
 
 PORTNAME=	node
-PORTVERSION=	12.20.1
+PORTVERSION=	12.20.2
 PORTREVISION=	1
 DISTVERSIONPREFIX=	v
 CATEGORIES=	www
