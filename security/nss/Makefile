@@ -1,9 +1,9 @@
 # Created by: Maxim Sobolev <sobomax@FreeBSD.org>
-# $FreeBSD: head/security/nss/Makefile 566134 2021-02-20 02:35:09Z jbeich $
+# $FreeBSD: head/security/nss/Makefile 566771 2021-02-28 15:05:56Z mikael $
 
 PORTNAME=	nss
 PORTVERSION=	3.62
-PORTREVISION=	1
+PORTREVISION=	2
 CATEGORIES=	security
 MASTER_SITES=	MOZILLA/security/${PORTNAME}/releases/${DISTNAME:tu:C/[-.]/_/g}_RTM/src
 
@@ -59,6 +59,10 @@ MAKE_ENV+=	BUILD_OPT=1
 BINS=		${DIST}/${OPSYS}${OSREL}_OPT.OBJ
 .else
 BINS=		${DIST}/${OPSYS}${OSREL}_DBG.OBJ
+.endif
+
+.if ${ARCH} == armv6
+MAKE_ENV+=	NSS_DISABLE_ARM32_NEON=1
 .endif
 
 .if ${ARCH} == powerpc64 || ${ARCH} == powerpc
