@@ -1,7 +1,7 @@
-# $FreeBSD: head/www/node10/Makefile 564900 2021-02-10 19:23:13Z bhughes $
+# $FreeBSD: head/www/node10/Makefile 567893 2021-03-09 06:41:33Z bhughes $
 
 PORTNAME=	node
-PORTVERSION=	10.23.3
+PORTVERSION=	10.24.0
 DISTVERSIONPREFIX=	v
 PORTREVISION=	1
 CATEGORIES=	www
@@ -17,6 +17,9 @@ LICENSE_FILE=	${WRKSRC}/LICENSE
 BROKEN_SSL=		libressl libressl-devel
 BROKEN_SSL_REASON=	Node.js 10.x LTS requires OpenSSL 1.1.x or the BUNDLED_SSL option enabled
 ONLY_FOR_ARCHS=		aarch64 amd64 armv6 armv7 i386 powerpc64 powerpc64le
+
+USES=		compiler:c++11-lib gmake python:2.7,build pkgconfig \
+		localbase shebangfix
 
 OPTIONS_DEFINE=		BUNDLED_SSL DOCS NLS DTRACE
 OPTIONS_DEFAULT=	DTRACE
@@ -45,9 +48,6 @@ NLS_BUILD_DEPENDS=	icu>=64.2:devel/icu
 NLS_LIB_DEPENDS=	libicui18n.so:devel/icu
 
 DTRACE_CONFIGURE_ON=	--with-dtrace
-
-USES=		compiler:c++11-lib gmake python:2.7,build pkgconfig \
-		localbase shebangfix
 
 HAS_CONFIGURE=	yes
 
