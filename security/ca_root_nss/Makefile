@@ -1,8 +1,8 @@
-# $FreeBSD: head/security/ca_root_nss/Makefile 568264 2021-03-13 17:12:00Z joneum $
+# $FreeBSD: head/security/ca_root_nss/Makefile 568775 2021-03-19 07:00:30Z joneum $
 
 PORTNAME=	ca_root_nss
 PORTVERSION=	${VERSION_NSS}
-PORTREVISION=	2
+PORTREVISION=	1
 CATEGORIES=	security
 MASTER_SITES=	MOZILLA/security/nss/releases/${DISTNAME:tu:C/[-.]/_/g}_RTM/src
 DISTNAME=	nss-${VERSION_NSS}${NSS_SUFFIX}
@@ -30,7 +30,7 @@ ETCSYMLINK_CONFLICTS_INSTALL=	ca-roots-[0-9]*
 CERTDIR?=	share/certs
 PLIST_SUB+=	CERTDIR=${CERTDIR}
 
-VERSION_NSS=	3.62
+VERSION_NSS=	3.63
 CERTDATA_TXT_PATH=	lib/ckfw/builtins/certdata.txt
 BUNDLE_PROCESSOR=	MAca-bundle.pl
 
