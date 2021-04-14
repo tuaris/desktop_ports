@@ -1,5 +1,3 @@
-# $FreeBSD: head/security/ca_root_nss/Makefile 568775 2021-03-19 07:00:30Z joneum $
-
 PORTNAME=	ca_root_nss
 PORTVERSION=	${VERSION_NSS}
 PORTREVISION=	1
