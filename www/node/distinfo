@@ -1,6 +1,6 @@
-TIMESTAMP = 1617773019
-SHA256 (node-v15.14.0.tar.gz) = f3a35c1b29b58846575085fdee7774d78b75ff4cf1e52572afce7f38685b159a
-SIZE (node-v15.14.0.tar.gz) = 63225027
+TIMESTAMP = 1618941785
+SHA256 (node-v16.0.0.tar.gz) = ef4928ed381dcb8f5eca9c521b3ffa4a384c75cc76656999e16f5d1c171d8e7b
+SIZE (node-v16.0.0.tar.gz) = 64007010
 SHA256 (ca-pacyworld.com.txt) = 2a5ea492bb86d7bcf07f0d46b74fa5793be9ba2f56224db9e21a895e26cfe914
 SIZE (ca-pacyworld.com.txt) = 7939
 SHA256 (ca-pacyworld_root.txt) = 7c7223ed3ec432daad2a9b190f738bd99fbb60d50c2db0103c0708d685f714e6
