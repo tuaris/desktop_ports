@@ -1,7 +1,7 @@
 # Created by: Maxim Sobolev <sobomax@FreeBSD.org>
 
 PORTNAME=	nss
-PORTVERSION=	3.64
+PORTVERSION=	3.65
 PORTREVISION=	1
 CATEGORIES=	security
 MASTER_SITES=	MOZILLA/security/${PORTNAME}/releases/${DISTNAME:tu:C/[-.]/_/g}_RTM/src
@@ -12,6 +12,8 @@ COMMENT=	Libraries to support development of security-enabled applications
 LICENSE=	MPL20
 LICENSE_FILE=	${WRKSRC}/COPYING
 
+BUILD_DEPENDS=	${BUILD_DEPENDS_${ARCH}}
+BUILD_DEPENDS_powerpc64le=	as:devel/binutils
 LIB_DEPENDS=	libnspr4.so:devel/nspr \
 		libsqlite3.so:databases/sqlite3
 TEST_DEPENDS=	bash:shells/bash
