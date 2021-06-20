@@ -29,6 +29,7 @@ fi
 shift
 git_clone_uri="https://github.com/tuaris/desktop_ports.git"
 git_branch="master"
+sed -i '' '/www\/seamonkey.* is not maintained upstream and full of security holes/d' ${poudriere_ports_mountpoint}/${default_poudriere_tree}/MOVED
 run_portshaker_command $*
 ```
 
