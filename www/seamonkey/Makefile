@@ -1,14 +1,19 @@
-# $FreeBSD$
-
 PORTNAME=	seamonkey
-DISTVERSION=	2.53.8
-PORTREVISION=	2
+DISTVERSION=	2.53.8.1
+PORTREVISION=	1
 CATEGORIES?=	www mail news irc
 MASTER_SITES=	MOZILLA/${PORTNAME}/releases/${DISTVERSION}/source
 DISTFILES=	${DISTNAME}.source${EXTRACT_SUFX}
 
 MAINTAINER=	code@edv-work.de
 COMMENT=	Webbrowser, e-mail, news and feed client, IRC chat, and HTML editing
+
+LIB_DEPENDS=	libv4l2.so:multimedia/libv4l \
+		libnspr4.so:devel/nspr \
+		libnssutil3.so:security/nss \
+		libfreetype.so:print/freetype2 \
+		libfontconfig.so:x11-fonts/fontconfig \
+		libharfbuzz.so:print/harfbuzz
 
 USES=		tar:xz compiler:c++17-lang cpe gl gmake iconv localbase pkgconfig python:3.6+
 USE_GL=		glu
@@ -31,13 +36,6 @@ BUILD_DEPENDS+=	python27>=2.7.18:lang/python27 \
 		zip:archivers/zip \
 		${RUST_DEFAULT}>=1.43:lang/${RUST_DEFAULT} \
 		${LOCALBASE}/bin/clang${LLVM_DEFAULT}:devel/llvm${LLVM}${LLVM_DEFAULT}
-
-LIB_DEPENDS=	libv4l2.so:multimedia/libv4l \
-		libnspr4.so:devel/nspr \
-		libnssutil3.so:security/nss \
-		libfreetype.so:print/freetype2 \
-		libfontconfig.so:x11-fonts/fontconfig \
-		libharfbuzz.so:print/harfbuzz
 
 MOZCONFIG?=		${WRKSRC}/.mozconfig
 MOZ_PLIST_DIRS?=	bin lib share/applications share/pixmaps
