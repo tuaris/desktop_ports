@@ -1,0 +1,21 @@
+# -*- makefile-bsdmake -*-
+
+MASTER_SITES+=	https://cdn.pacyworld.com/pacyworld.com/ca/:pacyworld
+DISTFILES=		${DISTNAME}${EXTRACT_SUFX} \
+				ca-pacyworld.com-der.txt:pacyworld ca-pacyworld_root-der.txt:pacyworld
+
+EXTRACT_ONLY=	${DISTNAME}${EXTRACT_SUFX}
+
+CERTDATA_TXT_PATH=	certifi/cacert.pem
+CERTDATA_PACYCOMCA_TXT=	ca-pacyworld.com-der.txt
+CERTDATA_PACYWORLD_TXT=	ca-pacyworld_root-der.txt
+
+post-extract:
+	@${CP} ${DISTDIR}/${CERTDATA_PACYCOMCA_TXT} ${WRKDIR}
+	@${CP} ${DISTDIR}/${CERTDATA_PACYWORLD_TXT} ${WRKDIR}
+	
+merge-pacyworld:
+	@${CAT} ${WRKDIR}/${CERTDATA_PACYCOMCA_TXT} ${WRKDIR}/${CERTDATA_PACYWORLD_TXT} >> ${WRKSRC}/${CERTDATA_TXT_PATH}
+
+pre-build: merge-pacyworld
+
