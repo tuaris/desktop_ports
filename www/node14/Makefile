@@ -1,7 +1,7 @@
 PORTNAME=	node
 DISTVERSIONPREFIX=	v
 DISTVERSION=	14.17.0
-PORTREVISION=	1
+PORTREVISION=	2
 CATEGORIES=	www
 MASTER_SITES=	http://nodejs.org/dist/v${DISTVERSION}/
 PKGNAMESUFFIX=	14
@@ -16,7 +16,7 @@ BROKEN_SSL=		libressl libressl-devel
 BROKEN_SSL_REASON=	Node.js 14.x LTS requires OpenSSL 1.1.x or the BUNDLED_SSL option enabled
 ONLY_FOR_ARCHS=		aarch64 amd64 armv6 armv7 i386 powerpc64 powerpc64le
 
-USES=		compiler:c++11-lib gmake python:build pkgconfig \
+USES=		compiler:c++11-lib gmake python:2.7-3.9,build pkgconfig \
 		localbase shebangfix
 
 OPTIONS_DEFINE=		BUNDLED_SSL DOCS NLS DTRACE
