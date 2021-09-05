@@ -1,11 +1,11 @@
 PORTNAME=	seamonkey
-DISTVERSION=	2.53.8.1
+DISTVERSION=	2.53.9
 PORTREVISION=	1
 CATEGORIES?=	www mail news irc
 MASTER_SITES=	MOZILLA/${PORTNAME}/releases/${DISTVERSION}/source
 DISTFILES=	${DISTNAME}.source${EXTRACT_SUFX}
 
-MAINTAINER=	code@edv-work.de
+MAINTAINER=	code@edv.work
 COMMENT=	Webbrowser, e-mail, news and feed client, IRC chat, and HTML editing
 
 LIB_DEPENDS=	libv4l2.so:multimedia/libv4l \
