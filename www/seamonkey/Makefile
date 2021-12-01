@@ -15,10 +15,10 @@ LIB_DEPENDS=	libv4l2.so:multimedia/libv4l \
 		libfontconfig.so:x11-fonts/fontconfig \
 		libharfbuzz.so:print/harfbuzz
 
-USES=		tar:xz compiler:c++17-lang cpe gl gmake iconv localbase pkgconfig python:3.6+
+USES=		tar:xz compiler:c++17-lang cpe gl gmake iconv localbase pkgconfig python:3.6+ gettext-runtime gnome
 USE_GL=		glu
-USE_GNOME=	cairo gdkpixbuf2 gtk20 gtk30
 USE_XORG=	x11 xcb xcomposite xdamage xext xfixes xrender xt xcursor xi
+USE_GNOME=	cairo gdkpixbuf2 gtk20 gtk30 pango atk
 
 BUILD_DEPENDS+=	python27>=2.7.18:lang/python27 \
 		nspr>=4.26:devel/nspr \
