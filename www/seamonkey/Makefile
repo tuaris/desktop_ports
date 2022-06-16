@@ -30,7 +30,7 @@ BUILD_DEPENDS+=	python27>=2.7.18:lang/python27 \
 		libvpx>=1.8.2:multimedia/libvpx \
 		${PYTHON_PKGNAMEPREFIX}sqlite3>0:databases/py-sqlite3@${PY_FLAVOR} \
 		v4l_compat>0:multimedia/v4l_compat \
-		autoconf-2.13:devel/autoconf213 \
+		autoconf-2.13:devel/autoconf2.13 \
 		nasm:devel/nasm \
 		yasm:devel/yasm \
 		zip:archivers/zip \
