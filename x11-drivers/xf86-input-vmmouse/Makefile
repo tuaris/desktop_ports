@@ -1,8 +1,6 @@
-# Created by: NIIMI Satoshi <sa2c@sa2c.net>
-
 PORTNAME=	xf86-input-vmmouse
 PORTVERSION=	13.1.0
-PORTREVISION=	6
+PORTREVISION=	7
 CATEGORIES=	x11-drivers
 
 MAINTAINER=	x11@FreeBSD.org
