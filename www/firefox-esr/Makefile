@@ -1,5 +1,5 @@
 PORTNAME=	firefox
-DISTVERSION=	91.12.0
+DISTVERSION=	91.13.0
 PORTREVISION=	1
 PORTEPOCH=	1
 CATEGORIES=	www wayland
@@ -10,6 +10,7 @@ DISTFILES=	${DISTNAME}esr.source${EXTRACT_SUFX}
 
 MAINTAINER=	gecko@FreeBSD.org
 COMMENT=	Web browser based on the browser portion of Mozilla
+WWW=		https://www.mozilla.com/firefox
 
 BUILD_DEPENDS=	nspr>=4.32:devel/nspr \
 		nss>=3.68:security/nss \
