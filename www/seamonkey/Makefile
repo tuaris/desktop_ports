@@ -1,5 +1,5 @@
 PORTNAME=	seamonkey
-DISTVERSION=	2.53.12
+DISTVERSION=	2.53.14
 PORTREVISION=	1
 CATEGORIES?=	www mail news irc
 MASTER_SITES=	MOZILLA/${PORTNAME}/releases/${DISTVERSION}/source
@@ -7,6 +7,7 @@ DISTFILES=	${DISTNAME}.source${EXTRACT_SUFX}
 
 MAINTAINER=	code@edv.work
 COMMENT=	Webbrowser, e-mail, news and feed client, IRC chat, and HTML editing
+WWW=	https://www.seamonkey-project.org/
 
 LIB_DEPENDS=	libv4l2.so:multimedia/libv4l \
 		libnspr4.so:devel/nspr \
@@ -15,27 +16,27 @@ LIB_DEPENDS=	libv4l2.so:multimedia/libv4l \
 		libfontconfig.so:x11-fonts/fontconfig \
 		libharfbuzz.so:print/harfbuzz
 
-USES=		tar:xz compiler:c++17-lang cpe gl gmake iconv localbase pkgconfig python:3.6+ gettext-runtime gnome
+USES=		tar:xz compiler:c++17-lang cpe gl gmake iconv localbase pkgconfig python:build gettext-runtime gnome
 USE_GL=		glu
 USE_XORG=	x11 xcb xcomposite xdamage xext xfixes xrender xt xcursor xi
 USE_GNOME=	cairo gdkpixbuf2 gtk20 gtk30 pango atk
 
-BUILD_DEPENDS+=	python27>=2.7.18:lang/python27 \
-		nspr>=4.26:devel/nspr \
-		nss>=3.58:security/nss \
-		icu>=67.1,1:devel/icu \
-		libevent>=2.1.8:devel/libevent \
-		graphite2>=1.3.14:graphics/graphite2 \
-		png>=1.6.35:graphics/png \
-		libvpx>=1.8.2:multimedia/libvpx \
+BUILD_DEPENDS+=	python27>=2.7.0:lang/python27 \
+		nspr>0:devel/nspr \
+		nss>0:security/nss \
+		icu>0:devel/icu \
+		libevent>0:devel/libevent \
+		graphite2>0:graphics/graphite2 \
+		png>0:graphics/png \
+		libvpx>0:multimedia/libvpx \
 		${PYTHON_PKGNAMEPREFIX}sqlite3>0:databases/py-sqlite3@${PY_FLAVOR} \
 		v4l_compat>0:multimedia/v4l_compat \
-		autoconf-2.13:devel/autoconf2.13 \
+		autoconf2.13:devel/autoconf2.13 \
 		nasm:devel/nasm \
 		yasm:devel/yasm \
 		zip:archivers/zip \
-		${RUST_DEFAULT}>=1.43:lang/${RUST_DEFAULT} \
-		${LOCALBASE}/bin/clang${LLVM_DEFAULT}:devel/llvm${LLVM}${LLVM_DEFAULT}
+		${RUST_DEFAULT}>0:lang/${RUST_DEFAULT} \
+		${LOCALBASE}/bin/clang13:devel/llvm13
 
 MOZCONFIG?=		${WRKSRC}/.mozconfig
 MOZ_PLIST_DIRS?=	bin lib share/applications share/pixmaps
@@ -50,7 +51,6 @@ MOZ_OPTIONS+=	--enable-release
 MOZ_OPTIONS+=	--enable-strip
 MOZ_OPTIONS+=	--enable-install-strip
 MOZ_OPTIONS+=	--enable-optimize
-MOZ_OPTIONS+=	--disable-rust-simd
 MOZ_OPTIONS+=	--disable-debug
 MOZ_OPTIONS+=	--disable-debug-symbols
 MOZ_OPTIONS+=	--disable-rust-debug
