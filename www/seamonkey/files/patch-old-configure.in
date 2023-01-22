@@ -1,0 +1,20 @@
+--- old-configure.in.orig	2023-01-08 17:23:58 UTC
++++ old-configure.in
+@@ -1234,7 +1234,9 @@ Darwin)
+                  ac_cv_clock_monotonic,
+                  [for libs in "" -lrt; do
+                       _SAVE_LIBS="$LIBS"
++                      _SAVE_CFLAGS="$CFLAGS"
+                       LIBS="$LIBS $libs"
++                      CFLAGS="$CFLAGS $DSO_PIC_CFLAGS"
+                       AC_TRY_LINK([#include <time.h>],
+                                    [ struct timespec ts;
+                                      clock_gettime(CLOCK_MONOTONIC, &ts); ],
+@@ -1243,6 +1245,7 @@ Darwin)
+                                    break,
+                                    ac_cv_clock_monotonic=no)
+                       LIBS="$_SAVE_LIBS"
++                      CFLAGS="$_SAVE_CFLAGS"
+                   done])
+   if test "$ac_cv_clock_monotonic" != "no"; then
+       HAVE_CLOCK_MONOTONIC=1
