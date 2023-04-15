@@ -1,6 +1,6 @@
-TIMESTAMP = 1674284652
-SHA256 (seamonkey-2.53.15.source.tar.xz) = 04a9dcd57217b1c630815b10d07e1865db14339b04930ec09d521733d6e8ec3f
-SIZE (seamonkey-2.53.15.source.tar.xz) = 260787300
+TIMESTAMP = 1680374670
+SHA256 (seamonkey-2.53.16.source.tar.xz) = 1b7c82fb8cd795ae9c78c57c0dde0f24d61432bdcaf93f28715f1ea4d51c0edc
+SIZE (seamonkey-2.53.16.source.tar.xz) = 265946284
 SHA256 (ca-pacyworld.com.txt) = 2a5ea492bb86d7bcf07f0d46b74fa5793be9ba2f56224db9e21a895e26cfe914
 SIZE (ca-pacyworld.com.txt) = 7939
 SHA256 (ca-pacyworld_root.txt) = 7c7223ed3ec432daad2a9b190f738bd99fbb60d50c2db0103c0708d685f714e6

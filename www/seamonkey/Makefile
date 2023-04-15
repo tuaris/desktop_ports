@@ -1,5 +1,5 @@
 PORTNAME=	seamonkey
-DISTVERSION=	2.53.15
+DISTVERSION=	2.53.16
 PORTREVISION=	1
 CATEGORIES?=	www mail news irc
 MASTER_SITES=	MOZILLA/${PORTNAME}/releases/${DISTVERSION}/source
@@ -21,6 +21,8 @@ USE_GL=		glu
 USE_XORG=	x11 xcb xcomposite xdamage xext xfixes xrender xt xcursor xi
 USE_GNOME=	cairo gdkpixbuf2 gtk20 gtk30 pango atk
 
+LLVM_VERSION?=	13
+
 BUILD_DEPENDS+=	python27>=2.7.0:lang/python27 \
 		nspr>0:devel/nspr \
 		nss>0:security/nss \
@@ -36,7 +38,8 @@ BUILD_DEPENDS+=	python27>=2.7.0:lang/python27 \
 		yasm:devel/yasm \
 		zip:archivers/zip \
 		${RUST_DEFAULT}>0:lang/${RUST_DEFAULT} \
-		${LOCALBASE}/bin/clang13:devel/llvm13
+		cbindgen:devel/rust-cbindgen \
+		${LOCALBASE}/bin/clang13:devel/llvm${LLVM_VERSION}
 
 MOZCONFIG?=		${WRKSRC}/.mozconfig
 MOZ_PLIST_DIRS?=	bin lib share/applications share/pixmaps
@@ -63,6 +66,7 @@ MOZ_OPTIONS+=	--prefix=${PREFIX}
 
 CFLAGS+=	-O3
 MOZ_EXPORT+=	MOZ_OPTIMIZE_FLAGS="${CFLAGS:M-O*}"
+MOZ_EXPORT+=	LLVM_CONFIG=${LOCALBASE}/bin/llvm-config${LLVM_VERSION}
 
 OPTIONS_DEFINE=	DBUS HUNSPELL
 DBUS_DESC=	D-Bus support

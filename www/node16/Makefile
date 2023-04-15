@@ -1,7 +1,7 @@
 PORTNAME=	node
 DISTVERSIONPREFIX=	v
-DISTVERSION=	16.19.0
-PORTREVISION=	1
+DISTVERSION=	16.20.0
+PORTREVISION=	2
 CATEGORIES=	www
 MASTER_SITES=	https://nodejs.org/dist/v${DISTVERSION}/
 PKGNAMESUFFIX=	16
@@ -46,10 +46,13 @@ CONFIGURE_ENV+=	CC_host="${CCACHE_BIN} ${CC}" \
 		CFLAGS_host="${CFLAGS}" \
 		CXX_host="${CCACHE_BIN} ${CXX}" \
 		CXXFLAGS_host="${CXXFLAGS}" \
-		LDFLAGS_host="${LDFLAGS}" \
-		LINK_host=${CXX}
-MAKE_ENV+=	CFLAGS.host="${CFLAGS}" \
+		LINK_host=${CXX} \
+		LDFLAGS_host="${LDFLAGS}"
+MAKE_ARGS+=	CC.host="${CCACHE_BIN} ${CC}" \
+		CFLAGS.host="${CFLAGS}" \
+		CXX.host="${CCACHE_BIN} ${CXX}" \
 		CXXFLAGS.host="${CXXFLAGS}" \
+		LINK.host=${CXX} \
 		LDFLAGS.host="${LDFLAGS}"
 
 CONFLICTS_INSTALL=	node[0-9][0-9]
