@@ -1,6 +1,6 @@
 PORTNAME=	seamonkey
 DISTVERSION=	2.53.16
-PORTREVISION=	1
+PORTREVISION=	2
 CATEGORIES?=	www mail news irc
 MASTER_SITES=	MOZILLA/${PORTNAME}/releases/${DISTVERSION}/source
 DISTFILES=	${DISTNAME}.source${EXTRACT_SUFX}
@@ -8,6 +8,9 @@ DISTFILES=	${DISTNAME}.source${EXTRACT_SUFX}
 MAINTAINER=	code@edv.work
 COMMENT=	Webbrowser, e-mail, news and feed client, IRC chat, and HTML editing
 WWW=	https://www.seamonkey-project.org/
+
+# as long we do not know more on that topic...
+ONLY_FOR_ARCHS=	amd64
 
 LIB_DEPENDS=	libv4l2.so:multimedia/libv4l \
 		libnspr4.so:devel/nspr \
@@ -24,6 +27,7 @@ USE_GNOME=	cairo gdkpixbuf2 gtk20 gtk30 pango atk
 LLVM_VERSION?=	13
 
 BUILD_DEPENDS+=	python27>=2.7.0:lang/python27 \
+		python3>0:lang/python3 \
 		nspr>0:devel/nspr \
 		nss>0:security/nss \
 		icu>0:devel/icu \
@@ -68,9 +72,8 @@ CFLAGS+=	-O3
 MOZ_EXPORT+=	MOZ_OPTIMIZE_FLAGS="${CFLAGS:M-O*}"
 MOZ_EXPORT+=	LLVM_CONFIG=${LOCALBASE}/bin/llvm-config${LLVM_VERSION}
 
-OPTIONS_DEFINE=	DBUS HUNSPELL
+OPTIONS_DEFINE=	DBUS
 DBUS_DESC=	D-Bus support
-HUNSPELL_DESC=	use systems hunspell
 
 OPTIONS_GROUP=		AUDIO
 OPTIONS_GROUP_AUDIO=	ALSA PULSEAUDIO
@@ -78,7 +81,7 @@ AUDIO_DESC?=		audio backends
 ALSA_DESC=		ALSA
 PULSEAUDIO_DESC=	PulseAudio sound server support
 
-OPTIONS_DEFAULT=	DBUS HUNSPELL ALSA PULSEAUDIO
+OPTIONS_DEFAULT=	ALSA
 
 DESKTOP_ENTRIES=	"SeaMonkey" \
 			"Internet Application Suite" \
@@ -96,14 +99,6 @@ LIB_DEPENDS+=	libdbus-glib-1.so:devel/dbus-glib
 LIB_DEPENDS+=	libdbus-1.so:devel/dbus
 .else
 MOZ_OPTIONS+=	--disable-dbus
-.endif
-
-.if ${PORT_OPTIONS:MHUNSPELL}
-MOZ_OPTIONS+=	--enable-system-hunspell
-BUILD_DEPENDS+=	hunspell:textproc/hunspell
-RUN_DEPENDS+=	hunspell:textproc/hunspell
-.else
-MOZ_OPTIONS+=	--disable-system-hunspell
 .endif
 
 .if ${PORT_OPTIONS:MALSA}

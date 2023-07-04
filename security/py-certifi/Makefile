@@ -1,5 +1,5 @@
 PORTNAME=	certifi
-PORTVERSION=	2022.12.7
+PORTVERSION=	2023.5.7
 PORTREVISION=	1
 CATEGORIES=	security python
 MASTER_SITES=	PYPI
@@ -11,7 +11,7 @@ WWW=		https://github.com/certifi/python-certifi
 
 LICENSE=	MPL20
 
-USES=		python:3.6+
+USES=		python
 USE_PYTHON=	autoplist concurrent distutils
 
 NO_ARCH=	yes
