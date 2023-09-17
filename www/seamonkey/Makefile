@@ -1,6 +1,6 @@
 PORTNAME=	seamonkey
-DISTVERSION=	2.53.16
-PORTREVISION=	2
+DISTVERSION=	2.53.17
+PORTREVISION=	1
 CATEGORIES?=	www mail news irc
 MASTER_SITES=	MOZILLA/${PORTNAME}/releases/${DISTVERSION}/source
 DISTFILES=	${DISTNAME}.source${EXTRACT_SUFX}
@@ -10,7 +10,7 @@ COMMENT=	Webbrowser, e-mail, news and feed client, IRC chat, and HTML editing
 WWW=	https://www.seamonkey-project.org/
 
 # as long we do not know more on that topic...
-ONLY_FOR_ARCHS=	amd64
+# ONLY_FOR_ARCHS=	amd64 i386
 
 LIB_DEPENDS=	libv4l2.so:multimedia/libv4l \
 		libnspr4.so:devel/nspr \
@@ -26,8 +26,7 @@ USE_GNOME=	cairo gdkpixbuf2 gtk20 gtk30 pango atk
 
 LLVM_VERSION?=	13
 
-BUILD_DEPENDS+=	python27>=2.7.0:lang/python27 \
-		python3>0:lang/python3 \
+BUILD_DEPENDS+=	python3>0:lang/python3 \
 		nspr>0:devel/nspr \
 		nss>0:security/nss \
 		icu>0:devel/icu \
