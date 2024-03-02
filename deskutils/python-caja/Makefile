@@ -1,6 +1,3 @@
-# Created by: Daniel Morante <daniel@morante.net>
-# $FreeBSD$
-
 PORTNAME=	python-caja
 PORTVERSION=	1.26.0
 CATEGORIES=	deskutils mate
@@ -8,7 +5,8 @@ MASTER_SITES=	MATE
 DIST_SUBDIR=	mate
 
 MAINTAINER=	gnome@FreeBSD.org
-COMMENT=	libcaja-extension python bindings 
+COMMENT=	Python bindings for the caja extension library
+WWW=	https://mate-desktop.org/
 
 LICENSE=	GPLv2
 LICENSE_FILE=	${WRKSRC}/COPYING
