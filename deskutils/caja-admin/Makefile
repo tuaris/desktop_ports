@@ -20,6 +20,11 @@ GH_ACCOUNT=	infirit
 OPTIONS_DEFINE=	NLS
 NLS_USES=	gettext
 
+MESON_ARGS+=	-Dpkexecpath=${LOCALBASE}/bin/pkexec \
+				-Dcajapath=${LOCALBASE}/bin/caja \
+				-Dplumapath=${LOCALBASE}/bin/pluma \
+				-Dterminalpath=${LOCALBASE}/bin/mate-terminal
+
 USE_MATE=	caja desktop polkit
 
 .include <bsd.port.mk>
