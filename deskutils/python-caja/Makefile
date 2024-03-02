@@ -11,15 +11,15 @@ WWW=	https://mate-desktop.org/
 LICENSE=	GPLv2
 LICENSE_FILE=	${WRKSRC}/COPYING
 
-BUILD_DEPENDS=	pygobject3-common>=3.0.0:devel/pygobject3-common
+LIB_DEPENDS=	libharfbuzz.so:print/harfbuzz
 
-USES=		compiler:c11 gmake mate libtool localbase:ldflags \
+USES=		compiler:c11 gmake mate gnome libtool localbase:ldflags \
 			pathfix pkgconfig python:3.6+ tar:xz
 
 OPTIONS_DEFINE=	DOCS NLS
 NLS_USES=	gettext
 
-USE_MATE=	caja desktop
+USE_MATE=	caja
 USE_GNOME=	cairo glib20 pango gdkpixbuf2 gtk30 intltool pygobject3
 USE_LDCONFIG=	yes
 GNU_CONFIGURE=	yes
