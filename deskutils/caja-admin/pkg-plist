@@ -1,0 +1,17 @@
+share/caja-python/extensions/caja-admin.py
+share/locale/ar/LC_MESSAGES/caja-admin.mo
+share/locale/cs/LC_MESSAGES/caja-admin.mo
+share/locale/de/LC_MESSAGES/caja-admin.mo
+share/locale/es/LC_MESSAGES/caja-admin.mo
+share/locale/eu/LC_MESSAGES/caja-admin.mo
+share/locale/fr/LC_MESSAGES/caja-admin.mo
+share/locale/it/LC_MESSAGES/caja-admin.mo
+share/locale/kab/LC_MESSAGES/caja-admin.mo
+share/locale/lt/LC_MESSAGES/caja-admin.mo
+share/locale/oc/LC_MESSAGES/caja-admin.mo
+share/locale/pl/LC_MESSAGES/caja-admin.mo
+share/locale/pt/LC_MESSAGES/caja-admin.mo
+share/locale/ru/LC_MESSAGES/caja-admin.mo
+share/locale/sk/LC_MESSAGES/caja-admin.mo
+share/locale/zh_CN/LC_MESSAGES/caja-admin.mo
+share/polkit-1/actions/org.freedesktop.caja-admin.policy
