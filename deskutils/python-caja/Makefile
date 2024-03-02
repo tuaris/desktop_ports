@@ -11,14 +11,16 @@ WWW=	https://mate-desktop.org/
 LICENSE=	GPLv2
 LICENSE_FILE=	${WRKSRC}/COPYING
 
+RUN_DEPENDS=	pygobject3-common>=3.42.0:devel/pygobject3-common
+
 USES=		compiler:c11 gmake mate libtool localbase:ldflags \
-		pathfix pkgconfig python:3.6+ tar:xz
+			pathfix pkgconfig python:3.6+ tar:xz
 
 OPTIONS_DEFINE=	NLS
 NLS_USES=	gettext
 
 USE_MATE=	caja desktop
-USE_GNOME=	cairo gdkpixbuf2 gtk30 intltool pygobject3
+USE_GNOME=	cairo glib20 pango gdkpixbuf2 gtk30 intltool pygobject3
 USE_LDCONFIG=	yes
 GNU_CONFIGURE=	yes
 INSTALL_TARGET=	install-strip
