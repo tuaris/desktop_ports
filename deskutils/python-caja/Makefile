@@ -11,7 +11,7 @@ WWW=	https://mate-desktop.org/
 LICENSE=	GPLv2
 LICENSE_FILE=	${WRKSRC}/COPYING
 
-RUN_DEPENDS=	pygobject3-common>=3.42.0:devel/pygobject3-common
+RUN_DEPENDS=	pygobject3-common>=3.0.0:devel/pygobject3-common
 
 USES=		compiler:c11 gmake mate libtool localbase:ldflags \
 			pathfix pkgconfig python:3.6+ tar:xz
