@@ -16,7 +16,7 @@ RUN_DEPENDS=	pygobject3-common>=3.42.0:devel/pygobject3-common
 USES=		compiler:c11 gmake mate libtool localbase:ldflags \
 			pathfix pkgconfig python:3.6+ tar:xz
 
-OPTIONS_DEFINE=	NLS
+OPTIONS_DEFINE=	DOCS NLS
 NLS_USES=	gettext
 
 USE_MATE=	caja desktop
