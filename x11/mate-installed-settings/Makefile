@@ -3,17 +3,17 @@
 #
 
 PORTNAME=	mate-installed-settings
-PORTVERSION=	3.9
+PORTVERSION=	3.10.0
 CATEGORIES=	x11
 
-MAINTAINER=	ericturgeon.bsd@gmail.com
-COMMENT=	GhostBSD mate settings in installed mode
+MAINTAINER=	daniel@morante.net
+COMMENT=	FreeBSD desktop mate settings in installed mode
 
 LICENSE=	BSD
 
 USE_GITHUB=	yes
-GH_ACCOUNT=	GhostBSD
-GH_PROJECT=	ghostbsd-mate-settings
+GH_ACCOUNT=	tuaris
+GH_PROJECT=	mate-desktop-settings
 
 RUN_DEPENDS=	glib-compile-schemas:devel/glib20 \
 		 dpkg:archivers/dpkg
