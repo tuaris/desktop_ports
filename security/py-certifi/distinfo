@@ -1,6 +1,6 @@
-TIMESTAMP = 1708449438
-SHA256 (certifi-2024.2.2.tar.gz) = 0569859f95fc761b18b45ef421b1290a0f65f147e92a1e5eb3e635f9a5e4e66f
-SIZE (certifi-2024.2.2.tar.gz) = 164886
+TIMESTAMP = 1717662498
+SHA256 (certifi-2024.6.2.tar.gz) = 3cd43f1c6fa7dedc5899d69d3ad0398fd018ad1a17fba83ddaf78aa46c747516
+SIZE (certifi-2024.6.2.tar.gz) = 165550
 SHA256 (ca-pacyworld.com-der.txt) = febbd4daf5570404be947e1192922343a95bc6a382736d40b2455964e751a826
 SIZE (ca-pacyworld.com-der.txt) = 1644
 SHA256 (ca-pacyworld_root-der.txt) = e50cdd18e63c91a6e6cf44f348ed5cc119a796e987de28bef1393007db6910eb
