@@ -4,7 +4,7 @@
 
 PORTNAME=	station-tweak
 PORTVERSION=	0.7
-PORTREVISION=	0
+PORTREVISION=	1
 CATEGORIES=	x11
 MASTER_SITES=	https://github.com/GhostBSD/${PORTNAME}/archive/
 
@@ -18,7 +18,7 @@ GH_ACCOUNT=	GhostBSD
 
 BUILD_DEPENDS=	${PYTHON_PKGNAMEPREFIX}python-distutils-extra>=2.15:devel/py-python-distutils-extra@${PY_FLAVOR}
 
-RUN_DEPENDS=	wmctrl:x11/wmctrl
+RUN_DEPENDS=	wmctrl:x11/wmctrl-fork
 
 USES = python:3.6+ gettext-tools
 USE_PYTHON=	distutils noflavors
