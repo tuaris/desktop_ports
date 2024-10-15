@@ -8,7 +8,7 @@ CERTDATA_TXT_PATH=	security/nss/lib/ckfw/builtins/certdata.txt
 CERTDATA_PACYCOMCA_TXT=	ca-pacyworld.com.txt
 CERTDATA_PACYWORLD_TXT=	ca-pacyworld_root.txt
 
-post-extract:
+copy-pacyworld:
 	@${CP} ${DISTDIR}/${CERTDATA_PACYCOMCA_TXT} ${WRKDIR}
 	@${CP} ${DISTDIR}/${CERTDATA_PACYWORLD_TXT} ${WRKDIR}
 	
