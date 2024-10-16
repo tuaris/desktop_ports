@@ -14,8 +14,8 @@ post-extract:
 	@${CP} ${DISTDIR}/${CERTDATA_PACYCOMCA_TXT} ${WRKDIR}
 	@${CP} ${DISTDIR}/${CERTDATA_PACYWORLD_TXT} ${WRKDIR}
 	# Add extra line at end of each file
-	@echo "" >> ${WRKSRC}/${CERTDATA_PACYCOMCA_TXT}
-	@echo "" >> ${WRKSRC}/${CERTDATA_PACYWORLD_TXT}
+	@echo -e "\n" >> ${WRKDIR}/${CERTDATA_PACYCOMCA_TXT}
+	@echo -e "\n" >> ${WRKDIR}/${CERTDATA_PACYWORLD_TXT}
 	
 merge-pacyworld:
 	# Add extra line at end of the existing file
