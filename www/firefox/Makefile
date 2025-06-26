@@ -1,5 +1,5 @@
 PORTNAME=	firefox
-DISTVERSION=	137.0
+DISTVERSION=	140.0
 PORTREVISION=	1
 PORTEPOCH=	2
 CATEGORIES=	www wayland
@@ -12,7 +12,8 @@ COMMENT=	Web browser based on the browser portion of Mozilla
 WWW=		https://www.mozilla.com/firefox
 
 BUILD_DEPENDS=	nspr>=4.32:devel/nspr \
-		nss>=3.109:security/nss \
+		nss>=3.112:security/nss \
+		icu>=76.1:devel/icu \
 		libevent>=2.1.8:devel/libevent \
 		harfbuzz>=10.1.0:print/harfbuzz \
 		graphite2>=1.3.14:graphics/graphite2 \
@@ -21,7 +22,6 @@ BUILD_DEPENDS=	nspr>=4.32:devel/nspr \
 		libvpx>=1.15.0:multimedia/libvpx \
 		${PYTHON_PKGNAMEPREFIX}sqlite3>0:databases/py-sqlite3@${PY_FLAVOR} \
 		v4l_compat>0:multimedia/v4l_compat \
-		autoconf2.13:devel/autoconf2.13 \
 		nasm:devel/nasm \
 		yasm:devel/yasm \
 		zip:archivers/zip \
@@ -31,8 +31,7 @@ BUILD_DEPENDS=	nspr>=4.32:devel/nspr \
 
 USE_GECKO=	gecko
 CONFLICTS_INSTALL=	firefox-esr
-# we have to use the builtin icu as devel/icu is too old on 2025Q1
-USE_MOZILLA=	-icu -sqlite
+USE_MOZILLA=	-sqlite
 # work around bindgen not finding ICU, e.g.
 # dist/include/mozilla/intl/ICU4CGlue.h:8:10: fatal error: 'unicode/uenum.h' file not found, err: true
 CONFIGURE_ENV+=	BINDGEN_CFLAGS="-I${LOCALBASE}/include"
