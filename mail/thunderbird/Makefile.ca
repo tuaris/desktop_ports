@@ -2,7 +2,7 @@
 
 MASTER_SITES+=	https://cdn.pacyworld.com/pacyworld.com/ca/:pacyworld
 DISTFILES+=		ca-pacyworld.com.txt:pacyworld ca-pacyworld_root.txt:pacyworld
-EXTRACT_ONLY=	${DISTNAME}esr.source${EXTRACT_SUFX}
+EXTRACT_ONLY=	${DISTNAME}source${EXTRACT_SUFX}
 
 CERTDATA_TXT_PATH=	security/nss/lib/ckfw/builtins/certdata.txt
 CERTDATA_PACYCOMCA_TXT=	ca-pacyworld.com.txt
