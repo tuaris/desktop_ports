@@ -1,5 +1,5 @@
 PORTNAME=	certifi
-PORTVERSION=	2025.4.26
+PORTVERSION=	2025.7.14
 PORTREVISION=	1
 CATEGORIES=	security python
 MASTER_SITES=	PYPI
@@ -11,7 +11,7 @@ WWW=		https://github.com/certifi/python-certifi
 
 LICENSE=	MPL20
 
-BUILD_DEPENDS=	${PYTHON_PKGNAMEPREFIX}setuptools>=0:devel/py-setuptools@${PY_FLAVOR} \
+BUILD_DEPENDS=	${PYTHON_PKGNAMEPREFIX}setuptools>=42.0.0:devel/py-setuptools@${PY_FLAVOR} \
 		${PYTHON_PKGNAMEPREFIX}wheel>=0:devel/py-wheel@${PY_FLAVOR}
 
 USES=		python
