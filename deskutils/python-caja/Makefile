@@ -20,7 +20,7 @@ OPTIONS_DEFINE=	DOCS NLS
 NLS_USES=	gettext
 
 USE_MATE=	caja
-USE_GNOME=	cairo glib20 pango gdkpixbuf2 gtk30 intltool pygobject3
+USE_GNOME=	cairo glib20 pango gdkpixbufextra gtk30 intltool pygobject3
 USE_LDCONFIG=	yes
 GNU_CONFIGURE=	yes
 INSTALL_TARGET=	install-strip
