@@ -1,12 +1,12 @@
-PORTNAME=	certifi
-PORTVERSION=	2025.11.12
-PORTREVISION=	1
-CATEGORIES=	security python
-MASTER_SITES=	PYPI
-PKGNAMEPREFIX=	${PYTHON_PKGNAMEPREFIX}
+PORTNAME=       certifi
+PORTVERSION=    2026.1.4
+PORTREVISION=   1
+CATEGORIES=     security python
+MASTER_SITES=   PYPI
+PKGNAMEPREFIX=  ${PYTHON_PKGNAMEPREFIX}
 
-MAINTAINER=	sunpoet@FreeBSD.org
-COMMENT=	Mozilla SSL certificates
+MAINTAINER=     sunpoet@FreeBSD.org
+COMMENT=        Mozilla SSL certificates
 WWW=		https://github.com/certifi/python-certifi
 
 LICENSE=	MPL20
