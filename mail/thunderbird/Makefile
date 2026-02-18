@@ -1,12 +1,12 @@
-PORTNAME=       thunderbird
-DISTVERSION=    147.0.1
-PORTREVISION=   4
-CATEGORIES=     mail news net-im wayland
-MASTER_SITES=   MOZILLA/${PORTNAME}/releases/${DISTVERSION}${DISTVERSIONSUFFIX}/source \
-                MOZILLA/${PORTNAME}/candidates/${DISTVERSION}${DISTVERSIONSUFFIX}-candidates/build1/source
-DISTFILES=      ${DISTNAME}.source${EXTRACT_SUFX}
+PORTNAME=	thunderbird
+DISTVERSION=	147.0.2
+PORTREVISION=	1
+CATEGORIES=	mail news net-im wayland
+MASTER_SITES=	MOZILLA/${PORTNAME}/releases/${DISTVERSION}${DISTVERSIONSUFFIX}/source \
+		MOZILLA/${PORTNAME}/candidates/${DISTVERSION}${DISTVERSIONSUFFIX}-candidates/build1/source
+DISTFILES=	${DISTNAME}.source${EXTRACT_SUFX}
 
-MAINTAINER=     gecko@FreeBSD.org
+MAINTAINER=	gecko@FreeBSD.org
 COMMENT=	Mozilla Thunderbird is standalone mail and news that stands above
 WWW=		https://www.thunderbird.net/
 

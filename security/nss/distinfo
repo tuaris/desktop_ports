@@ -1,6 +1,6 @@
-TIMESTAMP = 1767897175
-SHA256 (nss-3.120.tar.gz) = 7ce5f5b3a172a41539ffc118d8ef4834974d0a6a782743e4a05a4e208dd6d22f
-SIZE (nss-3.120.tar.gz) = 77634611
+TIMESTAMP = 1771264615
+SHA256 (nss-3.120.1.tar.gz) = a98f002d20bfe719f50f81824a64c9e6f067f4da3c6a1f0455e97e6d79240512
+SIZE (nss-3.120.1.tar.gz) = 77635792
 SHA256 (ca-pacyworld.com.txt) = 2a5ea492bb86d7bcf07f0d46b74fa5793be9ba2f56224db9e21a895e26cfe914
 SIZE (ca-pacyworld.com.txt) = 7939
 SHA256 (ca-pacyworld_root.txt) = 7c7223ed3ec432daad2a9b190f738bd99fbb60d50c2db0103c0708d685f714e6
