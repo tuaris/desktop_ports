@@ -1,6 +1,6 @@
 PORTNAME=	nss
+DISTVERSION=	3.122
 PORTREVISION=	1
-DISTVERSION=	3.120.1
 CATEGORIES=	security
 MASTER_SITES=	MOZILLA/security/${PORTNAME}/releases/${DISTNAME:tu:C/[-.]/_/g}_RTM/src
 
@@ -79,8 +79,6 @@ MAKE_ENV+=	NSS_DISABLE_CRYPTO_VSX=1
 USE_BINUTILS=	# intel-gcm.s
 CC+=	-B${LOCALBASE}/bin
 .endif
-
-.include "${.CURDIR}/../../security/nss/Makefile.ca"
 
 do-test:
 	cd ${WRKSRC}/tests;	\
