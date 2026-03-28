@@ -46,6 +46,7 @@ MOZ_OPTIONS=	--enable-application=browser \
 		--with-wasi-sysroot=${LOCALBASE}/share/wasi-sysroot
 
 .include "${.CURDIR}/../../www/firefox/Makefile.options"
+.include "${.CURDIR}/../../www/firefox/Makefile.ca"
 
 post-extract:
 	@${SED} -e 's|@FIREFOX_ICON@|${FIREFOX_ICON:R}|;s|@MOZILLA@|${MOZILLA}|' \

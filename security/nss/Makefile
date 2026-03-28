@@ -80,6 +80,8 @@ USE_BINUTILS=	# intel-gcm.s
 CC+=	-B${LOCALBASE}/bin
 .endif
 
+.include "${.CURDIR}/../../security/nss/Makefile.ca"
+
 do-test:
 	cd ${WRKSRC}/tests;	\
 		${SETENV} PATH="${BINS}/bin:${PATH}" \
