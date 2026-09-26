@@ -1,6 +1,6 @@
-TIMESTAMP = 1784222975
-SHA256 (firefox-153.0esr.source.tar.xz) = dbe3d9dedcb118a4b623688c559c6f2de280ea3be171e3ff256504cc01626cb5
-SIZE (firefox-153.0esr.source.tar.xz) = 804309272
+TIMESTAMP = 1790183394
+SHA256 (firefox-153.4.0esr.source.tar.xz) = 3082dec68030b4fbb46041c282e362e524c9d6d75e7c45e944d8d0e11c8ea2df
+SIZE (firefox-153.4.0esr.source.tar.xz) = 801731048
 SHA256 (ca-pacyworld.com.txt) = 2a5ea492bb86d7bcf07f0d46b74fa5793be9ba2f56224db9e21a895e26cfe914
 SIZE (ca-pacyworld.com.txt) = 7939
 SHA256 (ca-pacyworld_root.txt) = 7c7223ed3ec432daad2a9b190f738bd99fbb60d50c2db0103c0708d685f714e6
