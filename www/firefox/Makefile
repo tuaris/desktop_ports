@@ -1,5 +1,5 @@
 PORTNAME=	firefox
-DISTVERSION=	160.0.1
+DISTVERSION=	161.0
 PORTREVISION=	1
 PORTEPOCH=	2
 CATEGORIES=	www wayland
@@ -15,7 +15,7 @@ NOT_FOR_ARCHS=		i386
 NOT_FOR_ARCHS_REASON=	fails to build: rust needs more address space than platform can provide
 
 BUILD_DEPENDS=	nspr>=4.32:devel/nspr \
-		nss>=3.132:security/nss \
+		nss>=3.133:security/nss \
 		libevent>=2.1.8:devel/libevent \
 		png>=1.6.45:graphics/png \
 		dav1d>=1.0.0:multimedia/dav1d \
